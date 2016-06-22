@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>getting started with Spacemacs</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alxndr.github.io/blog/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html" />
+    
+    <meta property="og:site_name" content="alxndr&#x27;s blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="getting started with Spacemacs" />
+    <meta property="og:description" content="Are you a vi/vim user who&amp;#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&amp;#8230;&amp;#8203; (First:..." />
+    <meta property="og:url" content="https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html" />
+    <meta property="article:published_time" content="2015-06-20T07:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-11-07T17:25:36.535Z" />
+    <meta property="article:tag" content="spacemacs" />
+    <meta property="article:tag" content="emacs" />
+    <meta property="article:tag" content="vim" />
+    <meta property="article:tag" content="vi" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="getting started with Spacemacs" />
+    <meta name="twitter:description" content="Are you a vi/vim user who&amp;#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&amp;#8230;&amp;#8203; (First:..." />
+    <meta name="twitter:url" content="https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "alxndr&#x27;s blog",
+    "author": {
+        "@type": "Person",
+        "name": "Alexander Quine",
+        "image": "https://avatars.githubusercontent.com/u/174307?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://eleven-twelve.net"
+    },
+    "headline": "getting started with Spacemacs",
+    "url": "https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html",
+    "datePublished": "2015-06-20T07:00:00.000Z",
+    "dateModified": "2015-11-07T17:25:36.535Z",
+    "keywords": "spacemacs,  emacs,  vim,  vi",
+    "description": "Are you a vi/vim user who&amp;#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&amp;#8230;&amp;#8203; (First:..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-spacemacs tag-emacs tag-vim tag-vi">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alxndr.github.io/blog">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alxndr.github.io/blog/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-spacemacs tag-emacs tag-vim tag-vi">
+
+        <header class="post-header">
+            <h1 class="post-title">getting started with Spacemacs</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-06-20">20 June 2015</time>  on <a href="https://alxndr.github.io/blog/tag/spacemacs">spacemacs</a>, <a href="https://alxndr.github.io/blog/tag/emacs"> emacs</a>, <a href="https://alxndr.github.io/blog/tag/vim"> vim</a>, <a href="https://alxndr.github.io/blog/tag/vi"> vi</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Are you a vi/vim user who&#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>(First: have you read the <a href="https://github.com/syl20bnr/spacemacs/blob/074f425dc5d233f24195ecc3021eb96ac9d55d4d/doc/VIMUSERS.org#purpose-of-this-document"><code>VIMUSERS</code> doc</a>? You should. Go do that, then come back and start reading this.)</p>
+</div>
+<div class="paragraph">
+<p>Heads up: Spacemacs takes over <code>~/.emacs.d</code>, don&#8217;t mess with it. Your editor configuration file is now <code>~/.spacemacs</code>. <code>SPC f e d</code> to edit your config, and once it&#8217;s saved <code>SPC f e R</code> to reload it and begin using it.</p>
+</div>
+<div class="paragraph">
+<p>The space bar is now your leader key. It&#8217;s also sorta like the colon <code>:</code> to start an ex command from Normal mode&#8230;&#8203; it&#8217;s where pretty much all the functionality is accessible.</p>
+</div>
+<div class="paragraph">
+<p>The Spacemacs repository&#8217;s <code>DOCUMENTATION.org</code> file is much more comprehensive than the <code>README</code>. <a href="https://github.com/syl20bnr/spacemacs/blob/d555002308e7ce86161d3d7998e42cdcc5a9800d/doc/DOCUMENTATION.org">Here it is at the time of writing</a>; look for a more recent one&#8230;&#8203; <a href="http://ian.mccowan.space/2015/04/07/Spacemacs/">Ian McCowan&#8217;s post about creating Spacemacs</a> is a valuable intro as well, but beware that some of the key combos may have changed since it was written.</p>
+</div>
+<div class="paragraph">
+<p>Buffers don&#8217;t correspond to files&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The Meta key is still Escape? <a href="https://www.reddit.com/r/emacs/comments/333ywx/did_anyone_else_go_wow_after_trying_spacemacs/cqj97zy"><code>(setq mac-option-modifier 'meta)</code></a> or use the OSX package which puts it under the Option key.</p>
+</div>
+<div class="paragraph">
+<p>At the time of writing, <a href="https://github.com/railwaycat/homebrew-emacsmacport">the recommended port for OS X</a> has full mouse support, including scrolling — which is pixel-based, not character-based. Seeing that when I didn&#8217;t expect it was shocking enough that I felt the need to warn you.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_discovering_things">discovering things</h3>
+<div class="paragraph">
+<p>Learning how to learn is the first step to learning&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><code>SPC h d f</code> (i.e. "help describe function") will bring up another fuzzy-searchable list of functions, and when you select one it&#8217;ll pop open a buffer describing it and any keybindings for it.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC h d v</code> (i.e. "help describe variable") brings up a similar list for variables.</p>
+</div>
+<div class="paragraph">
+<p>Just type <code>SPC h d</code> and wait, a buffer appears with suggested completions. <code>SPC h d k</code> (i.e. "help describe key") prompts for another command sequence, and will pop up a buffer describing whatever it maps to. Try it on itself: type <code>SPC h d k</code>, and I see a prompt <code>Describe key (or click or menu item):</code> (I&#8217;m using the OS X GUI version; yours may be different) and then if I type <code>SPC h d k</code> again, the buffer opens explaining a little about the command <code>spacemacs/describe-key</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC ?</code> brings up a fuzzy-searchable list of functions, which you can run by hitting Enter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shells">shells</h3>
+<div class="paragraph">
+<p>I do a lot of work in a dedicated shell as well as my editor. To open a shell: <code>SPC :</code> is like hitting <code>:</code> to get into vim&#8217;s Ex command line, but includes a fuzzy-searcher for the command (<code>M-x</code> in normal Emacs). Then type "shell" or "ansi-term" or "eshell" <a href="https://www.masteringemacs.org/article/running-shells-in-emacs-overview">depending on what you want</a>. "ansi-term" will ask you what shell you want to run, so that&#8217;s how I get into zsh.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_finding_files_changing_directories">finding files, changing directories</h3>
+<div class="paragraph">
+<p><code>SPC f f</code> to bring up a [buffer? window?] which finds directories or files (not fuzzy-searching though; see below for that). It begins in the current working directory, but <code>BS</code> (that&#8217;s the backspace key, aka "regular delete", the one which goes left) in there will go up a directory. Change the selected entry with the arrow keys.</p>
+</div>
+<div class="paragraph">
+<p>Create new files with <code>SPC f f</code> as well: type out a path that doesn&#8217;t exist and hit enter, it&#8217;ll ask if you want to create an empty file there.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC p f</code> to fuzzy-search for files in the current project. In result list, <code>RET</code> opens the file, <code>C-c o</code> opens it in a new window (split).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/jaypei/emacs-neotree">NeoTree</a> is a NerdTree-like plugin; <code>SPC f t</code> opens the sidebar in the directory of the file you&#8217;re currently editing, and <code>SPC p t</code> opens into the current project&#8217;s root directory. <code>hjkl</code> to move around, <code>K</code> to move up directories, <code>RET</code> opens a file like you&#8217;d expect, vertical pipe <code>|</code> to open a file in a new vertical split, and hyphen <code>-</code> for a horizontal split.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_splits">splits</h3>
+<div class="paragraph">
+<p>Splits are called "windows". <code>SPC w /</code> to create a split/window to the right; <code>SPC w -</code> to create a split/window to the bottom. Navigating between windows can be done with <code>SPC w &lt;direction&gt;</code> or <code>C-w &lt;direction&gt;</code>, where direction is one of <code>hjkl</code> (and that <code>C-w</code> means to hold down control and then push <code>w</code>).</p>
+</div>
+<div class="paragraph">
+<p>Once, something I did ended up removing all my splits, as if I had ran <code>:only</code>. Turns out restoring my splits is just a <code>SPC w u</code> away (thanks <a href="http://emacswiki.org/emacs/WinnerMode">winner mode</a>).</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve been using <a href="https://github.com/moll/vim-bbye">vim-bbye</a> to be able to kill a buffer (aka close a file) without losing the split that the buffer&#8217;s in; in Spacemacs use <code>SPC b d</code> ("buffer delete") to <code>kill-this-buffer</code>. Closing a window can be done with <code>:q</code> like a good little vim emulation, or <code>SPC w c</code> ("window close").</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_line_wrapping">line wrapping</h3>
+<div class="paragraph">
+<p>&#8230;&#8203;is called line truncation. <code>SPC t l</code> to toggle line truncation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visible_whitespace">visible whitespace</h3>
+<div class="paragraph">
+<p>All whitespace in the current window can be made visible or invisible with the <code>SPC t w</code> combo. Toggle for everything with <code>SPC t C-w</code> (that&#8217;s space, then the letter <code>t</code>, then hold down control and press the letter <code>w</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_key_mappings">key mappings</h3>
+<div class="paragraph">
+<p>Haven&#8217;t really gotten that far yet&#8230;&#8203; turns out everything&#8217;s already got a space-based shortcut, which I&#8217;ve been able to put up with&#8230;&#8203;</p>
+</div>
+<div class="sect3">
+<h4 id="_chords">chords</h4>
+<div class="paragraph">
+<p>I&#8217;m now very accustomed to having both <code>jk</code> and <code>kj</code> in quick succession change to Normal node from Insert mode, but Emacs doesn&#8217;t do the "wait and see if this will be a combo" thing that vim does. However Spacemacs includes the <a href="https://github.com/syl20bnr/evil-escape">evil-escape</a> package, so I just needed to add <code>(setq-default evil-escape-key-sequence "jk")</code> to the <code>dotspacemacs/layers</code> function.</p>
+</div>
+<div class="paragraph">
+<p>For more customizable combos than just exiting insert mode, there&#8217;s a plugin called "keychord.el" which I haven&#8217;t yet looked at.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_git_via_magit">git, via Magit</h3>
+<div class="paragraph">
+<p><a href="https://github.com/magit/magit">Magit</a> is an Emacs interface to Git. It sounds like it doesn&#8217;t <strong>hide</strong> any of the complexity of Git, so if you&#8217;re not already comfortable with it on the command line, Magit probably isn&#8217;t going to be helpful&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>See a diff of the current file with <code>SPC g d</code>.</p>
+</li>
+<li>
+<p>Look at the overall project status with <code>SPC g s</code>, then:</p>
+</li>
+<li>
+<p>open/close diffs of files in there with <code>TAB</code></p>
+</li>
+<li>
+<p><code>s</code> will stage a file (or hunk) and <code>u</code> will unstage</p>
+</li>
+<li>
+<p><code>c</code> to bring up the commit menu (you can do interactive-type stuff here)</p>
+</li>
+<li>
+<p><code>?</code> to show you what else you can do (pulling, pushing, tagging, reverting, bisecting, oh my)</p>
+</li>
+<li>
+<p>Once you&#8217;ve settled on a commit message, <strong>actually</strong> commit by hitting <code>C-c C-c</code> (yes that&#8217;s control-and-lowercase-c, twice in a row; is there a smoother way to do that?)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Close these Magit windows with a bare press of <code>q</code>.</p>
+</div>
+<div class="paragraph">
+<p>Some potentially helpful links: <a href="https://www.masteringemacs.org/article/introduction-magit-emacs-mode-git">An introduction to Magit, an Emacs mode for Git</a>, <a href="https://github.com/magit/magit/blob/a83f9303be806dd2e793cd7207926f0fc8dd8146/Documentation/magit.org">the Magit user manual</a> (look for a more up-to-date version!).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__tabs">"tabs"</h3>
+<div class="paragraph">
+<p><a href="https://github.com/nex3/perspective-el">Perspective</a> "provides tagged workspaces". <a href="https://github.com/alxndr/dotfiles/commit/ff925be53193f0c820c82f116f3ec4dea55e8a0d">Add it to <code>dotspacemacs-configuration-layers</code></a>, then <code>SPC L s</code> to switch between workspaces or create a new one; <a href="https://github.com/syl20bnr/spacemacs/blob/6eab954afecb4af81aa29916deaa5c1cd332bcb9/layers/%2Bwindow-management/perspectives/README.org#key-bindings">rest of the bindings are here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_evil_surround">evil-surround</h3>
+<div class="paragraph">
+<p><a href="https://github.com/timcharper/evil-surround">Evil-surround</a> is like the venerable tpope&#8217;s <a href="https://github.com/tpope/vim-surround">vim-surround</a>. The bindings are the same; e.g. inside something in parens, <code>cs([</code> will change the parens to square brackets with a space for padding, <code>cs(]</code> will change them to square brackets without the space.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_thanks_where_thanks_is_due">thanks where thanks is due</h3>
+<div class="paragraph">
+<p>Some more people who, knowingly or unknowingly, have helped me out learning all this: <a href="https://news.ycombinator.com/item?id=9395785">tuhdo</a>, svarlet (in the elixir-lang Slack)</p>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/174307?v=3)"><span class="hidden">Alexander Quine's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Alexander Quine</a></h4>
+
+                <div class="author-meta">
+                    <span class="author-location icon-location">Oakland, CA</span>
+                    <span class="author-link icon-link"><a href="http://eleven-twelve.net">http://eleven-twelve.net</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=getting%20started%20with%20Spacemacs&amp;url=https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'drwxrxrx'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alxndr.github.io/blog">alxndr&#x27;s blog</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37422155-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

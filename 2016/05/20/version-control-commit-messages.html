@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>version control commit messages</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alxndr.github.io/blog/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html" />
+    
+    <meta property="og:site_name" content="alxndr&#x27;s blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="version control commit messages" />
+    <meta property="og:description" content="Here is how I like to structure my Git branches and commit messages. philosophy First, some reasons behind my madness&amp;#8230;&amp;#8203; My primary motivation with caring so much about commit messages is the value I&amp;#8217;ve gotten from..." />
+    <meta property="og:url" content="https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html" />
+    <meta property="article:published_time" content="2016-05-20T07:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-05-21T19:12:12.760Z" />
+    <meta property="article:tag" content="standards" />
+    <meta property="article:tag" content="communication" />
+    <meta property="article:tag" content="version control" />
+    <meta property="article:tag" content="stage this hunk" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="version control commit messages" />
+    <meta name="twitter:description" content="Here is how I like to structure my Git branches and commit messages. philosophy First, some reasons behind my madness&amp;#8230;&amp;#8203; My primary motivation with caring so much about commit messages is the value I&amp;#8217;ve gotten from..." />
+    <meta name="twitter:url" content="https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "alxndr&#x27;s blog",
+    "author": {
+        "@type": "Person",
+        "name": "Alexander Quine",
+        "image": "https://avatars.githubusercontent.com/u/174307?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://eleven-twelve.net"
+    },
+    "headline": "version control commit messages",
+    "url": "https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html",
+    "datePublished": "2016-05-20T07:00:00.000Z",
+    "dateModified": "2016-05-21T19:12:12.760Z",
+    "keywords": "standards,  communication,  version control,  stage this hunk",
+    "description": "Here is how I like to structure my Git branches and commit messages. philosophy First, some reasons behind my madness&amp;#8230;&amp;#8203; My primary motivation with caring so much about commit messages is the value I&amp;#8217;ve gotten from..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-standards tag-communication tag-version-control tag-stage-this-hunk">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alxndr.github.io/blog">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alxndr.github.io/blog/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-standards tag-communication tag-version-control tag-stage-this-hunk">
+
+        <header class="post-header">
+            <h1 class="post-title">version control commit messages</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-05-20">20 May 2016</time>  on <a href="https://alxndr.github.io/blog/tag/standards">standards</a>, <a href="https://alxndr.github.io/blog/tag/communication"> communication</a>, <a href="https://alxndr.github.io/blog/tag/version-control"> version control</a>, <a href="https://alxndr.github.io/blog/tag/stage-this-hunk"> stage this hunk</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is how I like to structure my Git branches and commit messages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_philosophy">philosophy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, some reasons behind my madness&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>My primary motivation with caring so much about commit messages is the value I&#8217;ve gotten from referencing well-written commits that others have created. Git comes with <a href="https://git-scm.com/docs/git-bisect">a handy way of searching through history for a commit which introduced some behavior</a>, and once you&#8217;ve identified which commit added a bug, it&#8217;s <em>extremely</em> helpful when the commit is only changing one (logical) thing and has a thorough explanation of <em>why</em> it&#8217;s being changed.</p>
+</div>
+<div class="paragraph">
+<p>Having experienced that several times, I resolved to pay it forward by putting thought into how I create commit messages. Not only will the developers who maintain my code after me be grateful, it benefits myself as well when that person maintaining my two-year-old code happens to be <em>me</em> and I&#8217;ve since completely forgotten the context and inspiration for a particular code change.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_atomic_commits">atomic commits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As I hinted in the above section, I like individual commits to stand on their own, with an explanatory commit message.</p>
+</div>
+<div class="paragraph">
+<p>I like to keep my code tidy, which can mean I&#8217;m making a commit just for something "trivial" like modifying whitespace, or changing a variable&#8217;s name. A change like that will be its own commit, with a message that can be as simple as "tweaking whitespace" or "renaming variable". This allows me to verify that I didn&#8217;t accidentally modify something unintended while doing what should be a minor refactor.</p>
+</div>
+<div class="paragraph">
+<p>The most useful tool I&#8217;ve found for encouraging me to create small commits is the <code>--patch</code> flag for <code>git add</code>. It is related to the <code>--interactive</code> feature, which lets you "Add modified contents in the working tree interactively to the index" [<a href="https://git-scm.com/docs/git-add">the manpage</a>]. The <code>--patch</code> feature pares down the full interactive mode into a series of prompts for the unstaged changes in your repository (or a subset of files, if you specify a path(s)). It asks whether or not to add each chunk of local changes to the commit-in-progress. If a chunk of changes includes two conceptually unrelated modifications, it lets you split the chunk into smaller ones, and then asks what you&#8217;d like to do for each smaller chunk. Furthermore, if there are unrelated changes within a single line, it can&#8217;t split the concepts apart for you, but the "manually edit the current hunk" feature will let you (though it can be a little tricky).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git_flow_esque_branching">git-flow-esque branching</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It can be difficult to identify the larger goal behind many small commits. Thus, I&#8217;m a fan of feature branches to group them together and identify the motivation behind all these commits.</p>
+</div>
+<div class="paragraph">
+<p>On my personal projects I&#8217;ve followed something close to <a href="http://nvie.com/posts/a-successful-git-branching-model/">the "git flow" pattern of branches</a>, in that the <code>master</code> branch should always be what&#8217;s on production, but I haven&#8217;t been using a <code>develop</code> branch. At work, with more collaborators and more development happening simultaneously, we use a <code>develop</code> branch to collect what&#8217;s ready to be released next (which often will only be one branch/ticket anyway).</p>
+</div>
+<div class="paragraph">
+<p>The GitHub page for an individual commit includes a link to the pull request via which the commit made it into the <code>master</code> branch. This lets you figure out the reason for a commit when you&#8217;ve identified that it&#8217;s responsible for a bug.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commit_messages">commit messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Git software and GitHub site display commit messages in certain ways, so I like to structure my commit messages to work with them. When showing many commits, they tend to show just the first line of each commit message, so I use that line to be a summary of the commit as a whole. Some things truncate this summary at 72 characters, so keeping the summary short is ideal; that said, I try not to sacrifice the intelligibility of the summary in order to fit it into that limit.</p>
+</div>
+<div class="paragraph">
+<p>After the summary line, you&#8217;ve got all the space you need to express yourself (<a href="https://github.com/alxndr/lyriki/commit/a01056c21db5619e13d282d6e2b524857411b443">e.g. with a paragraph!</a>). GitHub will render <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> in the commit message, so don&#8217;t be afraid to add <a href="https://github.com/alxndr/lyrem-ipsum/commit/b72bf9683ed40824e29c4c063100c37172aa5557">a bulleted list of things you&#8217;re addressing</a> or any <a href="https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html">links to other code (read this blog post if you ever link directly to code!!)</a>, documentation, StackOverflow, or other references you used in the process of changing the code.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re using a project management tool or bug tracker, include a reference to the ticket/story/bug in each commit. This could be as simple as "#123" where the ticket/bug ID is 123, but GitHub will think that refers to an issue or pull request in the current repository, and will turn it into a link. Therefore:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you&#8217;re not using GitHub issues as your main issue/bug tracker, it may be more helpful to include the full URL to the ticket/bug.</p>
+</li>
+<li>
+<p>If you are using GitHub issues as your issue tracker, in addition to having "#123" turn into a link to the issue/PR, note that <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">GitHub can close an issue when a commit is merged</a> if the commit message includes a phrase like "resolves #123" (<a href="https://github.com/alxndr/lyriki/commit/cf3dc401ca9b2715474a7ef3ad77cbe85e31fb66">e.g.</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A good habit I&#8217;ve built is to never use the <code>--message</code> (aka <code>-m</code>) flag of <code>git add</code> (which allows you to specify a commit message on the command line), and instead always use the <code>--verbose</code> (aka <code>-v</code>) flag of <code>git add</code>. The <code>--message</code> feature seems to encourage you to write a one-line commit message, whereas the <code>--verbose</code> flag will open up your favorite text editor, encouraging you to expound upon your changes. From <a href="https://git-scm.com/docs/git-add">the manpage</a>, <strong>emphasis added</strong>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>"Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template <strong>to help the user describe the commit by reminding what changes the commit has</strong>. [&#8230;&#8203;] This diff will not be a part of the commit message."</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>You can further encourage yourself to elucidate in commit messages by creating a custom template for messages. The branching strategy I use means that I can use a <a href="https://git-scm.com/docs/githooks">githook</a> to build <a href="https://github.com/alxndr/dotfiles/blob/619554a025950191510794d739b9e21cd19b2b8e/git-hooks/prepare-commit-msg">a git commit template which extracts a meaningful ticket identifier from the branch name</a>.
+You could also <a href="https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template">create a "global" template using the <code>commit.template</code> option</a> of <a href="https://git-scm.com/docs/git-config"><code>git config</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary">summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>git add --patch</code> to create small and atomic commits</p>
+</li>
+<li>
+<p><code>git commit --verbose</code> to thoroughly explain your changes (never <code>-m "commit message"</code>)</p>
+</li>
+<li>
+<p>this makes <code>git bisect</code> very powerful for code "archaeology"</p>
+</li>
+<li>
+<p>Future You will thank Past You</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/174307?v=3)"><span class="hidden">Alexander Quine's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Alexander Quine</a></h4>
+
+                <div class="author-meta">
+                    <span class="author-location icon-location">Oakland, CA</span>
+                    <span class="author-link icon-link"><a href="http://eleven-twelve.net">http://eleven-twelve.net</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=version%20control%20commit%20messages&amp;url=https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'drwxrxrx'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alxndr.github.io/blog">alxndr&#x27;s blog</a> &copy; 2016</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37422155-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

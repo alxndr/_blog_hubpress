@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>ElixirConf US 2015 notes</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alxndr.github.io/blog/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html" />
+    
+    <meta property="og:site_name" content="alxndr&#x27;s blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ElixirConf US 2015 notes" />
+    <meta property="og:description" content="ElixirConf US 2015 was October 2–3 in Austin, Texas. Bruce Tate: The Pendulum tech swings back and forth between approaches to problems. batch vs interactive&amp;#8230;&amp;#8203; request/response not quite enough&amp;#8230;&amp;#8203; appearance of MVC pattern for..." />
+    <meta property="og:url" content="https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html" />
+    <meta property="article:published_time" content="2015-10-02T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-10-03T21:50:16.606Z" />
+    <meta property="article:tag" content="elixirconf" />
+    <meta property="article:tag" content="elixir-lang" />
+    <meta property="article:tag" content="tech conference" />
+    <meta property="article:tag" content="Austin TX" />
+    <meta property="article:tag" content="" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ElixirConf US 2015 notes" />
+    <meta name="twitter:description" content="ElixirConf US 2015 was October 2–3 in Austin, Texas. Bruce Tate: The Pendulum tech swings back and forth between approaches to problems. batch vs interactive&amp;#8230;&amp;#8203; request/response not quite enough&amp;#8230;&amp;#8203; appearance of MVC pattern for..." />
+    <meta name="twitter:url" content="https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "alxndr&#x27;s blog",
+    "author": {
+        "@type": "Person",
+        "name": "Alexander Quine",
+        "image": "https://avatars.githubusercontent.com/u/174307?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://eleven-twelve.net"
+    },
+    "headline": "ElixirConf US 2015 notes",
+    "url": "https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html",
+    "datePublished": "2015-10-02T05:00:00.000Z",
+    "dateModified": "2015-10-03T21:50:16.606Z",
+    "keywords": "elixirconf,  elixir-lang,  tech conference,  Austin TX, ",
+    "description": "ElixirConf US 2015 was October 2–3 in Austin, Texas. Bruce Tate: The Pendulum tech swings back and forth between approaches to problems. batch vs interactive&amp;#8230;&amp;#8203; request/response not quite enough&amp;#8230;&amp;#8203; appearance of MVC pattern for..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-elixirconf tag-elixir-lang tag-tech-conference tag-Austin-TX tag-">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alxndr.github.io/blog">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alxndr.github.io/blog/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-elixirconf tag-elixir-lang tag-tech-conference tag-Austin-TX tag-">
+
+        <header class="post-header">
+            <h1 class="post-title">ElixirConf US 2015 notes</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-10-02">02 October 2015</time>  on <a href="https://alxndr.github.io/blog/tag/elixirconf">elixirconf</a>, <a href="https://alxndr.github.io/blog/tag/elixir-lang"> elixir-lang</a>, <a href="https://alxndr.github.io/blog/tag/tech-conference"> tech conference</a>, <a href="https://alxndr.github.io/blog/tag/Austin-TX"> Austin TX</a>, <a href="https://alxndr.github.io/blog/tag/"></a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://elixirconf.com">ElixirConf US 2015</a> was October 2–3 in Austin, Texas.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruce_tate_the_pendulum">Bruce Tate: The Pendulum</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>tech swings back and forth between approaches to problems. batch vs interactive&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>request/response not quite enough&#8230;&#8203; appearance of MVC pattern for local software</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GUIs&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>scaling on the web follows the same pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>concurrency/isolation are key for future&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>elixir!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chris_mccord_what_s_next_for_phoenix">Chris McCord: What&#8217;s Next for Phoenix</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://pragprog.com/book/phoenix/programming-phoenix">The Book is out</a>!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Phoenix beyond browser: Channel clients in JS, Swift, ObjC, C#, Java&#8230;&#8203;</p>
+</li>
+<li>
+<p>planned for v1.1: gettext, Channel presence</p>
+<div class="ulist">
+<ul>
+<li>
+<p>gettext internationalization was meant for 1.0, but was trickier than expected</p>
+</li>
+<li>
+<p>channel presence is very much non-trivial on distributed nodes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>look at <a href="https://facebook.github.io/graphql/">GraphQL</a> for ideas</p>
+<div class="ulist">
+<ul>
+<li>
+<p>support in views? so instead of having to e.g. <code>preload: [user: [:profile]]</code> etc when fetching stuff in your controller</p>
+</li>
+<li>
+<p>can help avoid "controller mayhem" (proliferation of routes for specific data shapes, versioning)</p>
+</li>
+<li>
+<p>specs are defined in the clients, not server&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>but the server will still do validations, deprecations?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>"server side views as just another GraphQL client"</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>js clients as well as backend template construction could both use it</p>
+</li>
+<li>
+<p>way way down the line, maybe "virtual DOM on the server"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>why not extend Ecto to do this sort of thing? not out of the question.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paul_shoenfelder_release_management_with_exrm_and_conform">Paul Shoenfelder: Release Management with ExRM and Conform</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>OTP apps: well-defined structure, explicit dependencies, useful metadata</p>
+</li>
+<li>
+<p>non-release way: dev deps in prod, can&#8217;t manage multiple apps, need to build things, can&#8217;t cross-compile&#8230;&#8203;</p>
+</li>
+<li>
+<p>what&#8217;s a release? versioned OTP app dependencies; ERTS; release metadata; configuration; scripts to manage; packaged as tarball</p>
+</li>
+<li>
+<p>what&#8217;s ExRM? extends Relx (Erlang&#8217;s release tool); provides mix tasks (with lots of hooks), appup generation, intelligent defaults</p>
+</li>
+<li>
+<p>configuration is compiled into static info in release (e.g. no dynamic config, can&#8217;t use get_env)</p>
+</li>
+<li>
+<p>schema allows for data transformations (and validations?)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alexander_songe_crdts_datatypes_for_the_apocalypse">Alexander Songe: CRDTs: Datatypes for the Apocalypse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"conflict-free datatype"&#8230;&#8203; how to have distributed complex values</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CRDTs are tricky; not many usable libraries</p>
+<div class="ulist">
+<ul>
+<li>
+<p>not a lot of code, but it has to be precise or you&#8217;ll corrupt source data</p>
+</li>
+<li>
+<p>need to test a lot, 100% code coverage doesn&#8217;t count, need to find edge cases</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>basis:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>log-based: read over logs, replay things</p>
+</li>
+<li>
+<p>state-based: easier to reason about, but get big (&amp; therefore hard to manage)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>updates to mutate state</p>
+<div class="ulist">
+<ul>
+<li>
+<p>updates are commutative, associative, idempotent</p>
+</li>
+<li>
+<p>&#8230;&#8203;&amp; therefore can be sent over network, will be eventually consistent</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>as long as everyone eventually communicates</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>flags, counters, sets, registers, maps, graphs, documents (huge&#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>examples</p>
+<div class="ulist">
+<ul>
+<li>
+<p>G-counter: counts up only. distributes values but takes max, so ensures eventually consistent. (can&#8217;t decrement&#8230;&#8203; have another G-counter for decrements.)</p>
+</li>
+<li>
+<p>G-set: adds items to a set. similar problem for subtracting; solved with ORSWOT operation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(similar but not quite the same as a vector clock)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>wider use of CRDTs&#8230;&#8203; not so much</p>
+<div class="ulist">
+<ul>
+<li>
+<p>would be super useful in rich clients</p>
+</li>
+<li>
+<p><a href="https://github.com/asonge/loom">Loom</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>wishlist</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Gossip protocol independent of project</p>
+</li>
+<li>
+<p>external representation</p>
+</li>
+<li>
+<p>language &amp; library support</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alan_gardner_phoenix_and_elm">Alan Gardner: Phoenix and Elm</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Elm has Model Update View pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update looks somewhat similar to message receiving&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Elm&#8217;s Signals: single value that changes over time&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this is how Elm "changes state"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Elm Architecture"</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fold</code> is where non-pure things can happen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>interop with outside world (Ports?)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>starting up the app, initial state takes <code>inputs</code></p>
+</li>
+<li>
+<p><code>init</code> and <code>update</code> need to account for <code>Effects</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>hooking Elm up to Phoenix&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>could run separately, old standard way of doing it&#8230;&#8203;</p>
+</li>
+<li>
+<p>could compile and add as vendored JS&#8230;&#8203;</p>
+</li>
+<li>
+<p>but you <strong>could embed Elm app into Phoenix</strong> and use brunch to compile</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>web/elm/</code> (not in <code>static/</code>)</p>
+</li>
+<li>
+<p><a href="https://github.com/madsflensted/elm-brunch"><code>elm-brunch</code> plugin</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>actually start it up with some regular old <code>app.js</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Elm Ports&#8230;&#8203; how outside world can interact with Elm</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(not the same as erlang ports)</p>
+</li>
+<li>
+<p>takes a JS data structure &amp; constructs Elm-ish signature for it</p>
+</li>
+<li>
+<p>need to explicitly map incoming data to (curried) <code>Action</code> s</p>
+<div class="ulist">
+<ul>
+<li>
+<p>and that becomes one of the <code>inputs</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bryan_joseph_elixir_beyond_the_browser">Bryan Joseph: Elixir Beyond the Browser</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/bryanjos/elixirscript">ElixirScript</a>!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>goals</p>
+<div class="ulist">
+<ul>
+<li>
+<p>full or subset of Elixir into ES2015</p>
+</li>
+<li>
+<p>complement elixir backends*</p>
+</li>
+<li>
+<p>idiomatic Elixir</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ESTree</p>
+<div class="ulist">
+<ul>
+<li>
+<p>including a thing that builds JS from Elixir code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ElixirScript: made of Compiler (in Elixir) and Runtime (in JS)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Compiler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>value translation uses <code>Symbol</code>, custom things for binaries</p>
+</li>
+<li>
+<p>use <code>Patterns</code> for "multiple" function defs/guards/destructuring params</p>
+</li>
+<li>
+<p>uses JS modules (but scope isn&#8217;t same as in Elixir&#8230;&#8203;)</p>
+</li>
+<li>
+<p>some current limitations: scopes, <code>quote</code>, <code>::</code>, pattern-matching <code>&lt;&lt; &gt;&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Runtime</p>
+<div class="ulist">
+<ul>
+<li>
+<p>most of the stdlib defined here</p>
+</li>
+<li>
+<p>also some features for compiling (e.g. pattern matching)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>how to "embrace the environment"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>interop with JS</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>demos&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>reimplementation of React API!</p>
+</li>
+<li>
+<p>running in an iOS app!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jessica_kerr_elixir_should_take_over_the_world">Jessica Kerr: Elixir Should Take Over the World</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>the March of Scientific Progress is presented as viewed through rose-tinted glasses&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>The Structure of Scientific Revolutions</em> by Thomas S Kuhn, read it&#8230;&#8203; coined "paradigm"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Ideas are shared. Ideas keep coming. Ideas are shared."</p>
+<div class="ulist">
+<ul>
+<li>
+<p>when the groundwork is laid for a "new idea", many people will independently have it&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>good recent talks at StrangeLoop 2015:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.slideshare.net/CamilleFournier1/hopelessness-and-confidence-in-distributed-systems-design">Camille Fournier&#8217;s Hopelessness and Confidence in Distributed Systems Design</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=H0i_bXKwujQ">Caitie McCaffrey&#8217;s Building Scalable Stateful Services</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>circular dependencies are painful; neither pure functional nor object-oriented approaches are quite right&#8230;&#8203;</p>
+</li>
+<li>
+<p>the way to success is more failures, and learn from them. "failure is the common case"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>if you learn from the failures, they become part of the eventual succes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>what&#8217;s next? (opinions&#8230;&#8203;)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>after agile? lean. learn, build, measure, learn, build&#8230;&#8203; (in theory that&#8217;s the scientific method, but scientists like proving their own points)</p>
+</li>
+<li>
+<p>after no estimates? time ranges. wider range means more unknowns&#8230;&#8203; at the end, "is it still worth it to do more of this?"</p>
+</li>
+<li>
+<p>after scientific method? Brené Brown looks at human systems, "grounded theory" data, categories, theory, data, categories&#8230;&#8203;</p>
+</li>
+<li>
+<p>after MVC? Elm architecture&#8230;&#8203;</p>
+</li>
+<li>
+<p>after REST? GraphQL&#8230;&#8203; maybe with backend-sourced events, channels&#8230;&#8203;</p>
+</li>
+<li>
+<p>after microservices? better organized microservices.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;microservices can easily end up circularly-dependent.</p>
+</li>
+<li>
+<p>while working on your new thing, it&#8217;ll end up being more complex than you think, but if you wrapped everything in a nice API then from the outside world it&#8217;ll look sane</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>it takes lots of people (especially skill levels) to make progress</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Science advances one funeral at a time" —Max Planck</p>
+</li>
+<li>
+<p>"we need people who don&#8217;t think like us"</p>
+</li>
+<li>
+<p>smooth the stairs into a ramp!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>big moustachioed Banana for Jim!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jos_valim_state_of_the_language">José Valim: State of the Language</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>what&#8217;s coming: extensibility: web infrastructure; embedded systems; financial/video platforms; GUIs</p>
+</li>
+<li>
+<p>just out: v1.1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>handy new functions!</p>
+</li>
+<li>
+<p>ExUnit: can capture calls to <code>Logger</code>, will print on failures; <code>@tag :not_implemented</code>; line numbers in doctests fixed</p>
+</li>
+<li>
+<p>Mix: <code>profile.fprof</code></p>
+</li>
+<li>
+<p><code>@callback</code> instead of <code>defcallback</code>; <code>@typedoc</code></p>
+</li>
+<li>
+<p>deprecations&#8230;&#8203; <code>Access</code> protocol (implementation became a bottleneck when protocols not compiled)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>v1.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>gonna be Erlang &gt;=18 only</p>
+</li>
+<li>
+<p>multi-aliases <code>alias MyApp.{Foo, Bar, Baz}</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>v1.3? just ideas here&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>GenRouter</code>: separate process, multi-in/multi-out</p>
+<div class="ulist">
+<ul>
+<li>
+<p>adds supervision to stream-like things</p>
+</li>
+<li>
+<p>source-driven, provides backpressure by default</p>
+</li>
+<li>
+<p>inspired by Akka Streams</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lennart_frid_n_virtually_instructional">Lennart Fridén: Virtually Instructional</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>can compile elixir into Erlantg assembly: <code>ERL_COMPILER_OPTIONS="'S'" elixirc file.ex</code></p>
+</li>
+<li>
+<p>but Erlang functions get transformed by BEAM&#8230;&#8203; so we&#8217;d need to look at a running system</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>:erts_debug.df MyApp</code> creates a .</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the function names end with their params' type signature&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>BEAM is register-based, unlike JAM, which was stack-based</p>
+<div class="ulist">
+<ul>
+<li>
+<p>bunch of functions will say how many registers are "active" (shouldn&#8217;t be GC&#8217;d?)</p>
+</li>
+<li>
+<p>different types of registers&#8230;&#8203; general, float, temporary, local vars</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>BEAM&#8217;s "assembly" is weird!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steven_proctor_beaming_with_joy">Steven Proctor: BEAMing with Joy</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>the Scheduler&#8230;&#8203; is awesome. one per CPU. expensive to start up, so they stay up</p>
+</li>
+<li>
+<p>monitoring</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>observer.start()</code></p>
+</li>
+<li>
+<p>erlang&#8217;s <code>c</code> module if you don&#8217;t have a GUI&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>c.regs/0</code> is all registered processes/ports</p>
+</li>
+<li>
+<p><code>c.i/0</code>, bunch of other info&#8230;&#8203;</p>
+</li>
+<li>
+<p><code>c.i/3</code> pass in your process info and get info about just that process</p>
+</li>
+<li>
+<p><code>:c.bt/1</code> to look at backtrace of a <code>:c.pid/3</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>types&#8230;&#8203; strongly-held small set of types, also dynamic if you want it</p>
+<div class="ulist">
+<ul>
+<li>
+<p>elixir: optional typing using <code>@spec</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://user.it.uu.se/~tobiasl/publications/typer.pdf">TypEr (pdf)</a> adds type annotations to source code?</p>
+</li>
+<li>
+<p>testing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Property testing: QuickCheck (not free), also PropEr</p>
+</li>
+<li>
+<p>Concurrency testing: <a href="https://github.com/parapluu/Concuerror">Concuerror</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nick_demonner_otp_has_done_it">Nick DeMonner: OTP Has Done It</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>your technical problems aren&#8217;t unique&#8230;&#8203; "we need to get over our reinvention addiction"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>don&#8217;t keep using abstractions that aren&#8217;t useful!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>supervisors</p>
+<div class="ulist">
+<ul>
+<li>
+<p>children are stopped in reverse of start order</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>(intro to all the <code>gen_*</code> things)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ben_wilson_streams_external_services_and_otp">Ben Wilson: Streams, External Services, and OTP</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>StreamRunner</code> by James Fish</p>
+<div class="ulist">
+<ul>
+<li>
+<p>makes an enumerable thing out of external service</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>but what about backpressure? <code>StreamRouter</code></p>
+</li>
+<li>
+<p><code>Collectable</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_james_smith_interoperability_in_elixir">James Smith: Interoperability in Elixir</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>can interop using JInterface, NIFs, and&#8230;&#8203;</p>
+</li>
+<li>
+<p>ports</p>
+<div class="ulist">
+<ul>
+<li>
+<p>wraps an external thing, passes messages to it, passes messages out to the owning erlang process</p>
+</li>
+<li>
+<p><code>Port.open/2</code>, tons of options, docs pretty good</p>
+</li>
+<li>
+<p>ETF External Term Format to convert any data into a binary format <code>data == :erlang_binary_to_term(:erlang.term_to_binary(data))</code></p>
+</li>
+<li>
+<p>can use stdin or also arbitrary file descriptors</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drew_olson_composable_queries_with_ecto">Drew Olson: Composable Queries with Ecto</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>separate construction of query from execution&#8230;&#8203; <code>query = from(&#8230;&#8203;); Repo.all(query)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"the query itself is data" "very explicitly decoupled from [the Repo]"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Query Expression syntax&#8230;&#8203; pull the keywords out into functions. <code>query = where(Post, [p], p.published == true)</code></p>
+</li>
+<li>
+<p>both syntaxes are composable! <code>query2 = from(c in query, where: c.votes &gt; 5)</code></p>
+</li>
+<li>
+<p>"Query Pipelines"&#8230;&#8203; inventing vocab for wrapping query expressions in nicely-named functions, then piping them together</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"query source" the data source, e.g. a whole table</p>
+</li>
+<li>
+<p>transformation modifies an existing query</p>
+</li>
+<li>
+<p>sink executes query, returns result</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/174307?v=3)"><span class="hidden">Alexander Quine's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Alexander Quine</a></h4>
+
+                <div class="author-meta">
+                    <span class="author-location icon-location">Oakland, CA</span>
+                    <span class="author-link icon-link"><a href="http://eleven-twelve.net">http://eleven-twelve.net</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=ElixirConf%20US%202015%20notes&amp;url=https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'drwxrxrx'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alxndr.github.io/blog">alxndr&#x27;s blog</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37422155-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

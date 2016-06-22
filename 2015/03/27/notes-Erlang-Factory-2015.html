@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>notes: Erlang Factory 2015</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//alxndr.github.io/blog/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html" />
+    
+    <meta property="og:site_name" content="alxndr&#x27;s blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="notes: Erlang Factory 2015" />
+    <meta property="og:description" content="José: What Elixir Is About not the syntax Extensibility &quot;Data type pm&amp;#8217;phism&quot; not possible in erlang processes: send a message. sorta-pm&amp;#8217;phic&amp;#8230;&amp;#8203; (sorta duck-typed in that it accepts a message) modules: calling a function&amp;#8230;..." />
+    <meta property="og:url" content="https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html" />
+    <meta property="article:published_time" content="2015-03-27T07:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-08-16T20:20:54.083Z" />
+    <meta property="article:tag" content="notes" />
+    <meta property="article:tag" content="erlang factory" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="notes: Erlang Factory 2015" />
+    <meta name="twitter:description" content="José: What Elixir Is About not the syntax Extensibility &quot;Data type pm&amp;#8217;phism&quot; not possible in erlang processes: send a message. sorta-pm&amp;#8217;phic&amp;#8230;&amp;#8203; (sorta duck-typed in that it accepts a message) modules: calling a function&amp;#8230;..." />
+    <meta name="twitter:url" content="https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "alxndr&#x27;s blog",
+    "author": {
+        "@type": "Person",
+        "name": "Alexander Quine",
+        "image": "https://avatars.githubusercontent.com/u/174307?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://eleven-twelve.net"
+    },
+    "headline": "notes: Erlang Factory 2015",
+    "url": "https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html",
+    "datePublished": "2015-03-27T07:00:00.000Z",
+    "dateModified": "2015-08-16T20:20:54.083Z",
+    "keywords": "notes,  erlang factory",
+    "description": "José: What Elixir Is About not the syntax Extensibility &quot;Data type pm&amp;#8217;phism&quot; not possible in erlang processes: send a message. sorta-pm&amp;#8217;phic&amp;#8230;&amp;#8203; (sorta duck-typed in that it accepts a message) modules: calling a function&amp;#8230;..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-notes tag-erlang-factory">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://alxndr.github.io/blog">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://alxndr.github.io/blog/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-notes tag-erlang-factory">
+
+        <header class="post-header">
+            <h1 class="post-title">notes: Erlang Factory 2015</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-03-27">27 March 2015</time>  on <a href="https://alxndr.github.io/blog/tag/notes">notes</a>, <a href="https://alxndr.github.io/blog/tag/erlang-factory"> erlang factory</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="sect1">
+<h2 id="_jos_what_elixir_is_about">José: What Elixir Is About</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>not the syntax</p>
+</li>
+<li>
+<p>Extensibility</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Data type pm&#8217;phism" not possible in erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>processes: send a message. sorta-pm&#8217;phic&#8230;&#8203; (sorta duck-typed in that it accepts a message)</p>
+</li>
+<li>
+<p>modules: calling a function&#8230;&#8203; same. obey a contract</p>
+</li>
+<li>
+<p>data: not so much. but in Elixir: <code>defprotocol</code>! then <code>defimpl Module, for: Type</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Elixir&#8217;s Enumerable protocol&#8230;&#8203; stream&#8230;&#8203; so anything in the future could be lazy-parsed</p>
+</li>
+<li>
+<p>Elixir&#8217;s Inspect protocol&#8230;&#8203; this is how everything is nice and readable in iex</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Productivity</p>
+<div class="ulist">
+<ul>
+<li>
+<p>mix</p>
+</li>
+<li>
+<p>hex&#8230;&#8203; some integration with rebar in the future?</p>
+</li>
+<li>
+<p>docs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Compatibility</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OTP: GenServer, GenEvent are untouched</p>
+<div class="ulist">
+<ul>
+<li>
+<p>but because GenServer is generic, hard to understand what a specific one is doing. could be just computing, could be just holding state&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>just computing? use Elixir Task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this revealed patterns: async/await, distributed work w/Task.Supervisor</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>just holding state? use Elixir Agent. provides a nice state API</p>
+<div class="ulist">
+<ul>
+<li>
+<p>which means can implement some determinism&#8230;&#8203; Agent.Lattices&#8230;&#8203; data replication with guarantees</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Parallelism</p>
+<div class="ulist">
+<ul>
+<li>
+<p>laziness</p>
+</li>
+<li>
+<p>pipeline parallelism: inject Stream.async() into a lazy chain and it can use other processes to calculate</p>
+</li>
+<li>
+<p>data parallelism</p>
+</li>
+<li>
+<p>challenges: what&#8217;s most efficient way of pm&#8217;phic dispatch? effective way of implementing caches? backpressure? sharing data?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erik_meadows_j_nsson_hex">Erik Meadows-Jönsson: Hex</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>mix: task runner. generate, compile, run tests, fetch dependencies</p>
+<div class="ulist">
+<ul>
+<li>
+<p>define a Project. versioning, dependencies</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>hex: install separately (may be bundled in future) but do stuff via mix</p>
+<div class="ulist">
+<ul>
+<li>
+<p>installed as code archive (.ez): zipped .beam &amp; .app files. erlang can code-load. auto-loaded by mix</p>
+</li>
+<li>
+<p>"remote converger" called by converger&#8230;&#8203; which is used by deps.get</p>
+<div class="ulist">
+<ul>
+<li>
+<p>converger: traverses deps tree, tries to merge same apps, reports error to user, put in dependency-based order</p>
+</li>
+<li>
+<p>remote:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>updates registry (ETS file) which is mapping of all apps &amp; versions which are deps, plus their deps</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;registry format is inefficient; should change in future</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>actually does the fetching</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hex.pm site</p>
+<div class="ulist">
+<ul>
+<li>
+<p>hexdocs.pm hosts docs, generate em with ExDocs: <code>mix hex.docs</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>escripts: executable binaries made from erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>can install from git or hex.pm&#8230;&#8203; (in elixir 1.1?)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>erlang tooling</p>
+<div class="ulist">
+<ul>
+<li>
+<p>rebar3; otp pkg mgr</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thomas_arts_quickcheck">Thomas Arts: QuickCheck</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>testing is boring&#8230;&#8203;</p>
+</li>
+<li>
+<p><code>use EQC.ExUnit</code> gives you a <code>property "desc", do: forall {vars} &#8592; {varTypes}, do: test(vars) end end</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>varTypes are type "generators"</p>
+</li>
+<li>
+<p>"shrinks" to find smallest test case that fails</p>
+</li>
+<li>
+<p>generating something specific, like a sequence: <code>EQC.StateM</code>. defines an api for how to begin, generate elements, verify them</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>CONCURRENCY! <code>run_parallel_commands</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;wow</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruce_tate_making_testing_nice_with_shouldi_and_blacksmith">Bruce Tate: making testing nice (&#8230;&#8203;with ShouldI, and Blacksmith)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>coverage: <a href="https://github.com/parroty/excoveralls" class="bare">https://github.com/parroty/excoveralls</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>can show you covered lines&#8230;&#8203; everything should be covered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>more of a testing DSL: <a href="https://github.com/batate/shouldi" class="bare">https://github.com/batate/shouldi</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>basics: <code>should</code>, (nested) setup/teardown</p>
+</li>
+<li>
+<p><code>step</code> for longer integration tests&#8230;&#8203; (or is this part of blacksmith)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>data generation: <a href="https://github.com/batate/blacksmith" class="bare">https://github.com/batate/blacksmith</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>like FactoryGirl</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>concurrency&#8230;&#8203;
+*something about unique ids</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jamie_winsor_mmorpg_in_elixir">Jamie Winsor: MMORPG in Elixir</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>don&#8217;t be afraid to contract out</p>
+</li>
+<li>
+<p>don&#8217;t hire maybes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>look for IQ &amp; EQ &amp; Personality, all are important</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>use OS</p>
+</li>
+<li>
+<p>is Elixir risky? not really&#8230;&#8203; has 2-way interop w/erlang. "fixes" erlang syntax, tooling, packaging.</p>
+</li>
+<li>
+<p>building stuff:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>protocol layer first</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>sharding&#8230;&#8203; buckets are postgres schemas. &#8230;&#8203;uh what</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"route server" to have more than 100 nodes talking to each other</p>
+</li>
+<li>
+<p>deterministic routing: knowing what shard a message goes to. using postgres functions to create unique ids&#8230;&#8203; uh what</p>
+</li>
+<li>
+<p>randomly determinstic routing: uhhhh tina-belcher.gif</p>
+</li>
+<li>
+<p>discovery&#8230;&#8203; partially enabled by erlang&#8217;s architecture</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>different servers for different functions: "world" vs "in-combat"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_garrett_smith_erlang_patterns">Garrett Smith: Erlang patterns</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>C Alexander: seeking "quality w/o a name" (&#8230;&#8203;名可各非常名)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>in the foreword to Software Patterns he actually basically says he&#8217;s skeptical whether software has that nameless quality</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;but programmers know it&#8217;s there</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>this is an attempt at Alexandrian approach to patterns</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>creating a pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>needs a name first. good name, but first just name it</p>
+</li>
+<li>
+<p>why pattern is good</p>
+</li>
+<li>
+<p>where it should be used</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>acceptance criteria for being a pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>used somewhere</p>
+</li>
+<li>
+<p>used enough to feel how it is to use it</p>
+</li>
+<li>
+<p>feels good to use</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>possible types of patterns in erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OTP constructs</p>
+</li>
+<li>
+<p>function types</p>
+</li>
+<li>
+<p>process/behavior types</p>
+</li>
+<li>
+<p>app-level facilities</p>
+</li>
+<li>
+<p>distributed stuff</p>
+</li>
+<li>
+<p>principles &#8230;&#8203;?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>examples!</p>
+</li>
+<li>
+<p>Supervisor, an OTP construct. recover from crashes! use when you need fault toleance.</p>
+</li>
+<li>
+<p>Message Handler, a function type. "callback" used when you receive a message. helps with boilerplate for handling messages&#8230;&#8203;?</p>
+</li>
+<li>
+<p>Task, a process/behavior type. process which is expected to stop after doing something. good for performing quick autonomous work</p>
+</li>
+<li>
+<p>Cleanup Crew, an app-level facility. process which cleans up after other(s). removes cleanup burden from other tasks</p>
+</li>
+<li>
+<p>Crash By Default, a principle. "fail fast" too general&#8230;&#8203; don&#8217;t handle errors. (what about APIs??) good bc simplifies code.</p>
+</li>
+<li>
+<p><a href="http://erlangpatterns.org" class="bare">http://erlangpatterns.org</a> <a href="https://github.com/gar1t/erlang-patterns" class="bare">https://github.com/gar1t/erlang-patterns</a></p>
+</li>
+<li>
+<p>antipatterns?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ransom_richardson_erlang_in_the_cloud">Ransom Richardson: Erlang in the Cloud</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>expect it to crash</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;need more than one instances, obv. AZes too. enough to absolb failures and resultant load spikes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>erld: makes the erlang vm seem like a unix daemon, supports heartbeats</p>
+</li>
+<li>
+<p>deployment: either upgrade existing server instances, or deploy all new ones. new: easy to rollback to still-running old ones. makes sure deployment is repeatable.</p>
+</li>
+<li>
+<p>replaced redis w/custom server, was simpler and faster (but redis driver for erlang is just really slow)</p>
+</li>
+<li>
+<p>AWS Lambda is interesting&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_joseph_blomstedt_data_structures">Joseph Blomstedt: Data Structures</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>bt: erlang tree data structure</p>
+</li>
+<li>
+<p>orddict: tree structure with leaves holding up to 3 values</p>
+</li>
+<li>
+<p>bt_nif: slow on 10 mil entries, but it can do it!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_i_aki_garay_training">Iñaki Garay: Training</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>community is small; finding experienced erlangers is hard</p>
+</li>
+<li>
+<p>right candidates; apprenticeship; clear guidelines; good tooling</p>
+</li>
+<li>
+<p><a href="https://github.com/inaka/elvis" class="bare">https://github.com/inaka/elvis</a></p>
+</li>
+<li>
+<p>having a toy project is very helpful. use as learning sandbox&#8230;&#8203; fundamental principles, concurrency, OTP, other libraries, up to deployment</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_louis_philippe_gauthier_debugging_complex_systems">Louis-Philippe Gauthier: Debugging Complex Systems</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>need to understand the system&#8230;&#8203; stack: OS, VM, application, protocols, external services&#8230;&#8203; tools (experiment begore you need them!)&#8230;&#8203; requirements: is this really a bug?</p>
+</li>
+<li>
+<p>reproduce the bug. find conditions, try locally, try prod</p>
+</li>
+<li>
+<p>collect data&#8230;&#8203; see if it&#8217;s a known bug. filter out data noise.</p>
+</li>
+<li>
+<p>process of elimination / divide and conquer. macro observations: all servers affected? data centers? external services? (if multiple bugs, one might be hiding another&#8230;&#8203;)</p>
+</li>
+<li>
+<p>change 1 thing at a time, don&#8217;t take shortcuts. keep audit trail: postmortems, collaboration, learning.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>tip: deploy different branches to different boxes!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>verify your assumptions! code deployed? VM version? configs? tools lying? (check your audit trail&#8230;&#8203;)</p>
+</li>
+<li>
+<p>take a step back. sleep on it, ask co-worker, ask expert</p>
+</li>
+<li>
+<p>validate fix. found root cause? maybe roll out slowly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>regression tests are good</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>erlang&#8217;s shell, can log in remotely</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ets:i()</code>? can also easily spin up interval checks for process info&#8230;&#8203; (<code>observer:start()</code>&#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>loggers. Lager</p>
+</li>
+<li>
+<p>metrics collection&#8230;&#8203; lots of em</p>
+</li>
+<li>
+<p>crash dump&#8230;&#8203; <code>observer</code> is friendly</p>
+</li>
+<li>
+<p>profilers&#8230;&#8203; <code>eflame</code>, lots of others</p>
+</li>
+<li>
+<p>system monitoring stuff</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/174307?v=3)"><span class="hidden">Alexander Quine's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Alexander Quine</a></h4>
+
+                <div class="author-meta">
+                    <span class="author-location icon-location">Oakland, CA</span>
+                    <span class="author-link icon-link"><a href="http://eleven-twelve.net">http://eleven-twelve.net</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=notes%3A%20Erlang%20Factory%202015&amp;url=https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'drwxrxrx'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://alxndr.github.io/blog">alxndr&#x27;s blog</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37422155-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

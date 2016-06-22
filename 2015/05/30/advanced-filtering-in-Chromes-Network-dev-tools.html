@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>setting up fancy fonts for vim in iTerm</title>
+    <title>advanced filtering in Chrome&#x27;s Network dev tools</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -15,26 +15,24 @@
     <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/Casper/assets/css/screen.css?v=1.0.0" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
-    <link rel="canonical" href="https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html" />
+    <link rel="canonical" href="https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html" />
     
     <meta property="og:site_name" content="alxndr&#x27;s blog" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="setting up fancy fonts for vim in iTerm" />
-    <meta property="og:description" content="Might need a patched font to get the fancy glyphs, e.g. Inconsolata for Powerline In iTerm: use the patched font: Preferences &amp;gt; Profiles &amp;gt; Text &amp;gt; Regular Font and Non-ASCII Font don&amp;#8217;t make questionable characters doublewidth: uncheck..." />
-    <meta property="og:url" content="https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html" />
-    <meta property="article:published_time" content="2014-04-29T07:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-08-16T20:20:54.099Z" />
-    <meta property="article:tag" content="vim" />
-    <meta property="article:tag" content="iTerm" />
-    <meta property="article:tag" content="fonts" />
-    <meta property="article:tag" content="powerline" />
-    <meta property="article:tag" content="airline" />
-    <meta property="article:tag" content="terminal colors" />
+    <meta property="og:title" content="advanced filtering in Chrome&#x27;s Network dev tools" />
+    <meta property="og:description" content="Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful...." />
+    <meta property="og:url" content="https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html" />
+    <meta property="article:published_time" content="2015-05-30T07:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-08-16T20:20:54.074Z" />
+    <meta property="article:tag" content="Google Chrome" />
+    <meta property="article:tag" content="developer tools" />
+    <meta property="article:tag" content="network" />
+    <meta property="article:tag" content="filters" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="setting up fancy fonts for vim in iTerm" />
-    <meta name="twitter:description" content="Might need a patched font to get the fancy glyphs, e.g. Inconsolata for Powerline In iTerm: use the patched font: Preferences &amp;gt; Profiles &amp;gt; Text &amp;gt; Regular Font and Non-ASCII Font don&amp;#8217;t make questionable characters doublewidth: uncheck..." />
-    <meta name="twitter:url" content="https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html" />
+    <meta name="twitter:title" content="advanced filtering in Chrome&#x27;s Network dev tools" />
+    <meta name="twitter:description" content="Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful...." />
+    <meta name="twitter:url" content="https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html" />
     
     <script type="application/ld+json">
 {
@@ -48,12 +46,12 @@
         "url": "undefined/author/undefined",
         "sameAs": "http://eleven-twelve.net"
     },
-    "headline": "setting up fancy fonts for vim in iTerm",
-    "url": "https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html",
-    "datePublished": "2014-04-29T07:00:00.000Z",
-    "dateModified": "2015-08-16T20:20:54.099Z",
-    "keywords": "vim,  iTerm,  fonts,  powerline,  airline,  terminal colors",
-    "description": "Might need a patched font to get the fancy glyphs, e.g. Inconsolata for Powerline In iTerm: use the patched font: Preferences &amp;gt; Profiles &amp;gt; Text &amp;gt; Regular Font and Non-ASCII Font don&amp;#8217;t make questionable characters doublewidth: uncheck..."
+    "headline": "advanced filtering in Chrome&#x27;s Network dev tools",
+    "url": "https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html",
+    "datePublished": "2015-05-30T07:00:00.000Z",
+    "dateModified": "2015-08-16T20:20:54.074Z",
+    "keywords": "Google Chrome,  developer tools,  network,  filters",
+    "description": "Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful...."
 }
     </script>
 
@@ -61,7 +59,7 @@
     <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 </head>
-<body class="post-template tag-vim tag-iTerm tag-fonts tag-powerline tag-airline tag-terminal-colors">
+<body class="post-template tag-Google-Chrome tag-developer-tools tag-network tag-filters">
 
     
 
@@ -75,34 +73,42 @@
 
 <main class="content" role="main">
 
-    <article class="post tag-vim tag-iTerm tag-fonts tag-powerline tag-airline tag-terminal-colors">
+    <article class="post tag-Google-Chrome tag-developer-tools tag-network tag-filters">
 
         <header class="post-header">
-            <h1 class="post-title">setting up fancy fonts for vim in iTerm</h1>
+            <h1 class="post-title">advanced filtering in Chrome&#x27;s Network dev tools</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2014-04-29">29 April 2014</time>  on <a href="https://alxndr.github.io/blog/tag/vim">vim</a>, <a href="https://alxndr.github.io/blog/tag/iTerm"> iTerm</a>, <a href="https://alxndr.github.io/blog/tag/fonts"> fonts</a>, <a href="https://alxndr.github.io/blog/tag/powerline"> powerline</a>, <a href="https://alxndr.github.io/blog/tag/airline"> airline</a>, <a href="https://alxndr.github.io/blog/tag/terminal-colors"> terminal colors</a>
+                <time class="post-date" datetime="2015-05-30">30 May 2015</time>  on <a href="https://alxndr.github.io/blog/tag/Google-Chrome">Google Chrome</a>, <a href="https://alxndr.github.io/blog/tag/developer-tools"> developer tools</a>, <a href="https://alxndr.github.io/blog/tag/network"> network</a>, <a href="https://alxndr.github.io/blog/tag/filters"> filters</a>
             </section>
         </header>
 
         <section class="post-content">
             <div class="paragraph">
-<p>Might need a patched font to get the fancy glyphs, e.g. <a href="https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata">Inconsolata for Powerline</a></p>
+<p>Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful.</p>
 </div>
 <div class="paragraph">
-<p>In iTerm:</p>
+<p>In Chrome 43 (on OS X 10.10), show the filter toolbar by clicking on the gray “filter” / “funnel” icon; it’ll turn blue and a text box appears below it. Next to the text box is a row of "buttons” which let you quickly filter by request type; “All” is the selected default. <span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>use the patched font: Preferences &gt; Profiles &gt; Text &gt; <strong>Regular Font</strong> and <strong>Non-ASCII Font</strong></p>
-</li>
-<li>
-<p>don&#8217;t make questionable characters doublewidth: uncheck the "Treat ambiguous-width as double width" checkbox at Preferences &gt; Profiles &gt; Text &gt; <strong>Double-Width Characters</strong></p>
-</li>
-<li>
-<p>change terminal name: enter "xterm-256color" in Preferences &gt; Profiles &gt; Terminal &gt; <strong>Report Terminal Type</strong></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The text box is the more powerful tool, with what the <a href="https://developer.chrome.com/devtools/docs/network">Dev Tools docs call</a> “filter types”.</p>
+</div>
+<div class="paragraph">
+<p>To only show requests from a certain domain name, use the filter type <code>domain:</code> like so: <code>domain:github.io</code>. To hide requests from a certain domain, start it with a hyphen: <code>-domain:github.io</code>.</p>
+</div>
+<div class="paragraph">
+<p>To only show requests that haven’t finished yet, use <code>is:running</code>.</p>
+</div>
+<div class="paragraph">
+<p>Find potentially-troublesome requests with <code>-status-code:200 -status-code:302 -status-code:204 -status-code:304 -status-code:307</code>. (If currently-running requests are distracting you, stick <code>-is:running</code> at the beginning of that.)</p>
+</div>
+<div class="paragraph">
+<p>Find out more handy little tips like this by keeping an eye on <a href="https://plus.google.com/+UmarHansa">Umar Hansa</a>’s mini-blog <a href="https://umaar.com/dev-tips/#archive">Chrome Dev Tips</a>.</p>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a> The next time you’re filtering something in the Network panel but you’re not seeing what you think you should be seeing, make sure this request type quick selector is on “All”!
+</div>
 </div>
         </section>
 
@@ -125,15 +131,15 @@
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/share?text=setting%20up%20fancy%20fonts%20for%20vim%20in%20iTerm&amp;url=https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html"
+                <a class="icon-twitter" href="https://twitter.com/share?text=advanced%20filtering%20in%20Chrome's%20Network%20dev%20tools&amp;url=https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
