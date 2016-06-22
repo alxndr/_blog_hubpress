@@ -1,0 +1,4 @@
+= Onboarding
+:hp-tags: onboarding, exercism.io
+
+onboarding junior developers should include exercism.io. it's practice in the specific language, code reviews, refactoring, and also written people skills.

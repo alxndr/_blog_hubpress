@@ -1,0 +1,5 @@
+= killing processes
+:published_at: 2014-10-04
+:hp-tags: unix, shell, processes
+
+Signals to try in order: 1, 15, 2, only then 9

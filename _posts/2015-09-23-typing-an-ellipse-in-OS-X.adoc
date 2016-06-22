@@ -1,0 +1,7 @@
+= typing an ellipse in OS X
+:hp-tags: keyboard shortcut, OS X, punctuation
+:published-on: 2015-09-23
+
+Ever find yourself wanting to type a literal ellipse, like this? …
+
+If you've got OS X on that computer, you're in luck: it's just Option `⌥` (aka Alt) and semicolon `;`.

@@ -1,0 +1,16 @@
+= don't be scared of git merge conflicts
+:hp-tags: git, merge conflicts, version control
+
+Sometimes when refactoring, you move code from one file to another and also modify it (e.g. conversion of JS to use RequireJS, which effectively means all JS gets re-wrapped and globals are converted into params). If someone else modifies the code that you're moving, you get a merge conflict. This particular case is is one of the trickier ones to resolve, because it means identifying the entirety of the other change and replicating it in wherever you've moved those files to, along with whatever other changes you may have made. Copying-and-pasting the affected lines often isn't enough in practice.
+
+...explain `git-ls-files`? `git conflicting`
+
+`git ls-files -u | awk '{print $3" "$4 }'`
+... what excatly are the numbers? 1 is common ancestor, 2 is you, 3 is remote?
+(what gitc snafu causes 2 and 3 to not be what you expect?)
+
+so `diff <(git show :1:path/to/file) <(git show :3:path/to/file)` shows difference between common ancestor and remote. means you can duplicate the change to that file in wherever you may have moved
+
+as you resolve, the ls-files list gets wonderfully shorter
+
+might find it useful to find individual commits. `git show-branch` can help visualize?

@@ -1,0 +1,11 @@
+= my favorite way of changing code
+:hp-tags: standards, communication, version control, commit messages, branching model
+
+* git-flow. branching model 
+
+* small atomic commits
+
+* commit message structure... summary line; empty line; [optional] description/explanation/notes; empty line; [optional] ticket/bug identifier
+** links are helpful.
+*** _whenever_ you link to a line of code, _link to the code using a hash_ not the branch! (example...)
+
