@@ -1,1 +1,25 @@
-{"meta":{"username":"alxndr","repositoryName":"blog","branch":"gh-pages"},"site":{"title":"alxndr's blog","description":"Alexander goes by \"alxndr\" or \"drwxrxrx\" on the Interwebs.\n\nScroll down, below this nice little sunset there are some things to read ☟","logo":"http://alxndr.github.io/blog/images/alexander.jpg","cover":"https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg","postsPerPage":"13","googleAnalytics":"UA-37422155-1","disqus":"drwxrxrx","url":"https://alxndr.github.io/blog"},"socialnetwork":{"twitter":"http://twitter.com/drwxrxrx","googleplus":"https://plus.google.com/105224764237949595992","flickr":"https://www.flickr.com/photos/alxndr","github":"http://github.com/alxndr"},"theme":{"name":"Casper","url":"//alxndr.github.io/blog/themes/Casper"}}
+{
+  "meta": {
+    "username": "alxndr",
+    "repositoryName": "blog",
+    "branch": "gh-pages"
+  },
+  "site": {
+    "title": "alxndr's blog",
+    "description": "Alexander goes by \"alxndr\" or \"drwxrxrx\" on the Interwebs.\n\nScroll down, below this nice little sunset there are some things to read ☟",
+    "logo": "http://alxndr.github.io/blog/images/alexander.jpg",
+    "cover": "https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg",
+    "postsPerPage": "13",
+    "googleAnalytics": "UA-37422155-1",
+    "disqus": "drwxrxrx"
+  },
+  "socialnetwork": {
+    "twitter": "http://twitter.com/drwxrxrx",
+    "googleplus": "https://plus.google.com/105224764237949595992",
+    "flickr": "https://www.flickr.com/photos/alxndr",
+    "github": "http://github.com/alxndr"
+  },
+  "theme": {
+    "name": "casper"
+  }
+}
