@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="https://alxndr.github.io/blog/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/casper/assets/css/screen.css?v=1466625539583" />
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/casper/assets/css/screen.css?v=1467903898426" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
     <link rel="canonical" href="https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html" />
@@ -25,6 +25,7 @@
     <meta property="og:url" content="https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html" />
     <meta property="article:tag" content="version control" />
     <meta property="article:tag" content=" future-proofing" />
+    <meta property="article:tag" content=" documentation" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="linking to code? always use an href which is tied to a specific commit" />
@@ -38,7 +39,7 @@ null
     <meta name="generator" content="HubPress" />
     <link rel="alternate" type="application/rss+xml" title="alxndr&#x27;s blog" href="https://alxndr.github.io/blog/rss/" />
 </head>
-<body class="post-template tag-version-control tag-future-proofing nav-closed">
+<body class="post-template tag-version-control tag-future-proofing tag-documentation nav-closed">
 
     
 
@@ -54,12 +55,12 @@ null
 </header>
 
 <main class="content" role="main">
-    <article class="post tag-version-control tag-future-proofing">
+    <article class="post tag-version-control tag-future-proofing tag-documentation">
 
         <header class="post-header">
             <h1 class="post-title">linking to code? always use an href which is tied to a specific commit</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-05-06">06 May 2016</time>  on <a href="https://alxndr.github.io/blog/tag/version-control/">version control</a>, <a href="https://alxndr.github.io/blog/tag/future-proofing/"> future-proofing</a>
+                <time class="post-date" datetime="2016-05-06">06 May 2016</time>  on <a href="https://alxndr.github.io/blog/tag/version-control/">version control</a>, <a href="https://alxndr.github.io/blog/tag/future-proofing/"> future-proofing</a>, <a href="https://alxndr.github.io/blog/tag/documentation/"> documentation</a>
             </section>
         </header>
 
@@ -75,10 +76,10 @@ null
 <p>You&#8217;re in luck: it&#8217;s very easy to avoid this problem. Find the most recent commit in that repository, and link to the file/line using the SHA from that commit. The commit itself (should!) never change, so even if your line of code gets <em>deleted</em> in the future, your link will still work and will still highlight the correct code.</p>
 </div>
 <div class="paragraph">
-<p>The way I do this on GitHub is to visit the project&#8217;s root page (e.g. <a href="http://github.com/alxndr/lyriki">github.com/alxndr/lyriki</a>). Just above the list of files on that page, there&#8217;s a row which shows the most recent commit (e.g. at time of writing <code>@alxndr bump patch version, Latest commit 82ff021 5 days ago</code>). Both the commit message and the SHA there are links to that commit&#8217;s page (e.g. <a href="https://github.com/alxndr/lyriki/commit/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/commit/82ff0210&#8230;&#8203;</a>); visit that page and then click the "Browse files" button on the right-hand side of the commit message header. You&#8217;ll be taken to a page which looks like the project&#8217;s root page (e.g. <a href="https://github.com/alxndr/lyriki/tree/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/tree/82ff0210&#8230;&#8203;</a>, but now you&#8217;re looking at the repo at a specific point in time instead of whatever is most recent; notice that the URL includes "blob/COMMIT_SHA".</p>
+<p>The way I do this on GitHub is to visit the project&#8217;s root page (e.g. <a href="http://github.com/alxndr/lyriki">github.com/alxndr/lyriki</a>). Just above the list of files on that page, there&#8217;s a row which shows the most recent commit (e.g. at time of writing <code>@alxndr bump patch version, Latest commit 82ff021 5 days ago</code>). Both the commit message and the SHA there are links to that commit&#8217;s page (e.g. <a href="https://github.com/alxndr/lyriki/commit/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/commit/82ff0210&#8230;&#8203;</a>); visit that page and then click the "Browse files" button on the right-hand side of the commit message header. You&#8217;ll be taken to a page which looks like the project&#8217;s root page (e.g. <a href="https://github.com/alxndr/lyriki/tree/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/tree/82ff0210&#8230;&#8203;</a>), but now you&#8217;re looking at the repo at a specific point in time instead of whatever is most recent; notice that the URL includes "tree/COMMIT_SHA/&#8230;&#8203;" (if you&#8217;re at a directory) or "blob/COMMIT_SHA/&#8230;&#8203;" (if you&#8217;re at a file).</p>
 </div>
 <div class="paragraph">
-<p>Now you can click through to find your target file (or use the <code>t</code> shortcut to fuzzy-find it), and notice that the URL for the file also includes "blob/COMMIT_SHA". That URL will continue to work and show this file, even if the file is renamed, moved, or deleted in the repository&#8217;s future. <em>Magic!</em></p>
+<p>Now you can click through to find your target file (or use the <code>t</code> shortcut to fuzzy-find it), and notice that the URL for the file also includes "blob/COMMIT_SHA/&#8230;&#8203;". That URL will continue to work and show this file, even if the file is renamed, moved, or deleted in the repository&#8217;s future. <em>Magic!</em></p>
 </div>
 <div class="paragraph">
 <p>(This does not, however, protect against the repository itself being deleted; if you&#8217;re worried about that, clone the repo and link to your fork. It also doesn&#8217;t protect against GitHub going away; if you&#8217;re worried about that, I dunno what to tell you.)</p>
@@ -105,15 +106,15 @@ null
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=linking%20to%20code%3F%20always%20use%20an%20href%20which%20is%20tied%20to%20a%20specific%20commit&amp;url=https://alxndr.github.io/blog/"
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=linking%20to%20code%3F%20always%20use%20an%20href%20which%20is%20tied%20to%20a%20specific%20commit&amp;url=https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
@@ -168,8 +169,8 @@ null
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script type="text/javascript" src="//alxndr.github.io/blog/themes/casper/assets/js/jquery.fitvids.js?v=1466625539583"></script>
-    <script type="text/javascript" src="//alxndr.github.io/blog/themes/casper/assets/js/index.js?v=1466625539583"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/casper/assets/js/jquery.fitvids.js?v=1467903898426"></script>
+    <script type="text/javascript" src="//alxndr.github.io/blog/themes/casper/assets/js/index.js?v=1467903898426"></script>
 
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
