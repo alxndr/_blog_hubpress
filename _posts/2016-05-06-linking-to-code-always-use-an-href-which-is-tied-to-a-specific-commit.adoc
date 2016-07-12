@@ -15,3 +15,5 @@ The way I do this on GitHub is to visit the project's root page (e.g. http://git
 Now you can click through to find your target file (or use the `t` shortcut to fuzzy-find it), and notice that the URL for the file also includes "blob/COMMIT_SHA/...". That URL will continue to work and show this file, even if the file is renamed, moved, or deleted in the repository's future. _Magic!_
 
 (This does not, however, protect against the repository itself being deleted; if you're worried about that, clone the repo and link to your fork. It also doesn't protect against GitHub going away; if you're worried about that, I dunno what to tell you.)
+
+(Anyone know if this is possible with https://github.com/mozilla/kuma[Mozilla's Kuma], the wiki which powers the https://developer.mozilla.org/en-US/[MDN] site?)
