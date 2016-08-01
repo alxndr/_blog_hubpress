@@ -1,6 +1,6 @@
 = notes for npmCamp 2016
 
-Isaac Schlueter, keynote
+Isaac Schlueter
 
 * history of npm
 ** node.js had no sharing story; turned a bash script into a node project & sent package.json PRs to repos
