@@ -6,7 +6,7 @@
   },
   "site": {
     "title": "alxndr's blog",
-    "description": "Alexander goes by \"alxndr\" or \"drwxrxrx\" on the Interwebs. Scroll down, below this nice little sunset there are some things to read ☟",
+    "description": "Alexander goes by \"alxndr\" or \"drwxrxrx\" on the Interwebs.",
     "logo": "http://alxndr.github.io/blog/images/alexander.jpg",
     "cover": "https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg",
     "postsPerPage": "13",
@@ -16,6 +16,7 @@
   "socialnetwork": {
     "twitter": "http://twitter.com/drwxrxrx",
     "googleplus": "https://plus.google.com/105224764237949595992",
+    "linkedin": "https://www.linkedin.com/in/alxndr",
     "flickr": "https://www.flickr.com/photos/alxndr",
     "github": "http://github.com/alxndr"
   },
