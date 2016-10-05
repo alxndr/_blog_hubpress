@@ -1,0 +1,2959 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Oct 2016 17:55:24 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[use a Dvorak keyboard layout on iOS Simulator]]></title><description><![CDATA[<div class="paragraph">
+<p>&#8230;&#8203;why would anyone want to have Dvorak on a mobile device?!? Actually, I only care about it in the iOS <em>Simulator</em>, when I&#8217;m using it on a computer with a real-live hardware keyboard.</p>
+</div>
+<div class="paragraph">
+<p>In OS X&#8217;s Simulator (v9.3), launch the <strong>Settings</strong> app from the home screen, then navigate through all these menus: <strong>General</strong> &gt; <strong>Keyboard</strong> &gt; <strong>Hardware Keyboard</strong> &gt; <strong>English</strong> &gt; <strong>Dvorak</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Ta-daa!</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</guid><category><![CDATA[dvorak keyboard]]></category><category><![CDATA[ ios]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes for npmCamp 2016]]></title><description><![CDATA[<div class="paragraph">
+<p>Isaac Schlueter</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>history of npm</p>
+<div class="ulist">
+<ul>
+<li>
+<p>node.js had no sharing story; turned a bash script into a node project &amp; sent package.json PRs to repos</p>
+</li>
+<li>
+<p>it becoming a thing that pros ~2013 used was a dramatic change; SCALING</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>semver</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"not magic, not math… still pretty good. shared vocabulary is useful"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>don’t really know what’s next… bad at predicting the future</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wolf Rentzsch: demo of tonicdev.com</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>use node packages in browser</p>
+<div class="ulist">
+<ul>
+<li>
+<p>can share "notebooks"</p>
+</li>
+<li>
+<p>visualize everything… urls, binaries, regexes, geo…</p>
+</li>
+<li>
+<p>notebooks can be reused, idempotent installation — not like how npm works by default</p>
+</li>
+<li>
+<p>timestamps all packages when they’re downloaded… like running shrinkwrap all the time</p>
+</li>
+<li>
+<p>…they download <em>all versions of all packages in realtime</em>…</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Steve Kinney: Ins &amp; Outs of Publishing to NPM</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>turing.io, 7-month-long code school in CO</p>
+</li>
+<li>
+<p>walkthrough of npm init</p>
+</li>
+<li>
+<p>can note which node versions a package specifically support</p>
+</li>
+<li>
+<p>write source in whatever lang you want (TS, CS, ES2015…) but publish in Plain JS so everyone can use it (e.g. use babel)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>create a build script… set it up on prepublish hook</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>npm version</code> will make git tags for you</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kassandra Perch: npm + nodebots</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>why do we code? for work; to learn; for fun.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>learning &amp; fun &#8594; side projects. "[devs] need side projects, code or otherwise, to continue to survive"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>npm is intentionally diverse</p>
+</li>
+<li>
+<p>"destroy your idols"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"we do not need horrible people that happen to write good code in our communities"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sara Itani: Node + MSFT</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>historically node doesn’t work so great on Windows…</p>
+<div class="ulist">
+<ul>
+<li>
+<p>they’re improving it</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>x-platform Visual Studio with smart completion, navigation, debugger w/time travel</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Andre Arko, Steve Klabnik, Samuel Giddins: panel about package Managers</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cargo was built before Rust hit 1.0, meant that lots of features could be in packages not core</p>
+</li>
+<li>
+<p>Cargo always has repeatable builds (unlike npm by default)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Marcy Sutton: a11y testing w/aXe</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>folks w/ disabilities are 1/5 of the web</p>
+</li>
+<li>
+<p>modernize &amp; automate a11y testing… bring it into the future</p>
+<div class="ulist">
+<ul>
+<li>
+<p>tests can document intended a11y functionality</p>
+</li>
+<li>
+<p>can’t automate screenreaders yet</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>axe-core <a href="https://www.npmjs.com/package/axe-core" class="bare">https://www.npmjs.com/package/axe-core</a></p>
+</li>
+<li>
+<p>(Q: if Amazon has so many of the basic things wrong, how do folks manage to use it??)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Iheanyi Ekechukwu: Ember + Devops</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"DevOps"…</p>
+<div class="ulist">
+<ul>
+<li>
+<p>provisioning, versioning</p>
+</li>
+<li>
+<p>automation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ember-cli-deploy is a plugin… lifecycle hooks</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kate Hudson: frontend dev &amp; npm3</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>users have very different ideas of what "reliable", "intuitive", etc means</p>
+</li>
+<li>
+<p>in-browser JS doesn’t (yet) have niceties for loading modules like node does</p>
+<div class="ulist">
+<ul>
+<li>
+<p>node has built-in <code>require</code>… but no standard for browsers</p>
+</li>
+<li>
+<p>loading modules is cheap on node; not via network</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>npm3 optimizes for maximally flat dependency tree</p>
+</li>
+<li>
+<p>npm dedupe can recognize potential version consolidation</p>
+</li>
+<li>
+<p>writing a plugin? specify node version ranges, not a specific verison</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Andrew Goode: automating semver</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>structured commit messages</p>
+<div class="ulist">
+<ul>
+<li>
+<p>add structure on squash-and-merge of feature branch</p>
+</li>
+<li>
+<p>structure can be using keywords like <code>feat:</code>, <code>fix:</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://www.npmjs.com/package/standard-version" class="bare">https://www.npmjs.com/package/standard-version</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>replacement of <code>npm version</code></p>
+</li>
+<li>
+<p>bumps versions, creates changelog</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Steph Snopek &amp; Kiera Manion-Fischer: npm support</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>official npm support exists… <a href="mailto:support@npmjs.com">support@npmjs.com</a>, <a href="http://twitter.com/npm_support">@npm_support</a></p>
+</li>
+<li>
+<p>enterprise customers can get video call support</p>
+</li>
+<li>
+<p>socks for docs… open a PR to the docs and they’ll send you some npm socks</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Stephan Bönnemann: managing deps w/ Greenkeeper</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>greenkeeper is <code>npm updated</code> as a service. they do support enterprise npm</p>
+</li>
+<li>
+<p>also wrote npm.im/semantic-release</p>
+</li>
+<li>
+<p>doesn’t have to create PRs to see if it passes tests, even if update is outside of pinned range</p>
+</li>
+<li>
+<p>one-click enabling app.greenkeeper.io</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sharon Steed: empathetic communication</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>communication is supposed to be empathetic</p>
+</li>
+<li>
+<p>"empathy fuels connection" –Brené Brown</p>
+<div class="ulist">
+<ul>
+<li>
+<p>∴ empathetic communication drives collaboration</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"failures of communication cannot be automated away"</p>
+</li>
+<li>
+<p>"collaboration fails because 1) people are afraid of being wrong 2) people are afraid of being misunderstood"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Daijiro Wachi: global OSS development</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>time zones… 10 min face to face can be &gt;1 day across the globe</p>
+</li>
+<li>
+<p>reproduce the issue, use same environment (node, npm, platform)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>February Keeney: towards inclusive community</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>diversity alone is not enough… need to be safe as well</p>
+</li>
+<li>
+<p>harassment types: blatant vs microaggression</p>
+<div class="ulist">
+<ul>
+<li>
+<p>blatant gets banhammer</p>
+</li>
+<li>
+<p>micro gets coaching. focus on how actions affect others, not on individual instigating</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kat Marchán (npm cli): state of the CLI</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>npm3</p>
+<div class="ulist">
+<ul>
+<li>
+<p>been out for a year; default w/node v6</p>
+</li>
+<li>
+<p>fancy new progress bar</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>stabilizing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>windows support; shinkwrap issues; monthly releases</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>triaging</p>
+<div class="ulist">
+<ul>
+<li>
+<p>every day; new contributors; want to help? &#8230;&#8203;don&#8217;t email forrest</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>product</p>
+<div class="ulist">
+<ul>
+<li>
+<p>cli is the FOSS arm of npm Inc</p>
+</li>
+<li>
+<p>new login features; opt-in analytics</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CJ Silverio: design patterns in the npm registry</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"the process of writing software is abstraction &amp; pattern extraction"</p>
+</li>
+<li>
+<p>the registry is "medium data" fits on a single disk but not in memory</p>
+</li>
+<li>
+<p>"modularity" term comes from a 1972 paper</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"hide info behind an interface so you can change it"</p>
+</li>
+<li>
+<p><a href="http://dl.acm.org/citation.cfm?id=361623" class="bare">http://dl.acm.org/citation.cfm?id=361623</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>how do design patterns promote modularity?</p>
+</li>
+<li>
+<p>patterns…</p>
+<div class="ulist">
+<ul>
+<li>
+<p>monoliths: everything in 1 process</p>
+<div class="ulist">
+<ul>
+<li>
+<p>easy to write &amp; change</p>
+</li>
+<li>
+<p>perf is okay</p>
+</li>
+<li>
+<p>easy to write coupled code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>microservices</p>
+<div class="ulist">
+<ul>
+<li>
+<p>forces you to design an API</p>
+</li>
+<li>
+<p>easy to mess up API design; unintentional coupling &amp; unruly side effects</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>transaction log: "what every software engineer should know about realtime data’s unifying abstraction" —LinkedIn</p>
+<div class="ulist">
+<ul>
+<li>
+<p>consumers do One Thing Well</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>messages/workers… (Erlang??)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>do things independently</p>
+</li>
+<li>
+<p>can scale</p>
+</li>
+<li>
+<p>can crash</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>none of these patterns are Right; "it’s tradeoffs all the way down"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>what problem are you trying to solve? what tools?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>you can change systems and patterns!</p>
+</li>
+</ul>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/07/30/notes-for-npm-Camp-2016.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/07/30/notes-for-npm-Camp-2016.html</guid><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[version control commit messages]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is how I like to structure my Git branches and commit messages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_philosophy">philosophy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, some reasons behind my madness&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>My primary motivation with caring so much about commit messages is the value I&#8217;ve gotten from referencing well-written commits that others have created. Git comes with <a href="https://git-scm.com/docs/git-bisect">a handy way of searching through history for a commit which introduced some behavior</a>, and once you&#8217;ve identified which commit added a bug, it&#8217;s <em>extremely</em> helpful when the commit is only changing one (logical) thing and has a thorough explanation of <em>why</em> it&#8217;s being changed.</p>
+</div>
+<div class="paragraph">
+<p>Having experienced that several times, I resolved to pay it forward by putting thought into how I create commit messages. Not only will the developers who maintain my code after me be grateful, it benefits myself as well when that person maintaining my two-year-old code happens to be <em>me</em> and I&#8217;ve since completely forgotten the context and inspiration for a particular code change.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_atomic_commits">atomic commits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As I hinted in the above section, I like individual commits to stand on their own, with an explanatory commit message.</p>
+</div>
+<div class="paragraph">
+<p>I like to keep my code tidy, which can mean I&#8217;m making a commit just for something "trivial" like modifying whitespace, or changing a variable&#8217;s name. A change like that will be its own commit, with a message that can be as simple as "tweaking whitespace" or "renaming variable". This allows me to verify that I didn&#8217;t accidentally modify something unintended while doing what should be a minor refactor.</p>
+</div>
+<div class="paragraph">
+<p>The most useful tool I&#8217;ve found for encouraging me to create small commits is the <code>--patch</code> flag for <code>git add</code>. It is related to the <code>--interactive</code> feature, which lets you "Add modified contents in the working tree interactively to the index" [<a href="https://git-scm.com/docs/git-add">the manpage</a>]. The <code>--patch</code> feature pares down the full interactive mode into a series of prompts for the unstaged changes in your repository (or a subset of files, if you specify a path(s)). It asks whether or not to add each chunk of local changes to the commit-in-progress. If a chunk of changes includes two conceptually unrelated modifications, it lets you split the chunk into smaller ones, and then asks what you&#8217;d like to do for each smaller chunk. Furthermore, if there are unrelated changes within a single line, it can&#8217;t split the concepts apart for you, but the "manually edit the current hunk" feature will let you (though it can be a little tricky).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git_flow_esque_branching">git-flow-esque branching</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It can be difficult to identify the larger goal behind many small commits. Thus, I&#8217;m a fan of feature branches to group them together and identify the motivation behind all these commits.</p>
+</div>
+<div class="paragraph">
+<p>On my personal projects I&#8217;ve followed something close to <a href="http://nvie.com/posts/a-successful-git-branching-model/">the "git flow" pattern of branches</a>, in that the <code>master</code> branch should always be what&#8217;s on production, but I haven&#8217;t been using a <code>develop</code> branch. At work, with more collaborators and more development happening simultaneously, we use a <code>develop</code> branch to collect what&#8217;s ready to be released next (which often will only be one branch/ticket anyway).</p>
+</div>
+<div class="paragraph">
+<p>The GitHub page for an individual commit includes a link to the pull request via which the commit made it into the <code>master</code> branch. This lets you figure out the reason for a commit when you&#8217;ve identified that it&#8217;s responsible for a bug.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commit_messages">commit messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Git software and GitHub site display commit messages in certain ways, so I like to structure my commit messages to work with them. When showing many commits, they tend to show just the first line of each commit message, so I use that line to be a summary of the commit as a whole. Some things truncate this summary at 72 characters, so keeping the summary short is ideal; that said, I try not to sacrifice the intelligibility of the summary in order to fit it into that limit.</p>
+</div>
+<div class="paragraph">
+<p>After the summary line, you&#8217;ve got all the space you need to express yourself (<a href="https://github.com/alxndr/lyriki/commit/a01056c21db5619e13d282d6e2b524857411b443">e.g. with a paragraph!</a>). GitHub will render <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> in the commit message, so don&#8217;t be afraid to add <a href="https://github.com/alxndr/lyrem-ipsum/commit/b72bf9683ed40824e29c4c063100c37172aa5557">a bulleted list of things you&#8217;re addressing</a> or any <a href="https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html">links to other code (read this blog post if you ever link directly to code!!)</a>, documentation, StackOverflow, or other references you used in the process of changing the code.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re using a project management tool or bug tracker, include a reference to the ticket/story/bug in each commit. This could be as simple as "#123" where the ticket/bug ID is 123, but GitHub will think that refers to an issue or pull request in the current repository, and will turn it into a link. Therefore:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you&#8217;re not using GitHub issues as your main issue/bug tracker, it may be more helpful to include the full URL to the ticket/bug.</p>
+</li>
+<li>
+<p>If you are using GitHub issues as your issue tracker, in addition to having "#123" turn into a link to the issue/PR, note that <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">GitHub can close an issue when a commit is merged</a> if the commit message includes a phrase like "resolves #123" (<a href="https://github.com/alxndr/lyriki/commit/cf3dc401ca9b2715474a7ef3ad77cbe85e31fb66">e.g.</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A good habit I&#8217;ve built is to never use the <code>--message</code> (aka <code>-m</code>) flag of <code>git add</code> (which allows you to specify a commit message on the command line), and instead always use the <code>--verbose</code> (aka <code>-v</code>) flag of <code>git add</code>. The <code>--message</code> feature seems to encourage you to write a one-line commit message, whereas the <code>--verbose</code> flag will open up your favorite text editor, encouraging you to expound upon your changes. From <a href="https://git-scm.com/docs/git-add">the manpage</a>, <strong>emphasis added</strong>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>"Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template <strong>to help the user describe the commit by reminding what changes the commit has</strong>. [&#8230;&#8203;] This diff will not be a part of the commit message."</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>You can further encourage yourself to elucidate in commit messages by creating a custom template for messages. The branching strategy I use means that I can use a <a href="https://git-scm.com/docs/githooks">githook</a> to build <a href="https://github.com/alxndr/dotfiles/blob/619554a025950191510794d739b9e21cd19b2b8e/git-hooks/prepare-commit-msg">a git commit template which extracts a meaningful ticket identifier from the branch name</a>.
+You could also <a href="https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template">create a "global" template using the <code>commit.template</code> option</a> of <a href="https://git-scm.com/docs/git-config"><code>git config</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary">summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>git add --patch</code> to create small and atomic commits</p>
+</li>
+<li>
+<p><code>git commit --verbose</code> to thoroughly explain your changes (never <code>-m "commit message"</code>)</p>
+</li>
+<li>
+<p>this makes <code>git bisect</code> very powerful for code "archaeology"</p>
+</li>
+<li>
+<p>Future You will thank Past You</p>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</guid><category><![CDATA[standards]]></category><category><![CDATA[ communication]]></category><category><![CDATA[ version control]]></category><category><![CDATA[ stage this hunk]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[linking to code? always use an href which is tied to a specific commit]]></title><description><![CDATA[<div class="paragraph">
+<p><strong>tl;dr</strong> Don&#8217;t <em>ever</em> use links like <code>github.com/owner/repo/blob/master/file.ext#L13</code> because that branch <em>will</em> change! Use <code>github.com/owner/repo/blob/COMMIT_SHA/file.ext#L13</code> and be <em>future-proof</em>.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Are you creating a link to a specific line of code, or a particular file in a code repository? <em>That file may change or move in the future</em> which means your link <strong>will eventually be worthless</strong>: the file you&#8217;re referring to can be edited which means your link will highlight the <strong>wrong</strong> line of code, or the whole file itself could move or be renamed which means your link will <strong>be a 404 error</strong>!</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;re in luck: it&#8217;s very easy to avoid this problem. Find the most recent commit in that repository, and link to the file/line using the SHA from that commit. The commit itself (should!) never change, so even if your line of code gets <em>deleted</em> in the future, your link will still work and will still highlight the correct code.</p>
+</div>
+<div class="paragraph">
+<p>The way I do this on GitHub is to visit the project&#8217;s root page (e.g. <a href="http://github.com/alxndr/lyriki">github.com/alxndr/lyriki</a>). Just above the list of files on that page, there&#8217;s a row which shows the most recent commit (e.g. at time of writing <code>@alxndr bump patch version, Latest commit 82ff021 5 days ago</code>). Both the commit message and the SHA there are links to that commit&#8217;s page (e.g. <a href="https://github.com/alxndr/lyriki/commit/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/commit/82ff0210&#8230;&#8203;</a>); visit that page and then click the "Browse files" button on the right-hand side of the commit message header. You&#8217;ll be taken to a page which looks like the project&#8217;s root page (e.g. <a href="https://github.com/alxndr/lyriki/tree/82ff0210da03760b530ecafb640f78efc83c3a02">github.com/alxndr/lyriki/tree/82ff0210&#8230;&#8203;</a>), but now you&#8217;re looking at the repo at a specific point in time instead of whatever is most recent; notice that the URL includes "tree/COMMIT_SHA/&#8230;&#8203;" (if you&#8217;re at a directory) or "blob/COMMIT_SHA/&#8230;&#8203;" (if you&#8217;re at a file).</p>
+</div>
+<div class="paragraph">
+<p>Now you can click through to find your target file (or use the <code>t</code> shortcut to fuzzy-find it), and notice that the URL for the file also includes "blob/COMMIT_SHA/&#8230;&#8203;". That URL will continue to work and show this file, even if the file is renamed, moved, or deleted in the repository&#8217;s future. <em>Magic!</em></p>
+</div>
+<div class="paragraph">
+<p>(This does not, however, protect against the repository itself being deleted; if you&#8217;re worried about that, clone the repo and link to your fork. It also doesn&#8217;t protect against GitHub going away; if you&#8217;re worried about that, I dunno what to tell you.)</p>
+</div>
+<div class="paragraph">
+<p>(Anyone know if this is possible with <a href="https://github.com/mozilla/kuma">Mozilla&#8217;s Kuma</a>, the wiki which powers the <a href="https://developer.mozilla.org/en-US/">MDN</a> site?)</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/05/06/linking-to-code-always-use-an-href-which-is-tied-to-a-specific-commit.html</guid><category><![CDATA[version control]]></category><category><![CDATA[ future-proofing]]></category><category><![CDATA[ documentation]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 06 May 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[search Git history, ignoring certain directory]]></title><description><![CDATA[<div class="paragraph">
+<p>Ever wanted to look through a Git repository&#8217;s history for a commits involving a specific string, but ignoring a certain directory (e.g. for packaged/built code)?</p>
+</div>
+<div class="paragraph">
+<p>As of Git 1.9, you&#8217;re in luck! In the file listing, you can now exclude certain paths by starting them with <code>:(exclude)</code> (or <code>:!</code> but your shell might mess with that):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">git log -u -S fooBar -- . ":(exclude)public/pkg/" ":(exclude)vendor/"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will look through the current directory (<code>.</code>, with the <code>--</code> <a href="http://unix.stackexchange.com/a/11382/48320">indicating the end of the options and the beginning of the paths</a>) for commits which add or remove the string "fooBar", but will not look through the <code>public/pkg/</code> or <code>vendor/</code> subdirectories of the current directory.</p>
+</div>
+<div class="paragraph">
+<p>Tip of the hat to <a href="http://stackoverflow.com/a/21079437/303896">VonC on StackOverflow</a>.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</guid><category><![CDATA[git]]></category><category><![CDATA[ version control]]></category><category><![CDATA[ code archaeology]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 11 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting Hound-CI to show Rubocop "cop names" again]]></title><description><![CDATA[<div class="paragraph">
+<p>Thoughtbot&#8217;s Hound-CI service runs Rubocop on Ruby projects. It had a setting to show the name of the "cop" (style rule) that failed, which made it easier to look up the options for that specific rule.</p>
+</div>
+<div class="paragraph">
+<p>At some point, the way that was configured changed. Now instead of putting <code>ShowCopNames: true</code> in the <code>rubocop.yml</code> file, it&#8217;s gotta be something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>AllCops:
+  DisplayCopNames: true</code></pre>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</guid><category><![CDATA[static analysis]]></category><category><![CDATA[ continuous integration]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 21 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[installing an old version of something via `brew`]]></title><description><![CDATA[<div class="paragraph">
+<p>Don&#8217;t need to <code>brew edit</code> or check out old SHAs inside <code>/usr/local/Library</code> any more: just <code>brew switch [project] [version]</code>. Shiny!</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/02/19/installing-an-old-version-of-something-via-brew.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/02/19/installing-an-old-version-of-something-via-brew.html</guid><category><![CDATA[brew]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 19 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[how to mark an email as "not-spam" in Google's Inbox]]></title><description><![CDATA[<div class="paragraph">
+<p>I&#8217;m using Google&#8217;s Inbox mail client for work email. Recently I noticed that an email in a thread was marked as being spam, and couldn&#8217;t find a way to tell Inbox that this automated email wasn&#8217;t actually spam.</p>
+</div>
+<div class="paragraph">
+<p>Turns out that pinning and then unpinning an email thread seems to convince Inbox that the contents of the thread aren&#8217;t to be considered spam.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</guid><category><![CDATA[google inbox]]></category><category><![CDATA[ ui fail]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[ElixirConf US 2015 notes]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://elixirconf.com">ElixirConf US 2015</a> was October 2–3 in Austin, Texas.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruce_tate_the_pendulum">Bruce Tate: The Pendulum</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>tech swings back and forth between approaches to problems. batch vs interactive&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>request/response not quite enough&#8230;&#8203; appearance of MVC pattern for local software</p>
+<div class="ulist">
+<ul>
+<li>
+<p>GUIs&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>scaling on the web follows the same pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>concurrency/isolation are key for future&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>elixir!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chris_mccord_what_s_next_for_phoenix">Chris McCord: What&#8217;s Next for Phoenix</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://pragprog.com/book/phoenix/programming-phoenix">The Book is out</a>!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Phoenix beyond browser: Channel clients in JS, Swift, ObjC, C#, Java&#8230;&#8203;</p>
+</li>
+<li>
+<p>planned for v1.1: gettext, Channel presence</p>
+<div class="ulist">
+<ul>
+<li>
+<p>gettext internationalization was meant for 1.0, but was trickier than expected</p>
+</li>
+<li>
+<p>channel presence is very much non-trivial on distributed nodes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>look at <a href="https://facebook.github.io/graphql/">GraphQL</a> for ideas</p>
+<div class="ulist">
+<ul>
+<li>
+<p>support in views? so instead of having to e.g. <code>preload: [user: [:profile]]</code> etc when fetching stuff in your controller</p>
+</li>
+<li>
+<p>can help avoid "controller mayhem" (proliferation of routes for specific data shapes, versioning)</p>
+</li>
+<li>
+<p>specs are defined in the clients, not server&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>but the server will still do validations, deprecations?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>"server side views as just another GraphQL client"</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>js clients as well as backend template construction could both use it</p>
+</li>
+<li>
+<p>way way down the line, maybe "virtual DOM on the server"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>why not extend Ecto to do this sort of thing? not out of the question.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paul_shoenfelder_release_management_with_exrm_and_conform">Paul Shoenfelder: Release Management with ExRM and Conform</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>OTP apps: well-defined structure, explicit dependencies, useful metadata</p>
+</li>
+<li>
+<p>non-release way: dev deps in prod, can&#8217;t manage multiple apps, need to build things, can&#8217;t cross-compile&#8230;&#8203;</p>
+</li>
+<li>
+<p>what&#8217;s a release? versioned OTP app dependencies; ERTS; release metadata; configuration; scripts to manage; packaged as tarball</p>
+</li>
+<li>
+<p>what&#8217;s ExRM? extends Relx (Erlang&#8217;s release tool); provides mix tasks (with lots of hooks), appup generation, intelligent defaults</p>
+</li>
+<li>
+<p>configuration is compiled into static info in release (e.g. no dynamic config, can&#8217;t use get_env)</p>
+</li>
+<li>
+<p>schema allows for data transformations (and validations?)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alexander_songe_crdts_datatypes_for_the_apocalypse">Alexander Songe: CRDTs: Datatypes for the Apocalypse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"conflict-free datatype"&#8230;&#8203; how to have distributed complex values</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CRDTs are tricky; not many usable libraries</p>
+<div class="ulist">
+<ul>
+<li>
+<p>not a lot of code, but it has to be precise or you&#8217;ll corrupt source data</p>
+</li>
+<li>
+<p>need to test a lot, 100% code coverage doesn&#8217;t count, need to find edge cases</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>basis:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>log-based: read over logs, replay things</p>
+</li>
+<li>
+<p>state-based: easier to reason about, but get big (&amp; therefore hard to manage)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>updates to mutate state</p>
+<div class="ulist">
+<ul>
+<li>
+<p>updates are commutative, associative, idempotent</p>
+</li>
+<li>
+<p>&#8230;&#8203;&amp; therefore can be sent over network, will be eventually consistent</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>as long as everyone eventually communicates</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>flags, counters, sets, registers, maps, graphs, documents (huge&#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>examples</p>
+<div class="ulist">
+<ul>
+<li>
+<p>G-counter: counts up only. distributes values but takes max, so ensures eventually consistent. (can&#8217;t decrement&#8230;&#8203; have another G-counter for decrements.)</p>
+</li>
+<li>
+<p>G-set: adds items to a set. similar problem for subtracting; solved with ORSWOT operation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(similar but not quite the same as a vector clock)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>wider use of CRDTs&#8230;&#8203; not so much</p>
+<div class="ulist">
+<ul>
+<li>
+<p>would be super useful in rich clients</p>
+</li>
+<li>
+<p><a href="https://github.com/asonge/loom">Loom</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>wishlist</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Gossip protocol independent of project</p>
+</li>
+<li>
+<p>external representation</p>
+</li>
+<li>
+<p>language &amp; library support</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alan_gardner_phoenix_and_elm">Alan Gardner: Phoenix and Elm</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Elm has Model Update View pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update looks somewhat similar to message receiving&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Elm&#8217;s Signals: single value that changes over time&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this is how Elm "changes state"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Elm Architecture"</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fold</code> is where non-pure things can happen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>interop with outside world (Ports?)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>starting up the app, initial state takes <code>inputs</code></p>
+</li>
+<li>
+<p><code>init</code> and <code>update</code> need to account for <code>Effects</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>hooking Elm up to Phoenix&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>could run separately, old standard way of doing it&#8230;&#8203;</p>
+</li>
+<li>
+<p>could compile and add as vendored JS&#8230;&#8203;</p>
+</li>
+<li>
+<p>but you <strong>could embed Elm app into Phoenix</strong> and use brunch to compile</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>web/elm/</code> (not in <code>static/</code>)</p>
+</li>
+<li>
+<p><a href="https://github.com/madsflensted/elm-brunch"><code>elm-brunch</code> plugin</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>actually start it up with some regular old <code>app.js</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Elm Ports&#8230;&#8203; how outside world can interact with Elm</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(not the same as erlang ports)</p>
+</li>
+<li>
+<p>takes a JS data structure &amp; constructs Elm-ish signature for it</p>
+</li>
+<li>
+<p>need to explicitly map incoming data to (curried) <code>Action</code> s</p>
+<div class="ulist">
+<ul>
+<li>
+<p>and that becomes one of the <code>inputs</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bryan_joseph_elixir_beyond_the_browser">Bryan Joseph: Elixir Beyond the Browser</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/bryanjos/elixirscript">ElixirScript</a>!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>goals</p>
+<div class="ulist">
+<ul>
+<li>
+<p>full or subset of Elixir into ES2015</p>
+</li>
+<li>
+<p>complement elixir backends*</p>
+</li>
+<li>
+<p>idiomatic Elixir</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ESTree</p>
+<div class="ulist">
+<ul>
+<li>
+<p>including a thing that builds JS from Elixir code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ElixirScript: made of Compiler (in Elixir) and Runtime (in JS)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Compiler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>value translation uses <code>Symbol</code>, custom things for binaries</p>
+</li>
+<li>
+<p>use <code>Patterns</code> for "multiple" function defs/guards/destructuring params</p>
+</li>
+<li>
+<p>uses JS modules (but scope isn&#8217;t same as in Elixir&#8230;&#8203;)</p>
+</li>
+<li>
+<p>some current limitations: scopes, <code>quote</code>, <code>::</code>, pattern-matching <code>&lt;&lt; &gt;&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Runtime</p>
+<div class="ulist">
+<ul>
+<li>
+<p>most of the stdlib defined here</p>
+</li>
+<li>
+<p>also some features for compiling (e.g. pattern matching)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>how to "embrace the environment"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>interop with JS</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>demos&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>reimplementation of React API!</p>
+</li>
+<li>
+<p>running in an iOS app!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jessica_kerr_elixir_should_take_over_the_world">Jessica Kerr: Elixir Should Take Over the World</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>the March of Scientific Progress is presented as viewed through rose-tinted glasses&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>The Structure of Scientific Revolutions</em> by Thomas S Kuhn, read it&#8230;&#8203; coined "paradigm"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Ideas are shared. Ideas keep coming. Ideas are shared."</p>
+<div class="ulist">
+<ul>
+<li>
+<p>when the groundwork is laid for a "new idea", many people will independently have it&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>good recent talks at StrangeLoop 2015:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.slideshare.net/CamilleFournier1/hopelessness-and-confidence-in-distributed-systems-design">Camille Fournier&#8217;s Hopelessness and Confidence in Distributed Systems Design</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=H0i_bXKwujQ">Caitie McCaffrey&#8217;s Building Scalable Stateful Services</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>circular dependencies are painful; neither pure functional nor object-oriented approaches are quite right&#8230;&#8203;</p>
+</li>
+<li>
+<p>the way to success is more failures, and learn from them. "failure is the common case"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>if you learn from the failures, they become part of the eventual succes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>what&#8217;s next? (opinions&#8230;&#8203;)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>after agile? lean. learn, build, measure, learn, build&#8230;&#8203; (in theory that&#8217;s the scientific method, but scientists like proving their own points)</p>
+</li>
+<li>
+<p>after no estimates? time ranges. wider range means more unknowns&#8230;&#8203; at the end, "is it still worth it to do more of this?"</p>
+</li>
+<li>
+<p>after scientific method? Brené Brown looks at human systems, "grounded theory" data, categories, theory, data, categories&#8230;&#8203;</p>
+</li>
+<li>
+<p>after MVC? Elm architecture&#8230;&#8203;</p>
+</li>
+<li>
+<p>after REST? GraphQL&#8230;&#8203; maybe with backend-sourced events, channels&#8230;&#8203;</p>
+</li>
+<li>
+<p>after microservices? better organized microservices.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;microservices can easily end up circularly-dependent.</p>
+</li>
+<li>
+<p>while working on your new thing, it&#8217;ll end up being more complex than you think, but if you wrapped everything in a nice API then from the outside world it&#8217;ll look sane</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>it takes lots of people (especially skill levels) to make progress</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Science advances one funeral at a time" —Max Planck</p>
+</li>
+<li>
+<p>"we need people who don&#8217;t think like us"</p>
+</li>
+<li>
+<p>smooth the stairs into a ramp!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>big moustachioed Banana for Jim!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jos_valim_state_of_the_language">José Valim: State of the Language</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>what&#8217;s coming: extensibility: web infrastructure; embedded systems; financial/video platforms; GUIs</p>
+</li>
+<li>
+<p>just out: v1.1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>handy new functions!</p>
+</li>
+<li>
+<p>ExUnit: can capture calls to <code>Logger</code>, will print on failures; <code>@tag :not_implemented</code>; line numbers in doctests fixed</p>
+</li>
+<li>
+<p>Mix: <code>profile.fprof</code></p>
+</li>
+<li>
+<p><code>@callback</code> instead of <code>defcallback</code>; <code>@typedoc</code></p>
+</li>
+<li>
+<p>deprecations&#8230;&#8203; <code>Access</code> protocol (implementation became a bottleneck when protocols not compiled)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>v1.2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>gonna be Erlang &gt;=18 only</p>
+</li>
+<li>
+<p>multi-aliases <code>alias MyApp.{Foo, Bar, Baz}</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>v1.3? just ideas here&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>GenRouter</code>: separate process, multi-in/multi-out</p>
+<div class="ulist">
+<ul>
+<li>
+<p>adds supervision to stream-like things</p>
+</li>
+<li>
+<p>source-driven, provides backpressure by default</p>
+</li>
+<li>
+<p>inspired by Akka Streams</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lennart_frid_n_virtually_instructional">Lennart Fridén: Virtually Instructional</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>can compile elixir into Erlantg assembly: <code>ERL_COMPILER_OPTIONS="'S'" elixirc file.ex</code></p>
+</li>
+<li>
+<p>but Erlang functions get transformed by BEAM&#8230;&#8203; so we&#8217;d need to look at a running system</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>:erts_debug.df MyApp</code> creates a .</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the function names end with their params' type signature&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>BEAM is register-based, unlike JAM, which was stack-based</p>
+<div class="ulist">
+<ul>
+<li>
+<p>bunch of functions will say how many registers are "active" (shouldn&#8217;t be GC&#8217;d?)</p>
+</li>
+<li>
+<p>different types of registers&#8230;&#8203; general, float, temporary, local vars</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>BEAM&#8217;s "assembly" is weird!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steven_proctor_beaming_with_joy">Steven Proctor: BEAMing with Joy</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>the Scheduler&#8230;&#8203; is awesome. one per CPU. expensive to start up, so they stay up</p>
+</li>
+<li>
+<p>monitoring</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>observer.start()</code></p>
+</li>
+<li>
+<p>erlang&#8217;s <code>c</code> module if you don&#8217;t have a GUI&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>c.regs/0</code> is all registered processes/ports</p>
+</li>
+<li>
+<p><code>c.i/0</code>, bunch of other info&#8230;&#8203;</p>
+</li>
+<li>
+<p><code>c.i/3</code> pass in your process info and get info about just that process</p>
+</li>
+<li>
+<p><code>:c.bt/1</code> to look at backtrace of a <code>:c.pid/3</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>types&#8230;&#8203; strongly-held small set of types, also dynamic if you want it</p>
+<div class="ulist">
+<ul>
+<li>
+<p>elixir: optional typing using <code>@spec</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://user.it.uu.se/~tobiasl/publications/typer.pdf">TypEr (pdf)</a> adds type annotations to source code?</p>
+</li>
+<li>
+<p>testing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Property testing: QuickCheck (not free), also PropEr</p>
+</li>
+<li>
+<p>Concurrency testing: <a href="https://github.com/parapluu/Concuerror">Concuerror</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nick_demonner_otp_has_done_it">Nick DeMonner: OTP Has Done It</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>your technical problems aren&#8217;t unique&#8230;&#8203; "we need to get over our reinvention addiction"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>don&#8217;t keep using abstractions that aren&#8217;t useful!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>supervisors</p>
+<div class="ulist">
+<ul>
+<li>
+<p>children are stopped in reverse of start order</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>(intro to all the <code>gen_*</code> things)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ben_wilson_streams_external_services_and_otp">Ben Wilson: Streams, External Services, and OTP</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><code>StreamRunner</code> by James Fish</p>
+<div class="ulist">
+<ul>
+<li>
+<p>makes an enumerable thing out of external service</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>but what about backpressure? <code>StreamRouter</code></p>
+</li>
+<li>
+<p><code>Collectable</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_james_smith_interoperability_in_elixir">James Smith: Interoperability in Elixir</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>can interop using JInterface, NIFs, and&#8230;&#8203;</p>
+</li>
+<li>
+<p>ports</p>
+<div class="ulist">
+<ul>
+<li>
+<p>wraps an external thing, passes messages to it, passes messages out to the owning erlang process</p>
+</li>
+<li>
+<p><code>Port.open/2</code>, tons of options, docs pretty good</p>
+</li>
+<li>
+<p>ETF External Term Format to convert any data into a binary format <code>data == :erlang_binary_to_term(:erlang.term_to_binary(data))</code></p>
+</li>
+<li>
+<p>can use stdin or also arbitrary file descriptors</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drew_olson_composable_queries_with_ecto">Drew Olson: Composable Queries with Ecto</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>separate construction of query from execution&#8230;&#8203; <code>query = from(&#8230;&#8203;); Repo.all(query)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"the query itself is data" "very explicitly decoupled from [the Repo]"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Query Expression syntax&#8230;&#8203; pull the keywords out into functions. <code>query = where(Post, [p], p.published == true)</code></p>
+</li>
+<li>
+<p>both syntaxes are composable! <code>query2 = from(c in query, where: c.votes &gt; 5)</code></p>
+</li>
+<li>
+<p>"Query Pipelines"&#8230;&#8203; inventing vocab for wrapping query expressions in nicely-named functions, then piping them together</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"query source" the data source, e.g. a whole table</p>
+</li>
+<li>
+<p>transformation modifies an existing query</p>
+</li>
+<li>
+<p>sink executes query, returns result</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</guid><category><![CDATA[elixirconf]]></category><category><![CDATA[ elixir-lang]]></category><category><![CDATA[ tech conference]]></category><category><![CDATA[ Austin TX]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 02 Oct 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[typing an ellipse in OS X]]></title><description><![CDATA[<div class="paragraph">
+<p>Ever find yourself wanting to type a literal ellipse, like this? …</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;ve got OS X on that computer, you&#8217;re in luck: it&#8217;s just Option <code>⌥</code> (aka Alt) and semicolon <code>;</code>.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/09/23/typing-an-ellipse-in-OS-X.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/09/23/typing-an-ellipse-in-OS-X.html</guid><category><![CDATA[keyboard shortcut]]></category><category><![CDATA[ OS X]]></category><category><![CDATA[ punctuation]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 23 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[La trahison des mots]]></title><description><![CDATA[<div class="paragraph">
+<p>Run this in your (POSIX-compliant) shell — I promise it&#8217;s not bad:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo "ceci n'est pas une pipe" | sed -Ee 's/(eci n|pas )//g'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="http://i.imgur.com/57UvJmY.gif" alt="animation of "WAKA WAKA" above Fozzie Bear (from the Muppets) waggling his eyebrows"></span></p>
+</div>
+<div class="paragraph">
+<p>No seriously though folks, that&#8217;s my favorite code joke.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>This formation uses the "extended regex" option of GNU <code>sed</code> so I could use the <code>|</code>: another pipe, and it means there&#8217;s only one <code>s///</code> operation. With basic regexes I guess it&#8217;d be:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo "ceci n'est pas une pipe" | sed -e 's/eci n//' -e 's/pas //'</pre>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. Close second is: "What&#8217;s the best thing about UDP jokes? No one cares if you don&#8217;t get it!" &#8230;&#8203;third is <a href="https://twitter.com/iamdevloper/status/399991896862638081">"Knock knock. Race condition. Who&#8217;s there?"</a>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</guid><category><![CDATA[pun]]></category><category><![CDATA[ shell code]]></category><category><![CDATA[ rene magritte]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 05 Aug 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting started with Spacemacs]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Are you a vi/vim user who&#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>(First: have you read the <a href="https://github.com/syl20bnr/spacemacs/blob/074f425dc5d233f24195ecc3021eb96ac9d55d4d/doc/VIMUSERS.org#purpose-of-this-document"><code>VIMUSERS</code> doc</a>? You should. Go do that, then come back and start reading this.)</p>
+</div>
+<div class="paragraph">
+<p>Heads up: Spacemacs takes over <code>~/.emacs.d</code>, don&#8217;t mess with it. Your editor configuration file is now <code>~/.spacemacs</code>. <code>SPC f e d</code> to edit your config, and once it&#8217;s saved <code>SPC f e R</code> to reload it and begin using it.</p>
+</div>
+<div class="paragraph">
+<p>The space bar is now your leader key. It&#8217;s also sorta like the colon <code>:</code> to start an ex command from Normal mode&#8230;&#8203; it&#8217;s where pretty much all the functionality is accessible.</p>
+</div>
+<div class="paragraph">
+<p>The Spacemacs repository&#8217;s <code>DOCUMENTATION.org</code> file is much more comprehensive than the <code>README</code>. <a href="https://github.com/syl20bnr/spacemacs/blob/d555002308e7ce86161d3d7998e42cdcc5a9800d/doc/DOCUMENTATION.org">Here it is at the time of writing</a>; look for a more recent one&#8230;&#8203; <a href="http://ian.mccowan.space/2015/04/07/Spacemacs/">Ian McCowan&#8217;s post about creating Spacemacs</a> is a valuable intro as well, but beware that some of the key combos may have changed since it was written.</p>
+</div>
+<div class="paragraph">
+<p>Buffers don&#8217;t correspond to files&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The Meta key is still Escape? <a href="https://www.reddit.com/r/emacs/comments/333ywx/did_anyone_else_go_wow_after_trying_spacemacs/cqj97zy"><code>(setq mac-option-modifier 'meta)</code></a> or use the OSX package which puts it under the Option key.</p>
+</div>
+<div class="paragraph">
+<p>At the time of writing, <a href="https://github.com/railwaycat/homebrew-emacsmacport">the recommended port for OS X</a> has full mouse support, including scrolling — which is pixel-based, not character-based. Seeing that when I didn&#8217;t expect it was shocking enough that I felt the need to warn you.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_discovering_things">discovering things</h3>
+<div class="paragraph">
+<p>Learning how to learn is the first step to learning&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><code>SPC h d f</code> (i.e. "help describe function") will bring up another fuzzy-searchable list of functions, and when you select one it&#8217;ll pop open a buffer describing it and any keybindings for it.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC h d v</code> (i.e. "help describe variable") brings up a similar list for variables.</p>
+</div>
+<div class="paragraph">
+<p>Just type <code>SPC h d</code> and wait, a buffer appears with suggested completions. <code>SPC h d k</code> (i.e. "help describe key") prompts for another command sequence, and will pop up a buffer describing whatever it maps to. Try it on itself: type <code>SPC h d k</code>, and I see a prompt <code>Describe key (or click or menu item):</code> (I&#8217;m using the OS X GUI version; yours may be different) and then if I type <code>SPC h d k</code> again, the buffer opens explaining a little about the command <code>spacemacs/describe-key</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC ?</code> brings up a fuzzy-searchable list of functions, which you can run by hitting Enter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shells">shells</h3>
+<div class="paragraph">
+<p>I do a lot of work in a dedicated shell as well as my editor. To open a shell: <code>SPC :</code> is like hitting <code>:</code> to get into vim&#8217;s Ex command line, but includes a fuzzy-searcher for the command (<code>M-x</code> in normal Emacs). Then type "shell" or "ansi-term" or "eshell" <a href="https://www.masteringemacs.org/article/running-shells-in-emacs-overview">depending on what you want</a>. "ansi-term" will ask you what shell you want to run, so that&#8217;s how I get into zsh.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_finding_files_changing_directories">finding files, changing directories</h3>
+<div class="paragraph">
+<p><code>SPC f f</code> to bring up a [buffer? window?] which finds directories or files (not fuzzy-searching though; see below for that). It begins in the current working directory, but <code>BS</code> (that&#8217;s the backspace key, aka "regular delete", the one which goes left) in there will go up a directory. Change the selected entry with the arrow keys.</p>
+</div>
+<div class="paragraph">
+<p>Create new files with <code>SPC f f</code> as well: type out a path that doesn&#8217;t exist and hit enter, it&#8217;ll ask if you want to create an empty file there.</p>
+</div>
+<div class="paragraph">
+<p><code>SPC p f</code> to fuzzy-search for files in the current project. In result list, <code>RET</code> opens the file, <code>C-c o</code> opens it in a new window (split).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/jaypei/emacs-neotree">NeoTree</a> is a NerdTree-like plugin; <code>SPC f t</code> opens the sidebar in the directory of the file you&#8217;re currently editing, and <code>SPC p t</code> opens into the current project&#8217;s root directory. <code>hjkl</code> to move around, <code>K</code> to move up directories, <code>RET</code> opens a file like you&#8217;d expect, vertical pipe <code>|</code> to open a file in a new vertical split, and hyphen <code>-</code> for a horizontal split.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_splits">splits</h3>
+<div class="paragraph">
+<p>Splits are called "windows". <code>SPC w /</code> to create a split/window to the right; <code>SPC w -</code> to create a split/window to the bottom. Navigating between windows can be done with <code>SPC w &lt;direction&gt;</code> or <code>C-w &lt;direction&gt;</code>, where direction is one of <code>hjkl</code> (and that <code>C-w</code> means to hold down control and then push <code>w</code>).</p>
+</div>
+<div class="paragraph">
+<p>Once, something I did ended up removing all my splits, as if I had ran <code>:only</code>. Turns out restoring my splits is just a <code>SPC w u</code> away (thanks <a href="http://emacswiki.org/emacs/WinnerMode">winner mode</a>).</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;ve been using <a href="https://github.com/moll/vim-bbye">vim-bbye</a> to be able to kill a buffer (aka close a file) without losing the split that the buffer&#8217;s in; in Spacemacs use <code>SPC b d</code> ("buffer delete") to <code>kill-this-buffer</code>. Closing a window can be done with <code>:q</code> like a good little vim emulation, or <code>SPC w c</code> ("window close").</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_line_wrapping">line wrapping</h3>
+<div class="paragraph">
+<p>&#8230;&#8203;is called line truncation. <code>SPC t l</code> to toggle line truncation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visible_whitespace">visible whitespace</h3>
+<div class="paragraph">
+<p>All whitespace in the current window can be made visible or invisible with the <code>SPC t w</code> combo. Toggle for everything with <code>SPC t C-w</code> (that&#8217;s space, then the letter <code>t</code>, then hold down control and press the letter <code>w</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_key_mappings">key mappings</h3>
+<div class="paragraph">
+<p>Haven&#8217;t really gotten that far yet&#8230;&#8203; turns out everything&#8217;s already got a space-based shortcut, which I&#8217;ve been able to put up with&#8230;&#8203;</p>
+</div>
+<div class="sect3">
+<h4 id="_chords">chords</h4>
+<div class="paragraph">
+<p>I&#8217;m now very accustomed to having both <code>jk</code> and <code>kj</code> in quick succession change to Normal node from Insert mode, but Emacs doesn&#8217;t do the "wait and see if this will be a combo" thing that vim does. However Spacemacs includes the <a href="https://github.com/syl20bnr/evil-escape">evil-escape</a> package, so I just needed to add <code>(setq-default evil-escape-key-sequence "jk")</code> to the <code>dotspacemacs/layers</code> function.</p>
+</div>
+<div class="paragraph">
+<p>For more customizable combos than just exiting insert mode, there&#8217;s a plugin called "keychord.el" which I haven&#8217;t yet looked at.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_git_via_magit">git, via Magit</h3>
+<div class="paragraph">
+<p><a href="https://github.com/magit/magit">Magit</a> is an Emacs interface to Git. It sounds like it doesn&#8217;t <strong>hide</strong> any of the complexity of Git, so if you&#8217;re not already comfortable with it on the command line, Magit probably isn&#8217;t going to be helpful&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>See a diff of the current file with <code>SPC g d</code>.</p>
+</li>
+<li>
+<p>Look at the overall project status with <code>SPC g s</code>, then:</p>
+</li>
+<li>
+<p>open/close diffs of files in there with <code>TAB</code></p>
+</li>
+<li>
+<p><code>s</code> will stage a file (or hunk) and <code>u</code> will unstage</p>
+</li>
+<li>
+<p><code>c</code> to bring up the commit menu (you can do interactive-type stuff here)</p>
+</li>
+<li>
+<p><code>?</code> to show you what else you can do (pulling, pushing, tagging, reverting, bisecting, oh my)</p>
+</li>
+<li>
+<p>Once you&#8217;ve settled on a commit message, <strong>actually</strong> commit by hitting <code>C-c C-c</code> (yes that&#8217;s control-and-lowercase-c, twice in a row; is there a smoother way to do that?)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Close these Magit windows with a bare press of <code>q</code>.</p>
+</div>
+<div class="paragraph">
+<p>Some potentially helpful links: <a href="https://www.masteringemacs.org/article/introduction-magit-emacs-mode-git">An introduction to Magit, an Emacs mode for Git</a>, <a href="https://github.com/magit/magit/blob/a83f9303be806dd2e793cd7207926f0fc8dd8146/Documentation/magit.org">the Magit user manual</a> (look for a more up-to-date version!).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__tabs">"tabs"</h3>
+<div class="paragraph">
+<p><a href="https://github.com/nex3/perspective-el">Perspective</a> "provides tagged workspaces". <a href="https://github.com/alxndr/dotfiles/commit/ff925be53193f0c820c82f116f3ec4dea55e8a0d">Add it to <code>dotspacemacs-configuration-layers</code></a>, then <code>SPC L s</code> to switch between workspaces or create a new one; <a href="https://github.com/syl20bnr/spacemacs/blob/6eab954afecb4af81aa29916deaa5c1cd332bcb9/layers/%2Bwindow-management/perspectives/README.org#key-bindings">rest of the bindings are here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_evil_surround">evil-surround</h3>
+<div class="paragraph">
+<p><a href="https://github.com/timcharper/evil-surround">Evil-surround</a> is like the venerable tpope&#8217;s <a href="https://github.com/tpope/vim-surround">vim-surround</a>. The bindings are the same; e.g. inside something in parens, <code>cs([</code> will change the parens to square brackets with a space for padding, <code>cs(]</code> will change them to square brackets without the space.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_thanks_where_thanks_is_due">thanks where thanks is due</h3>
+<div class="paragraph">
+<p>Some more people who, knowingly or unknowingly, have helped me out learning all this: <a href="https://news.ycombinator.com/item?id=9395785">tuhdo</a>, svarlet (in the elixir-lang Slack)</p>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</guid><category><![CDATA[spacemacs]]></category><category><![CDATA[ emacs]]></category><category><![CDATA[ vim]]></category><category><![CDATA[ vi]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 20 Jun 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[advanced filtering in Chrome's Network dev tools]]></title><description><![CDATA[<div class="paragraph">
+<p>Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful.</p>
+</div>
+<div class="paragraph">
+<p>In Chrome 43 (on OS X 10.10), show the filter toolbar by clicking on the gray “filter” / “funnel” icon; it’ll turn blue and a text box appears below it. Next to the text box is a row of "buttons” which let you quickly filter by request type; “All” is the selected default. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>The text box is the more powerful tool, with what the <a href="https://developer.chrome.com/devtools/docs/network">Dev Tools docs call</a> “filter types”.</p>
+</div>
+<div class="paragraph">
+<p>To only show requests from a certain domain name, use the filter type <code>domain:</code> like so: <code>domain:github.io</code>. To hide requests from a certain domain, start it with a hyphen: <code>-domain:github.io</code>.</p>
+</div>
+<div class="paragraph">
+<p>To only show requests that haven’t finished yet, use <code>is:running</code>.</p>
+</div>
+<div class="paragraph">
+<p>Find potentially-troublesome requests with <code>-status-code:200 -status-code:302 -status-code:204 -status-code:304 -status-code:307</code>. (If currently-running requests are distracting you, stick <code>-is:running</code> at the beginning of that.)</p>
+</div>
+<div class="paragraph">
+<p>Find out more handy little tips like this by keeping an eye on <a href="https://plus.google.com/+UmarHansa">Umar Hansa</a>’s mini-blog <a href="https://umaar.com/dev-tips/#archive">Chrome Dev Tips</a>.</p>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. The next time you’re filtering something in the Network panel but you’re not seeing what you think you should be seeing, make sure this request type quick selector is on “All”!
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</guid><category><![CDATA[Google Chrome]]></category><category><![CDATA[ developer tools]]></category><category><![CDATA[ network]]></category><category><![CDATA[ filters]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 30 May 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[only show master branch status in CI status feeds (for e.g. CCMenu)]]></title><description><![CDATA[<div class="paragraph">
+<p><a href="http://ccmenu.org/">CCMenu</a> is a neat little menu icon which shows the build status of your projects <a href="http://docs.travis-ci.com/user/cc-menu/">on Travis CI</a>, <a href="https://circleci.com/docs/polling-project-status">CircleCI</a>, or many other automated build services.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes they show the build status of all open PRs, which can often be noisy. I like to limit them to only show the status of the master branch:</p>
+</div>
+<div class="paragraph">
+<p>For Travis CI, stick <a href="https://github.com/travis-ci/travis-api/commit/3f16100247e1baf2be97eb870afb26a542f23fcc"><code>&amp;branch=master</code></a> onto <a href="http://docs.travis-ci.com/user/cc-menu/">the <code>cc.xml</code> URL you&#8217;re using</a>.</p>
+</div>
+<div class="paragraph">
+<p>For Circle CI, <a href="https://circleci.com/docs/polling-project-status">add "master" to the file name</a> so <a href="https://circleci.com/docs/polling-project-status">the full URL looks like <code>https://circleci.com/gh/USER/REPO/tree/master.cc.xml?circle-token=TOKEN&amp;ccmenu-hack=cc.xml</code></a>.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CCMenu.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CCMenu.html</guid><category><![CDATA[build status]]></category><category><![CDATA[ ccmenu]]></category><category><![CDATA[ travis ci]]></category><category><![CDATA[ circle ci]]></category><category><![CDATA[ xml feed]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 25 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[watch some files, and run something whenever they change]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>For the next time I forget what this tool is called:</p>
+</div>
+</div>
+</div>
+<h1 id="_entr" class="sect0">entr</h1>
+<div class="paragraph">
+<p><a href="http://entrproject.org"><code>entr</code></a> is a neat little tool that monitors files and runs a command when they change.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</guid><category><![CDATA[entr]]></category><category><![CDATA[ tools]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 15 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes: Erlang Factory 2015]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_jos_what_elixir_is_about">José: What Elixir Is About</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>not the syntax</p>
+</li>
+<li>
+<p>Extensibility</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Data type pm&#8217;phism" not possible in erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>processes: send a message. sorta-pm&#8217;phic&#8230;&#8203; (sorta duck-typed in that it accepts a message)</p>
+</li>
+<li>
+<p>modules: calling a function&#8230;&#8203; same. obey a contract</p>
+</li>
+<li>
+<p>data: not so much. but in Elixir: <code>defprotocol</code>! then <code>defimpl Module, for: Type</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Elixir&#8217;s Enumerable protocol&#8230;&#8203; stream&#8230;&#8203; so anything in the future could be lazy-parsed</p>
+</li>
+<li>
+<p>Elixir&#8217;s Inspect protocol&#8230;&#8203; this is how everything is nice and readable in iex</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Productivity</p>
+<div class="ulist">
+<ul>
+<li>
+<p>mix</p>
+</li>
+<li>
+<p>hex&#8230;&#8203; some integration with rebar in the future?</p>
+</li>
+<li>
+<p>docs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Compatibility</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OTP: GenServer, GenEvent are untouched</p>
+<div class="ulist">
+<ul>
+<li>
+<p>but because GenServer is generic, hard to understand what a specific one is doing. could be just computing, could be just holding state&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>just computing? use Elixir Task</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this revealed patterns: async/await, distributed work w/Task.Supervisor</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>just holding state? use Elixir Agent. provides a nice state API</p>
+<div class="ulist">
+<ul>
+<li>
+<p>which means can implement some determinism&#8230;&#8203; Agent.Lattices&#8230;&#8203; data replication with guarantees</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Parallelism</p>
+<div class="ulist">
+<ul>
+<li>
+<p>laziness</p>
+</li>
+<li>
+<p>pipeline parallelism: inject Stream.async() into a lazy chain and it can use other processes to calculate</p>
+</li>
+<li>
+<p>data parallelism</p>
+</li>
+<li>
+<p>challenges: what&#8217;s most efficient way of pm&#8217;phic dispatch? effective way of implementing caches? backpressure? sharing data?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erik_meadows_j_nsson_hex">Erik Meadows-Jönsson: Hex</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>mix: task runner. generate, compile, run tests, fetch dependencies</p>
+<div class="ulist">
+<ul>
+<li>
+<p>define a Project. versioning, dependencies</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>hex: install separately (may be bundled in future) but do stuff via mix</p>
+<div class="ulist">
+<ul>
+<li>
+<p>installed as code archive (.ez): zipped .beam &amp; .app files. erlang can code-load. auto-loaded by mix</p>
+</li>
+<li>
+<p>"remote converger" called by converger&#8230;&#8203; which is used by deps.get</p>
+<div class="ulist">
+<ul>
+<li>
+<p>converger: traverses deps tree, tries to merge same apps, reports error to user, put in dependency-based order</p>
+</li>
+<li>
+<p>remote:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>updates registry (ETS file) which is mapping of all apps &amp; versions which are deps, plus their deps</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;registry format is inefficient; should change in future</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>actually does the fetching</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hex.pm site</p>
+<div class="ulist">
+<ul>
+<li>
+<p>hexdocs.pm hosts docs, generate em with ExDocs: <code>mix hex.docs</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>escripts: executable binaries made from erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>can install from git or hex.pm&#8230;&#8203; (in elixir 1.1?)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>erlang tooling</p>
+<div class="ulist">
+<ul>
+<li>
+<p>rebar3; otp pkg mgr</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thomas_arts_quickcheck">Thomas Arts: QuickCheck</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>testing is boring&#8230;&#8203;</p>
+</li>
+<li>
+<p><code>use EQC.ExUnit</code> gives you a <code>property "desc", do: forall {vars} &#8592; {varTypes}, do: test(vars) end end</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>varTypes are type "generators"</p>
+</li>
+<li>
+<p>"shrinks" to find smallest test case that fails</p>
+</li>
+<li>
+<p>generating something specific, like a sequence: <code>EQC.StateM</code>. defines an api for how to begin, generate elements, verify them</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>CONCURRENCY! <code>run_parallel_commands</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;wow</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruce_tate_making_testing_nice_with_shouldi_and_blacksmith">Bruce Tate: making testing nice (&#8230;&#8203;with ShouldI, and Blacksmith)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>coverage: <a href="https://github.com/parroty/excoveralls" class="bare">https://github.com/parroty/excoveralls</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>can show you covered lines&#8230;&#8203; everything should be covered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>more of a testing DSL: <a href="https://github.com/batate/shouldi" class="bare">https://github.com/batate/shouldi</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>basics: <code>should</code>, (nested) setup/teardown</p>
+</li>
+<li>
+<p><code>step</code> for longer integration tests&#8230;&#8203; (or is this part of blacksmith)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>data generation: <a href="https://github.com/batate/blacksmith" class="bare">https://github.com/batate/blacksmith</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>like FactoryGirl</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>concurrency&#8230;&#8203;
+*something about unique ids</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jamie_winsor_mmorpg_in_elixir">Jamie Winsor: MMORPG in Elixir</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>don&#8217;t be afraid to contract out</p>
+</li>
+<li>
+<p>don&#8217;t hire maybes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>look for IQ &amp; EQ &amp; Personality, all are important</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>use OS</p>
+</li>
+<li>
+<p>is Elixir risky? not really&#8230;&#8203; has 2-way interop w/erlang. "fixes" erlang syntax, tooling, packaging.</p>
+</li>
+<li>
+<p>building stuff:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>protocol layer first</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>sharding&#8230;&#8203; buckets are postgres schemas. &#8230;&#8203;uh what</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"route server" to have more than 100 nodes talking to each other</p>
+</li>
+<li>
+<p>deterministic routing: knowing what shard a message goes to. using postgres functions to create unique ids&#8230;&#8203; uh what</p>
+</li>
+<li>
+<p>randomly determinstic routing: uhhhh tina-belcher.gif</p>
+</li>
+<li>
+<p>discovery&#8230;&#8203; partially enabled by erlang&#8217;s architecture</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>different servers for different functions: "world" vs "in-combat"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_garrett_smith_erlang_patterns">Garrett Smith: Erlang patterns</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>C Alexander: seeking "quality w/o a name" (&#8230;&#8203;名可各非常名)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>in the foreword to Software Patterns he actually basically says he&#8217;s skeptical whether software has that nameless quality</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;but programmers know it&#8217;s there</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>this is an attempt at Alexandrian approach to patterns</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>creating a pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>needs a name first. good name, but first just name it</p>
+</li>
+<li>
+<p>why pattern is good</p>
+</li>
+<li>
+<p>where it should be used</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>acceptance criteria for being a pattern</p>
+<div class="ulist">
+<ul>
+<li>
+<p>used somewhere</p>
+</li>
+<li>
+<p>used enough to feel how it is to use it</p>
+</li>
+<li>
+<p>feels good to use</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>possible types of patterns in erlang</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OTP constructs</p>
+</li>
+<li>
+<p>function types</p>
+</li>
+<li>
+<p>process/behavior types</p>
+</li>
+<li>
+<p>app-level facilities</p>
+</li>
+<li>
+<p>distributed stuff</p>
+</li>
+<li>
+<p>principles &#8230;&#8203;?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>examples!</p>
+</li>
+<li>
+<p>Supervisor, an OTP construct. recover from crashes! use when you need fault toleance.</p>
+</li>
+<li>
+<p>Message Handler, a function type. "callback" used when you receive a message. helps with boilerplate for handling messages&#8230;&#8203;?</p>
+</li>
+<li>
+<p>Task, a process/behavior type. process which is expected to stop after doing something. good for performing quick autonomous work</p>
+</li>
+<li>
+<p>Cleanup Crew, an app-level facility. process which cleans up after other(s). removes cleanup burden from other tasks</p>
+</li>
+<li>
+<p>Crash By Default, a principle. "fail fast" too general&#8230;&#8203; don&#8217;t handle errors. (what about APIs??) good bc simplifies code.</p>
+</li>
+<li>
+<p><a href="http://erlangpatterns.org" class="bare">http://erlangpatterns.org</a> <a href="https://github.com/gar1t/erlang-patterns" class="bare">https://github.com/gar1t/erlang-patterns</a></p>
+</li>
+<li>
+<p>antipatterns?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ransom_richardson_erlang_in_the_cloud">Ransom Richardson: Erlang in the Cloud</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>expect it to crash</p>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8230;&#8203;need more than one instances, obv. AZes too. enough to absolb failures and resultant load spikes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>erld: makes the erlang vm seem like a unix daemon, supports heartbeats</p>
+</li>
+<li>
+<p>deployment: either upgrade existing server instances, or deploy all new ones. new: easy to rollback to still-running old ones. makes sure deployment is repeatable.</p>
+</li>
+<li>
+<p>replaced redis w/custom server, was simpler and faster (but redis driver for erlang is just really slow)</p>
+</li>
+<li>
+<p>AWS Lambda is interesting&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_joseph_blomstedt_data_structures">Joseph Blomstedt: Data Structures</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>bt: erlang tree data structure</p>
+</li>
+<li>
+<p>orddict: tree structure with leaves holding up to 3 values</p>
+</li>
+<li>
+<p>bt_nif: slow on 10 mil entries, but it can do it!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_i_aki_garay_training">Iñaki Garay: Training</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>community is small; finding experienced erlangers is hard</p>
+</li>
+<li>
+<p>right candidates; apprenticeship; clear guidelines; good tooling</p>
+</li>
+<li>
+<p><a href="https://github.com/inaka/elvis" class="bare">https://github.com/inaka/elvis</a></p>
+</li>
+<li>
+<p>having a toy project is very helpful. use as learning sandbox&#8230;&#8203; fundamental principles, concurrency, OTP, other libraries, up to deployment</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_louis_philippe_gauthier_debugging_complex_systems">Louis-Philippe Gauthier: Debugging Complex Systems</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>need to understand the system&#8230;&#8203; stack: OS, VM, application, protocols, external services&#8230;&#8203; tools (experiment begore you need them!)&#8230;&#8203; requirements: is this really a bug?</p>
+</li>
+<li>
+<p>reproduce the bug. find conditions, try locally, try prod</p>
+</li>
+<li>
+<p>collect data&#8230;&#8203; see if it&#8217;s a known bug. filter out data noise.</p>
+</li>
+<li>
+<p>process of elimination / divide and conquer. macro observations: all servers affected? data centers? external services? (if multiple bugs, one might be hiding another&#8230;&#8203;)</p>
+</li>
+<li>
+<p>change 1 thing at a time, don&#8217;t take shortcuts. keep audit trail: postmortems, collaboration, learning.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>tip: deploy different branches to different boxes!</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>verify your assumptions! code deployed? VM version? configs? tools lying? (check your audit trail&#8230;&#8203;)</p>
+</li>
+<li>
+<p>take a step back. sleep on it, ask co-worker, ask expert</p>
+</li>
+<li>
+<p>validate fix. found root cause? maybe roll out slowly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>regression tests are good</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>erlang&#8217;s shell, can log in remotely</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ets:i()</code>? can also easily spin up interval checks for process info&#8230;&#8203; (<code>observer:start()</code>&#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>loggers. Lager</p>
+</li>
+<li>
+<p>metrics collection&#8230;&#8203; lots of em</p>
+</li>
+<li>
+<p>crash dump&#8230;&#8203; <code>observer</code> is friendly</p>
+</li>
+<li>
+<p>profilers&#8230;&#8203; <code>eflame</code>, lots of others</p>
+</li>
+<li>
+<p>system monitoring stuff</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</guid><category><![CDATA[notes]]></category><category><![CDATA[ erlang factory]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 27 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[jiggling the handle of OS X 10.8.5's dock]]></title><description><![CDATA[<div class="paragraph">
+<p>About once a week now, I&#8217;ll notice that the Dock on my Macbook (running 10.8.5) no longer auto-shows itself when hovering at the bottom of the screen.</p>
+</div>
+<div class="paragraph">
+<p>My current somewhat-quick workaround to make it behave is to four-finger-swipe-up to activate Mission Control, which shows the Dock. Then right-click on it and open up the Dock preferences. At this point the Dock is behaving again; close the preferences.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</guid><category><![CDATA[OSX]]></category><category><![CDATA[ dock]]></category><category><![CDATA[ autohiding]]></category><category><![CDATA[ workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 06 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[project naming chains of nonsense]]></title><description><![CDATA[<div class="sect5">
+<h6 id="_elm_pine_pico_nano">elm pine pico nano</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>elm the email client: abbreviation for electronic mail</p>
+</li>
+<li>
+<p>pine the email client: acronym for Pine Is No-longer Elm, and also the name of a tree</p>
+</li>
+<li>
+<p>pico the text editor: acronym for pine editor</p>
+</li>
+<li>
+<p>nano the text editor: nano- is the SI prefix which is 1000 times the size of pico-</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_xml_ajax_comet">xml ajax comet</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>xml: extensible markup languages</p>
+</li>
+<li>
+<p>ajax the js/http pattern: acronym for asynchronous javascript and xml</p>
+</li>
+<li>
+<p>comet the predecessor js/java/http pattern: also a household cleaner (like ajax)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_multics_unix_gnu">multics unix gnu:</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>multics: acronym for multiplexed information and computer services</p>
+</li>
+<li>
+<p>unix: originally unics, acronym for uniplexed information and computing service, after multics</p>
+</li>
+<li>
+<p>gnu: acronym for gnu&#8217;s not unix</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_vi_vim_neovim">vi vim neovim</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>vi: short for "visual"</p>
+</li>
+<li>
+<p>vim: "vi improved"</p>
+</li>
+<li>
+<p>neovim: a new vim</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_emacs">emacs</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>emacs: "editing macros" or "E with macros" <a href="http://en.wikipedia.org/wiki/Emacs#History"><sup>1</sup></a></p>
+</li>
+<li>
+<p>eine the text editor: *e*ine *i*s *n*ot *e*macs <a href="http://emacswiki.org/emacs/EmacsHistory"><sup>2</sup></a></p>
+</li>
+<li>
+<p>zwei the text editor: *z*wei *w*as *e*ie *i*nitially <a href="http://emacswiki.org/emacs/EmacsHistory"><sup>3</sup></a></p>
+</li>
+</ul>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</guid><category><![CDATA[nomenclature]]></category><category><![CDATA[ trivia]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[Wanted: replacement for actionitems.us]]></title><description><![CDATA[<div class="paragraph">
+<p>In 2011 the dev team I was on went to <a href="http://pivotallabs.com/">Pivotal Labs</a> for a few months to bootstrap a rebuild of our company&#8217;s site, and learn their style of "extreme programming". We used a tool to organize our weekly retrospective meetings which I felt was remarkably useful and easy, but it&#8217;s since disappeared and I haven&#8217;t found a web-based replacement.</p>
+</div>
+<div class="paragraph">
+<p>The site was <strong>actionitems.us</strong>, it was bare-bones and did just one thing and felt easy to use and understand. In a nutshell:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>users are collected into teams</p>
+</li>
+<li>
+<p>team has an upcoming meeting</p>
+</li>
+<li>
+<p>team members can submit thoughts/topics for upcoming meeting</p>
+</li>
+<li>
+<p>members can rank topics in order of what they&#8217;d like to discuss</p>
+</li>
+<li>
+<p>members can comment on existing topics whenever</p>
+</li>
+<li>
+<p>when meeting starts, ordered topic list is the agenda</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I felt that it was a great tool for our team. It was fast enough to use that any thoughts on the current dev cycle (code, ops, design, administrative, office-related&#8230;&#8203;) could be quickly recorded, and then it got out of the way. We would try to develop action items out of any pain point topics we discussed.</p>
+</div>
+<div class="paragraph">
+<p>I haven&#8217;t found something like it. Could be a fun open-source project.</p>
+</div>
+<div class="paragraph">
+<p>(In the meantime, <strong><a href="http://stickies.io/">stickies.io</a></strong>, though lacking the voting/ranking feature, has been a decent replacement.)</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</guid><category><![CDATA[agile]]></category><category><![CDATA[ retrospective]]></category><category><![CDATA[ tooling]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[sometimes iTunes doesn't show the currently-playing song's name and position]]></title><description><![CDATA[<div class="paragraph">
+<p>In the middle of the very top of iTunes, between the play/volume controls on the left and the search bar on the right, there&#8217;s a panel that normally shows the currently-playing song name and position, or device sync info, or CD burning info.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes it doesn&#8217;t show me the currently-playing song name and position even though I&#8217;m playing a song and not doing anything else. There&#8217;s no little triangle button to switch between the things it should be showing, like I&#8217;ve sometimes seen.</p>
+</div>
+<div class="paragraph">
+<p>To fix, close the iTunes window and re-open it by goning up to the Window menu and "unchecking"/selecting the (helpfully-named) iTunes menu option. The song you&#8217;re playing will continue to play, but the iTunes window goes away. Then pull the Window menu down again and "check"/re-select the iTunes menu option. The iTunes window comes back, and now it&#8217;s showing the name/position/album of the still-playing song.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</guid><category><![CDATA[iTunes]]></category><category><![CDATA[ UI]]></category><category><![CDATA[ bug]]></category><category><![CDATA[ workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 14 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[Sharpening Your Tools]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>…is an episode of <a href="http://rubyrogues.com/">the Ruby Rogues podcast</a>, <a href="http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/">#129 with Ben Orenstein</a> (who has spent some of his time being the host of <a href="http://thoughtbot.com/">Thoughtbot</a>’s <a href="http://podcasts.thoughtbot.com/giantrobots">Giant Robots podcast</a>). In the episode, Ben talks about periodically evaluating his tools and making them work better for you.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>I thought of it as slowly sanding down the rough edges of my environment. [&#8230;&#8203;] Anything that irked me, I would try to spend a little time on, every morning. —Ben, at around 6:15</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>In general, I think re-evaluating your own tools is an interesting and often useful exercise do from time to time. Computers can make this especially easy!</p>
+</div>
+<div class="paragraph">
+<p>Here are some of my favorite computery tool-sharpenings.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_your_shell">In your shell</h3>
+<div class="paragraph">
+<p>Do you use a shell? Can it alias things? Read on for <strong>ONE WEIRD TRICK</strong> that will <strong>SAVE YOU TIME AND MONEY!!</strong></p>
+</div>
+<div class="paragraph">
+<p>In the Ruby Rogues episode, one cohost begins by mentioning <a href="https://www.youtube.com/watch?v=8ZMOWypU34k">a talk Ben gave</a> where he shows and talks about how he periodically analyzes the commandline tools he uses most often.</p>
+</div>
+<div class="paragraph">
+<p>Now for some audience participation! Open up a shell and run this command after the <code>$</code>, and you should get a list of the 20 commands you use the most:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ history | awk '{ count[$2]++ } END { for (cmd in count) { print count[cmd] " " cmd } }' | sort -rn | head -20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What does your list look like? How many letters is your longest command?</p>
+</div>
+<div class="paragraph">
+<p>How much time do you think you spent typing that long command last week?</p>
+</div>
+<div class="paragraph">
+<p>Ben did this in his talk, showing and talking about the commands he runs the most often. What I find most interesting is that more than half of the commands in his list aren&#8217;t "real" commands; they&#8217;re shortcuts he&#8217;s made. Ben&#8217;s most commonly-used command is <code>g</code>, which he explains is a wrapper for <code>git</code>. Now he saves two keypresses every time he needs to use <code>git</code>.</p>
+</div>
+<div class="paragraph">
+<p>Also in the top half of Ben&#8217;s list are a set of shortcuts for specific git actions: <code>gad</code>, <code>gcm</code>, <code>gd</code>, <code>gco</code>, <code>gg</code>. Now instead of typing <code>git add .</code>, he types <code>gad</code>, and saves five characters. Instead of typing <code>git commit -m "message"</code> he types <code>gcm "message"</code> and saves ten characters. You might be able to guess what the other ones are.</p>
+</div>
+<div class="paragraph">
+<p>This is a powerful idea to me. Our computers let us refine our tools so that they suit our hands more!</p>
+</div>
+<div class="paragraph">
+<p>Paul McKellar has taken this history analysis step further with the <a href="https://github.com/paulmars/huffshell">huffshell</a> project, which will look at your shell history and suggest shortcuts — even including the types of commands that take subcommands, like <code>git</code>, <code>rake</code>, <code>npm</code>, what have you.</p>
+</div>
+<div class="paragraph">
+<p>As you might imagine, I also have a bunch of shortcuts in my shell. I have so many that <a href="https://github.com/alxndr/dotfiles/blob/master/.alias">I keep my <code>.alias</code> file in GitHub</a>. I like to read other people&#8217;s and steal ideas. You should try it! And then put your <code>.alias</code> file on GitHub too!</p>
+</div>
+<div class="paragraph">
+<p>Check this out: <a href="https://github.com/alxndr/dotfiles/blob/931d9dd08849c9dcd2bd72b31c9071a0cbbe65c0/.alias#L39-47">I start my Rails servers with <code>rs</code></a>. Doesn&#8217;t matter what version of Rails, my shortcut will figure it out for me. Same thing with the Rails console: <a href="https://github.com/alxndr/dotfiles/blob/931d9dd08849c9dcd2bd72b31c9071a0cbbe65c0/.alias#L25-38"><code>rc</code> and I&#8217;m in</a>. Bingo bango. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>I bet <code>cd</code> is up there on your top 20 list. If I were a betting man, I might bet that it&#8217;s in your top five even. <code>cd</code> is pretty short, I guess we could shave one character off it by aliasing it to <code>c</code> or whatever&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;but what if you didn&#8217;t type it at all?</p>
+</div>
+<div class="paragraph">
+<p><a href="http://i.imgur.com/5XFQX6D.gif" class="bare">http://i.imgur.com/5XFQX6D.gif</a></p>
+</div>
+<div class="paragraph">
+<p>This gif is showing a couple things, but mostly it&#8217;s showing that zsh is pretty cool. It lets you elide <code>cd</code>: just type the directory that you&#8217;re going to and hit enter. Works with <code>..</code> too. (But if you find yourself doing <code>../..</code> a lot, maybe you want to alias that to <code>&#8230;&#8203;</code>?)</p>
+</div>
+<div class="paragraph">
+<p>It also shows zsh&#8217;s sweet tab completion: I initially typed "wo/br/cms", and then I hit the tab key, which zsh then <a href="http://en.wikipedia.org/wiki/Glob_%28programming%29">glob</a>s to figure out that I want to go to "workspace/br/cms". Pretty nice!</p>
+</div>
+<div class="paragraph">
+<p>And that <code>3</code>, <code>1</code>, <code>2</code>, <code>1</code> weirdness? zsh keeps track of the history of directories you&#8217;ve navigated through. Maybe you know about <a href="http://stackoverflow.com/q/9740298/303896">the <code>cd -</code> trick</a> — it takes you back to the directory you just came from. This is the same functionality as zsh&#8217;s <code>1</code>: it takes you <strong>one</strong> step back in the history of your directory navigation. So that <code>3</code> is taking me back to the directory I was in three <code>cd</code> s ago. This is zsh&#8217;s <code>autopushd</code> feature, which is admittedly a bit of a party trick, but it&#8217;s a neat party trick!</p>
+</div>
+<div class="paragraph">
+<p>Finally, it shows my command prompt. I&#8217;ve streamlined my prompt to only show me the stuff I pretty much always care about: where I am, and (if I&#8217;m in a git repository) what branch I have checked out.</p>
+</div>
+<div class="paragraph">
+<p>The git branch name is a feature of the zsh theme I&#8217;m using, but previously I had cobbled together <a href="https://github.com/alxndr/dotfiles/blob/7fe23897f764334fb1b7718668f4ea4a65fe6c5f/.bashrc#L14-30">something similar for bash</a> before I started using zsh.</p>
+</div>
+<div class="paragraph">
+<p>The colors, newlines, and emoji are all intentional:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the purple <code>$</code> prompt sigil is unabrasively eye-catching enough to help me locate the start of commands quickly</p>
+</li>
+<li>
+<p>the branch name in yellow makes it stand out the most, since it&#8217;s the piece of information there I use the most often</p>
+</li>
+<li>
+<p>directory and branch name are on a separate line from the prompt itself to maximize the space available for typing commands</p>
+</li>
+<li>
+<p>the newline gap between the end of one command&#8217;s output and the start of the following prompt helps me skim through a screen full of history</p>
+</li>
+<li>
+<p>the lightning bolt emoji is a sign that the git repository I&#8217;m in has uncommitted changes</p>
+</li>
+<li>
+<p>the blinking active cursor is easy to find in a sea of split terminals</p>
+</li>
+<li>
+<p>&#8230;&#8203;ok, the cactus emoji is just kinda cute</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I&#8217;m new to zsh so I&#8217;m trying to discover more of the neat sharpenings that are available in it. I jumped on the <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> bandwagon to get into it, and it&#8217;s been a very comfortable switch.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_your_git">In your git</h3>
+<div class="paragraph">
+<p>Git has built-in support for aliases! Yay git!</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ g config alias.foo status
+$ g foo
+On branch master
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+    public/shortcuts.jpg
+    public/shortcuts.md
+nothing added to commit but untracked files present (use "git add" to track)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I mostly end up using git aliases to package up somewhat tricky or hard-to-remember things in git. My favorite one at the moment is what I&#8217;m calling <a href="https://github.com/alxndr/dotfiles/blob/772a33fdc38598f077c2812a91f647bc6060c8cb/.gitconfig#L22"><code>family tree</code></a>, which shows the branches that have been merged into whatever branch I&#8217;m currently on. There&#8217;s also <a href="https://github.com/alxndr/dotfiles/blob/772a33fdc38598f077c2812a91f647bc6060c8cb/.gitconfig#L27"><code>reset-upstream</code></a>, handy when I want to create a feature branch on my fork of someone else&#8217;s repo: it hard-resets my origin&#8217;s master branch to the newly-fetched upstream&#8217;s master branch.</p>
+</div>
+<div class="paragraph">
+<p>I also have some nice quick keystroke savers that aren&#8217;t anything fancy: <code>b</code> for branch, <code>ci</code> for commit, <code>co</code> for checkout, <code>di</code> for diff, <code>st</code> for status.</p>
+</div>
+<div class="paragraph">
+<p>Put all your git aliases together and stick 'em in your <code>~/.gitconfig</code> so they&#8217;re available everywhere! <a href="https://github.com/alxndr/dotfiles/blob/master/.gitconfig">Here&#8217;s mine</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://git.wiki.kernel.org/index.php/Aliases">doc page on git&#8217;s aliases</a> includes a range of great examples as well, if you want some inspiration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_your_editor">In your editor</h3>
+<div class="paragraph">
+<p>(I use Vim and RubyMine, so this part will be about Vim and RubyMine. If you use a different editor, I bet it has ways to do stuff like this as well. If it doesn&#8217;t, maybe you should think about finding a new editor?)</p>
+</div>
+<div class="paragraph">
+<p>Vim is (in?)famously extensible. Google "vim plugins" if you don&#8217;t believe me. I use <a href="https://github.com/alxndr/dotfiles/tree/master/.vim/bundle">a bunch of them</a>, but I think the ones that save me the most time are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/scrooloose/syntastic">Syntastic</a>: point out your syntax errors, in whatever language(s) you type</p>
+</li>
+<li>
+<p><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a>: powerful word completion, in whatever language(s) you type</p>
+</li>
+<li>
+<p><a href="https://github.com/scrooloose/nerdcommenter">NerdCommenter</a>: shortcut to comment and uncomment stuff, in whatever language(s) you type</p>
+</li>
+<li>
+<p><a href="https://github.com/kien/ctrlp.vim">CtrlP</a>: fuzzy file finding, and ctags integration (if you don&#8217;t know what ctags is, look it up, you&#8217;re in for a treat!)</p>
+</li>
+<li>
+<p><a href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</a>: visually mark which lines have been added/deleted/changed since last commit, and move between them quickly</p>
+</li>
+<li>
+<p><a href="https://github.com/tpope/vim-pathogen">Pathogen</a>: vim plugin management (how meta)</p>
+</li>
+<li>
+<p>gotta have a syntax highlighter for whatever language(s) you type!</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I recommend learning as many of vim&#8217;s movement and repetition capabilities as possible. Being able to move around quickly and do several things at once is less like a shortcut and more like a raw power upgrade — which you could turn into even more powerful shortcuts.</p>
+</div>
+<div class="paragraph">
+<p>(Don&#8217;t be intimidated by the variety of options for movement or text manipulation: pick whatever seems the simplest and try to start using it whenever you can. Then after a little while, pick the next simplest one and do it again. If it all just seems needlessly complex, see if either <a href="http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/">Ben McCormick&#8217;s "Vim as a Language"</a> or the classic SO answer <a href="http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">"Your problem with Vim is that you don&#8217;t grok vi"</a> helps at all.)</p>
+</div>
+<div class="paragraph">
+<p>However you get your navigation or manipulation done in vim, you can package up entire sequences of keypresses into shorter commands. Vim&#8217;s <a href="http://vim.wikia.com/wiki/Mapping%5Fkeys%5Fin%5FVim%5F-%5FTutorial%5F%28Part%5F1%29">key mapping</a> feature lets you alias entire sequences of keypresses into quick commands. To access those shortcut mappings, you preface it by pressing a "leader" key. <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>I set up vim to respond to two leader keys, one for each hand:<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup> I&#8217;ll use whichever one is on the opposite side from the first letter of the mapping I want to use, so I can always come up with an easy-to-remember shortcut that isn&#8217;t uncomfortable or inconvenient to type.</p>
+</div>
+<div class="paragraph">
+<p>Using the spacebar as a leader key is another quick way to be able to use both hands! (I like to use spacebar as <a href="https://github.com/alxndr/dotfiles/blob/49a4e065/.vimrc#L53-56">a fold/unfold shortcut</a> instead&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.jetbrains.com/ruby/">RubyMine</a> is a not-free full-blown IDE which targets Ruby-based projects, based on IntelliJ. I like it because, for the most part, it has the functionality of all those vim plugins above but already built-in, and I can make its UI get out of my way so I have a bunch of split panes/tabs plus a bunch of shortcuts. The fuzzy file finder I have available as shift-command-n; syntax errors and git modifications are shown in the gutter; command-/ will comment or uncomment lines in any language<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnote_4" title="View footnote.">4</a>]</sup>; command-b is an even more powerful ctags-like thing; word completion is built in; static code analysis is pretty good and customizable&#8230;&#8203; It also has some nice automated refactoring tools (which are especially tricky to get right with a sneaky language like Ruby).</p>
+</div>
+<div class="paragraph">
+<p>Like most big fancy GUI programs, it supports custom keybindings to access the commands that are <a href="https://blog.pivotal.io/pivotal-labs/labs/exploring-rubymines-quick-commands">normally hidden under menus</a>. And like a nicely-thought-out tool, it supports plugins and has a <a href="http://plugins.jetbrains.com/ruby">big list of them all</a>.</p>
+</div>
+<div class="paragraph">
+<p>But finding useful commands to keybind, or getting familiar with new plugins, requires a non-trivial amount of effort to begin using. For something easier to get into, it also supports — you guessed it — custom shortcuts!</p>
+</div>
+<div class="paragraph">
+<p>How often do you create a new method in a Ruby class? How often do you type out <code>console.log</code> in JS? RubyMine has a feature it calls Live Templates, which turn an alias into a text template, and optionally places your cursor in defined areas within the text. Here&#8217;s one I think I got from <a href="https://github.com/pivotal/Pivotal-Preferences-RubyMine">the setup that Pivotal Labs uses</a>, which creates the skeleton of a Jasmine test when you type <code>it</code> and then a tab:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>it('should _', function() {
+  _
+});</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;with your cursor waiting at the first underscore to let you describe your test, and then when you hit tab again it jumps to the next underscore where you fill in your test code. Nice!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_your_browser">In your browser</h3>
+<div class="paragraph">
+<p>Did you know that your browser can do aliases too? That&#8217;s right!</p>
+</div>
+<div class="paragraph">
+<p>(I use Chrome so what I&#8217;m about to describe is based on Chrome v38’s specific UI, but I know Firefox has this feature, and the last time I used Opera I&#8217;m pretty sure it did too&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p>How often do you look for something specifically on Wikipedia? Do you first Google it, and hope that the Wikipedia article is the first or second result? How much time does it take to find the Wikipedia article if it&#8217;s not on the first page of results? Do you look through more results, or refine your search, or go to Wikipedia and try their built-in search?</p>
+</div>
+<div class="paragraph">
+<p>Well <strong>NO MORE</strong>! Open up Chrome&#8217;s preferences, find the Search section on the main Settings page, and click the "Manage search engines&#8230;&#8203;" button. The little modal that pops up will show a "Default search settings" that&#8217;s probably got Google as the default, but the box below that is where you can add your own. You should see three text fields: in the first one put a helpful name, like "Wikipedia short cut"; in the second one put the short alias you want to use, like <code>w</code>; and in the last one put this: <code><a href="https://www.google.com/search?q=site:wikipedia.org+%s&amp;btnI" class="bare">https://www.google.com/search?q=site:wikipedia.org+%s&amp;btnI</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>Now hit "Done", and close the Settings. Go into the URL bar, and type a <code>w</code> and then a space — you&#8217;ll see a thing in the URL bar appear to the left when you hit the space, saying "Search Wikipedia short cut:", and then there&#8217;s your cursor. Now if you type "bleacher report" and hit enter, you&#8217;re taken directly to the Wikipedia article for BR!</p>
+</div>
+<div class="paragraph">
+<p>Take another look at the URL you stuck in: there&#8217;s a <code>%s</code> hiding towards the end. That bit gets replaced with whatever you type after the "w-space", so the expansion ends up turning into a Google URL that restricts the search results to Wikipedia&#8217;s domain name. The <code>btnI</code> query parameter at the end is Google&#8217;s "I&#8217;m Feeling Lucky" button, which takes you directly to the first result.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnote_5" title="View footnote.">5</a>]</sup> 99% of the time, this&#8217;ll take you right to the article you want!</p>
+</div>
+<div class="paragraph">
+<p>(If you ever wanted to know how I find gifs of stuff quickly, it&#8217;s a shortcut like this. There I just shared my secret gif recipe.)</p>
+</div>
+<div class="paragraph">
+<p>Okay, how about some that sound useful for doing real work, instead of <a href="http://xkcd.com/214/">enabling three hours of fascinated clicking</a>?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I use GitHub a lot on the job. How often do you end up typing "github.com" followed by something? Presto change-o! Create yourself a shortcut with this in the URL bar: <code><a href="https://github.com/%s" class="bare">https://github.com/%s</a></code>, and now to visit my dotfiles repo all you need to do is "gh alxndr/dotfiles" in your URL bar. Nice!</p>
+</li>
+<li>
+<p>Ever find yourself looking up the docs for an older version of something, like Ruby 1.9? They&#8217;re a little buried in Google these days if you don&#8217;t specify the version number&#8230;&#8203; Here you go: <code><a href="https://www.google.com/search?q=site:www.ruby-doc.org+"1.9"+%s&amp;btnI" class="bare">https://www.google.com/search?q=site:www.ruby-doc.org+"1.9"+%s&amp;btnI</a></code></p>
+</li>
+<li>
+<p>I&#8217;m always forgetting the order of the parameters to JS functions&#8230;&#8203; Mozilla&#8217;s Developer Network is a pretty nice reference site: <code><a href="https://www.google.com/search?q=site:developer.mozilla.org+%s&amp;btnI" class="bare">https://www.google.com/search?q=site:developer.mozilla.org+%s&amp;btnI</a></code></p>
+</li>
+<li>
+<p>What&#8217;s that? You want to use my lyrics-jumbling Lorem Ipsum generator, but you can never remember the name of the site cause it&#8217;s a stupid name? <code><a href="http://lyrem-ipsum.com/text-from-lyrics-by/%s" class="bare">http://lyrem-ipsum.com/text-from-lyrics-by/%s</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exercise for the reader: make yourself a shortcut for going to Jira tickets quickly. You&#8217;re welcome.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_your_os">In your OS</h3>
+<div class="paragraph">
+<p>Oh wow, shortcuts in the operating system!</p>
+</div>
+<div class="paragraph">
+<p>(The only operating system I use these days is OS X 10.8 and 10.9, so again that&#8217;s all I&#8217;ll be talking about for the time being.)</p>
+</div>
+<div class="paragraph">
+<p>First one is the simplest, and very useful: restore power to your tab button! Head to OS X&#8217;s Preferences (there&#8217;s a shortcut under the Apple menu) and then the Keyboard panel. In the Keyboard Shortcuts side of the panel, there&#8217;s an option called Full Keyboard Access. Flip that over to "all controls" to let your tab button skip through every button and checkbox instead of just the text boxes and selection fields. This means you don&#8217;t have to reach for your mouse when a dialog pops up and you want to hit a button that&#8217;s not tied to the Enter key.</p>
+</div>
+<div class="paragraph">
+<p>If you have a trackpad, while you&#8217;re in the Preferences, poke through the options in the Trackpad panel. I really like the "Secondary click" and "Three finger drag" options, and having a gesture tied to Mission Control is helpful when I find myself lost in too many windows.</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;m not using it to its full potential, but <a href="http://www.alfredapp.com/">Alfred</a> is pretty much OS X&#8217;s Spotlight on steroids. It&#8217;s an app launcher and file searcher which you can also extend a million ways. I pretty much just use it to launch apps, which I&#8217;m slightly embarrassed to admit.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="http://spectacleapp.com/">Spectacle app</a> lets you define some shortcuts to reposition windows. I use it every day to move windows from one screen to another, or maximize em, or take up exactly half the screen. It&#8217;s sort of a free version of <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a> (which is also a great tool).</p>
+</div>
+<div class="paragraph">
+<p>Earlier I explained how I tuned my command prompt; I also try to tune the visual environment of OS X. To that end, I think it&#8217;s very much worth it to give Surtees Studios fifteen bucks for <a href="http://www.macbartender.com/">the Bartender app</a>, which lets you hide that crap up in the menu bar that you don&#8217;t care about, like the Notifications icon (which who actually uses that anyway), or the Spotlight icon (which I never use because I have Alfred), or your own account name (which hopefully you know by now).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_closing">In closing</h3>
+<div class="paragraph">
+<p>It is worth it to take the time to improve how you do what you do.</p>
+</div>
+<div class="paragraph">
+<p>Evaluate your workflows and tools. Identify what is a hassle, or even what could be improved slightly. Improve it. Repeat.</p>
+</div>
+<div class="paragraph">
+<p>And share! What&#8217;s your favorite shortcut?</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_moar_links">Moar links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/">Ruby Rogues #129, Sharpening Tools with Ben Orenstein</a></p>
+</li>
+<li>
+<p><a href="http://www.confreaks.com/videos/2677-gogaruco2013-frequently-asked-questions">Ben Orenstein&#8217;s GoGaRuCo 2013 talk "Frequently Asked Questions"</a></p>
+</li>
+<li>
+<p>Some dotfiles:</p>
+</li>
+<li>
+<p><a href="https://github.com/alxndr/dotfiles">mine</a></p>
+</li>
+<li>
+<p><a href="https://github.com/thoughtbot/dotfiles">thoughtbot&#8217;s</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. Ok, that&#8217;s not a normal alias, it&#8217;s a new function. But it&#8217;s still a shortcut!
+</div>
+<div class="footnote" id="_footnote_2">
+<a href="#_footnoteref_2">2</a>. In vim it&#8217;s common to preface one&#8217;s custom key mappings with a "leader" key, which starts a short-lived secret mode where your next keypresses are interpreted as a mapping, instead of normal vim commands. I think the backslash <code>\</code> is the most common one.
+</div>
+<div class="footnote" id="_footnote_3">
+<a href="#_footnoteref_3">3</a>. Well, that&#8217;s not quite true — I just happen to use the comma as the start of some mappings, which feels the same as having another leader key. The backslash and the comma are on different sides of the keyboard in the <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">the Dvorak keyboard layout</a>.
+</div>
+<div class="footnote" id="_footnote_4">
+<a href="#_footnoteref_4">4</a>. Except it doesn&#8217;t work in Dvorak! Weird. I set up another shortcut so it works with \, which is in the same place in QWERTY&#8230;&#8203;
+</div>
+<div class="footnote" id="_footnote_5">
+<a href="#_footnoteref_5">5</a>. Actually, Google seems to be playing with how <code>btnI</code> works these days&#8230;&#8203; Unless the first result is a dead match for what you searched, it appears they&#8217;ll keep you on the search results page. Some of my image search parameters have been hit-and-miss as well. What&#8217;s up, Google?
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</guid><category><![CDATA[tooling]]></category><category><![CDATA[ shortcuts]]></category><category><![CDATA[ efficiency]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 13 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[killing processes]]></title><description><![CDATA[<div class="paragraph">
+<p>Signals to try in order: 1, 15, 2, only then 9</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/04/killing-processes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/04/killing-processes.html</guid><category><![CDATA[unix]]></category><category><![CDATA[ shell]]></category><category><![CDATA[ processes]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 04 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[RequireJS 'invalid require call' error"]]></title><description><![CDATA[<div class="paragraph">
+<p>Ruh roh.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Uncaught Error: Invalid require call
+http://requirejs.org/docs/errors.html#requireargs require.js:167
+makeError require.js:167
+localRequire require.js:1372
+Module.fetch require.js:806
+Module.check require.js:841
+Module.enable require.js:1144
+context.enable require.js:1512
+(anonymous function) require.js:1129
+(anonymous function) require.js:133
+each require.js:58
+Module.enable require.js:1091
+Module.init require.js:775
+(anonymous function) require.js:1417</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That link up there pointing to the RequireJS site tersely states that this happens because you didn&#8217;t pass an array as the first parameter to <code>require()</code>.</p>
+</div>
+<div class="paragraph">
+<p>This error can also come from the shim portion of the config, if you (similarly) declare the <code>deps</code> as a bare string instead of an array. CoffeeScript example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>require.config shim:
+  'underscore':
+    exports: '_'
+  'backbone':
+    exports: 'Backbone'
+    deps: ['jquery', 'underscore']
+  'marionette':
+    exports: 'Backbone.Marionette'
+    #deps: 'backbone'   # wrong
+    deps: ['backbone']  # there we go!</pre>
+</div>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/08/16/RequireJS-invalid-require-call-error.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/08/16/RequireJS-invalid-require-call-error.html</guid><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 16 Aug 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[setting up fancy fonts for vim in iTerm]]></title><description><![CDATA[<div class="paragraph">
+<p>Might need a patched font to get the fancy glyphs, e.g. <a href="https://github.com/Lokaltog/powerline-fonts/tree/master/Inconsolata">Inconsolata for Powerline</a></p>
+</div>
+<div class="paragraph">
+<p>In iTerm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>use the patched font: Preferences &gt; Profiles &gt; Text &gt; <strong>Regular Font</strong> and <strong>Non-ASCII Font</strong></p>
+</li>
+<li>
+<p>don&#8217;t make questionable characters doublewidth: uncheck the "Treat ambiguous-width as double width" checkbox at Preferences &gt; Profiles &gt; Text &gt; <strong>Double-Width Characters</strong></p>
+</li>
+<li>
+<p>change terminal name: enter "xterm-256color" in Preferences &gt; Profiles &gt; Terminal &gt; <strong>Report Terminal Type</strong></p>
+</li>
+</ul>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</guid><category><![CDATA[vim]]></category><category><![CDATA[ iTerm]]></category><category><![CDATA[ fonts]]></category><category><![CDATA[ powerline]]></category><category><![CDATA[ airline]]></category><category><![CDATA[ terminal colors]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 29 Apr 2014 00:00:00 GMT</pubDate></item></channel></rss>
