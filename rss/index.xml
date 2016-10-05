@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Oct 2016 17:55:24 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[use a Dvorak keyboard layout on iOS Simulator]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Oct 2016 21:12:09 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[use a Dvorak keyboard layout on iOS Simulator]]></title><description><![CDATA[<div class="paragraph">
 <p>&#8230;&#8203;why would anyone want to have Dvorak on a mobile device?!? Actually, I only care about it in the iOS <em>Simulator</em>, when I&#8217;m using it on a computer with a real-live hardware keyboard.</p>
 </div>
 <div class="paragraph">
-<p>In OS X&#8217;s Simulator (v9.3), launch the <strong>Settings</strong> app from the home screen, then navigate through all these menus: <strong>General</strong> &gt; <strong>Keyboard</strong> &gt; <strong>Hardware Keyboard</strong> &gt; <strong>English</strong> &gt; <strong>Dvorak</strong>.</p>
+<p>In OS X&#8217;s Simulator (v9.3), launch the <strong>Settings</strong> app from the home screen<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>, then navigate through all these menus: <strong>General</strong> &gt; <strong>Keyboard</strong> &gt; <strong>Hardware Keyboard</strong> &gt; <strong>English</strong> &gt; <strong>Dvorak</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Ta-daa!</p>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. which you can get to quickly by pressing <code>Command</code>+<code>Shift</code>+<code>h</code>
+</div>
 </div>]]></description><link>https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</guid><category><![CDATA[dvorak keyboard]]></category><category><![CDATA[ ios]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes for npmCamp 2016]]></title><description><![CDATA[<div class="paragraph">
 <p>Isaac Schlueter</p>
 </div>
