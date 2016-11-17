@@ -1,0 +1,23 @@
+= don't be scared of merge conflicts
+
+:hp-tags: versioning, merge conflicts
+
+When you do a merge and there's a crazy conflict, you want to see what changed between the common ancestor and whatever you just pulled down. You can do that for individual files like this:
+
+```
+$ git ls-files -u | awk '{print $3" "$4}'
+```
+
+...to show what files are conflicting. It'll print out something like this:
+
+```
+1 path/to/file
+2 path/to/file
+3 path/to/file
+```
+
+...the `1` there is the common ancestor; `2` is your file (your HEAD); `3` is what you've tried to merge in. To see what changed between the common ancestor and what you just merged in, do this:
+
+```
+$ git diff :1:path/to/file :3:path/to/file
+```
