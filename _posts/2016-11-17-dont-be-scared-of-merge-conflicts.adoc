@@ -1,6 +1,6 @@
 = don't be scared of merge conflicts
-
 :hp-tags: versioning, merge conflicts
+:published-at: 2016-11-17
 
 When you do a merge and there's a crazy conflict, you want to see what changed between the common ancestor and whatever you just pulled down. You can do that for individual files like this:
 
