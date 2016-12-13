@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="https://alxndr.github.io/blog/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
-    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/roon/assets/css/screen.css?v=1479422585892" />
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/roon/assets/css/screen.css?v=1481650383220" />
 
     <link rel="canonical" href="https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html" />
     <meta name="referrer" content="origin" />
@@ -21,14 +21,14 @@
     <meta property="og:site_name" content="alxndr&#x27;s blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="don&#x27;t be scared of merge conflicts" />
-    <meta property="og:description" content="When you do a merge and there&amp;#8217;s a crazy conflict, you want to see what changed between the common ancestor and whatever you just pulled down. You can do that for individual files like this: $ git ls-files -u | awk &#x27;{print $3&quot; &quot;$4}&#x27; &amp;#8230;&amp;#8203;to show" />
+    <meta property="og:description" content="First things first: it can be a lot easier to resolve merge conflicts when you can see what the code looked like before the edits which are now conflicting. Git calls that the &quot;common ancestors&quot; of the conflicting lines of code, and it&amp;#8217;s easy to configure Git to" />
     <meta property="og:url" content="https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html" />
     <meta property="article:tag" content="versioning" />
     <meta property="article:tag" content=" merge conflicts" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="don&#x27;t be scared of merge conflicts" />
-    <meta name="twitter:description" content="When you do a merge and there&amp;#8217;s a crazy conflict, you want to see what changed between the common ancestor and whatever you just pulled down. You can do that for individual files like this: $ git ls-files -u | awk &#x27;{print $3&quot; &quot;$4}&#x27; &amp;#8230;&amp;#8203;to show" />
+    <meta name="twitter:description" content="First things first: it can be a lot easier to resolve merge conflicts when you can see what the code looked like before the edits which are now conflicting. Git calls that the &quot;common ancestors&quot; of the conflicting lines of code, and it&amp;#8217;s easy to configure Git to" />
     <meta name="twitter:url" content="https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html" />
     
     <script type="application/ld+json">
@@ -52,6 +52,24 @@ null
 
         <div class="text" id="js-post-content">
             <div class="paragraph">
+<p>First things first: it can be a lot easier to resolve merge conflicts when you can see what the code looked like <strong>before</strong> the edits which are now conflicting. Git calls that the "common ancestors" of the conflicting lines of code, and it&#8217;s easy to configure Git to show those in the merge conflicts themselves using the <code>merge.conflictstyle</code> config option. Here&#8217;s what Git&#8217;s help has to say about it:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Specify the style in which conflicted hunks are written out to working tree files upon merge. The default is "merge", which shows a <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> conflict marker, changes made by one side, a <code>=======</code> marker, changes made by the other side, and then a <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marker. An alternate style, "diff3", adds a <code>|||||||</code> marker and the original text before the <code>=======</code> marker.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; merge.conflictstyle<br>
+<cite>git help config</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>To configure your local Git client to always use this style of merge conflict, run <code>git config --global merge.conflictstyle diff3</code> in your shell (which will modify your global <code>.gitconfig</code>).</p>
+</div>
+<hr>
+<div class="paragraph">
 <p>When you do a merge and there&#8217;s a crazy conflict, you want to see what changed between the common ancestor and whatever you just pulled down. You can do that for individual files like this:</p>
 </div>
 <div class="listingblock">
