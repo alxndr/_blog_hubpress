@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 19 Jan 2017 01:13:08 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[eslint: Cannot read property 'value' of undefined]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 19 Jan 2017 01:16:29 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[eslint: Cannot read property 'value' of undefined]]></title><description><![CDATA[<div class="paragraph">
 <p>Are you seeing ESLint throwing an error like</p>
 </div>
 <div class="literalblock">
@@ -11,6 +11,19 @@ TypeError: Cannot read property 'value' of undefined
 </div>
 <div class="paragraph">
 <p>It might be that you&#8217;ve put <code>async</code> on a named function, and ESLint doesn&#8217;t like it. I made ESLint happy by making the function a fat-arrow anonymous function with <code>async</code> on it, and assigning it to a <code>const</code> with the name I wanted.</p>
+</div>
+<div class="paragraph">
+<p>Related:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/eslint/eslint/issues/6773">eslint/eslint issue: Async function declaration</a></p>
+</li>
+<li>
+<p><a href="https://github.com/babel/babel-eslint/issues/350">babel/babel-eslint issue: Remove the ast changes for async/await when ESLint supports it</a></p>
+</li>
+</ul>
 </div>]]></description><link>https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</guid><category><![CDATA[eslint]]></category><category><![CDATA[ ecmascript]]></category><category><![CDATA[ javascript]]></category><category><![CDATA[ linting]]></category><category><![CDATA[ notes to self]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 18 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[don't be scared of merge conflicts]]></title><description><![CDATA[<div class="paragraph">
 <p>First things first: it can be a lot easier to resolve merge conflicts when you can see what the code looked like <strong>before</strong> the edits which are now conflicting. Git calls that the "common ancestors" of the conflicting lines of code, and it&#8217;s easy to configure Git to show those in the merge conflicts themselves using the <code>merge.conflictstyle</code> config option. Here&#8217;s what Git&#8217;s help has to say about it:</p>
 </div>
