@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 02 Feb 2017 19:05:41 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[how to find the merge where your code disappeared]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 02 Feb 2017 19:24:50 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[how to find the merge where your code disappeared]]></title><description><![CDATA[<div class="paragraph">
 <p>Because I keep forgetting that <a href="https://twitter.com/drwxrxrx/status/766373512437039104">I originally put this on the twitters</a>&#8230;&#8203;</p>
 </div>
 <div class="literalblock">
@@ -12,25 +12,41 @@
 <div class="paragraph">
 <p>About <code>-m</code>:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>This flag makes the merge commits show the full diff like regular commits; for each merge parent, a separate log entry and diff is generated. An exception is that only diff against the first parent is shown when `--first-parent` option is given; in that case, the output represents the changes the merge brought into the then-current branch.</pre>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>This flag makes the merge commits show the full diff like regular commits; for each merge parent, a separate log entry and diff is generated. An exception is that only diff against the first parent is shown when <code>--first-parent</code> option is given; in that case, the output represents the changes the merge brought into the then-current branch.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; git help log
 </div>
 </div>
 <div class="paragraph">
 <p>About <code>-G &lt;regex&gt;</code>:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>Look for differences whose patch text contains added/removed lines that match `&lt;regex&gt;`. To illustrate the difference between `-S&lt;regex&gt; --pickaxe-regex` and `-G&lt;regex&gt;`, consider a commit with the following diff in the same file:
-+    return !regexec(regexp, two-&gt;ptr, 1, &amp;regmatch, 0);
-...
--    hit = !regexec(regexp, mf2.ptr, 1, &amp;regmatch, 0);
-While `git log -G"regexec\(regexp"` will show this commit, `git log -S"regexec\(regexp" --pickaxe-regex` will not (because the number of occurrences of that string did not change). See the pickaxe entry in `gitdiffcore(7)` for more information.
-------
-
-If you find that you're digging through third-party code or compiled stuff, https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html[here's a handy way of excluding certain directories]!</pre>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Look for differences whose patch text contains added/removed lines that match <code>&lt;regex&gt;</code>. To illustrate the difference between <code>-S&lt;regex&gt; --pickaxe-regex</code> and <code>-G&lt;regex&gt;</code>, consider a commit with the following diff in the same file:</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>+    return !regexec(regexp, two-&gt;ptr, 1, &amp;regmatch, 0);
+...
+-    hit = !regexec(regexp, mf2.ptr, 1, &amp;regmatch, 0);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>While <code>git log -G"regexec\(regexp"</code> will show this commit, <code>git log -S"regexec\(regexp" --pickaxe-regex</code> will not (because the number of occurrences of that string did not change). See the pickaxe entry in <code>gitdiffcore(7)</code> for more information.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; git help log
+</div>
+</div>
+<div class="paragraph">
+<p>If you find that you&#8217;re digging through third-party code or compiled stuff, <a href="https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html">here&#8217;s a handy way of excluding certain directories</a>!</p>
 </div>]]></description><link>https://alxndr.github.io/blog/2017/02/01/how-to-find-the-merge-where-your-code-disappeared.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2017/02/01/how-to-find-the-merge-where-your-code-disappeared.html</guid><category><![CDATA[versioning]]></category><category><![CDATA[ code archaeology]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 01 Feb 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[eslint: Cannot read property 'value' of undefined]]></title><description><![CDATA[<div class="paragraph">
 <p>Are you seeing ESLint throwing an error like</p>
 </div>
