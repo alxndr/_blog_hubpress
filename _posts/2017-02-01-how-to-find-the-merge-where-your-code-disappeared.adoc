@@ -1,0 +1,26 @@
+= how to find the merge where your code disappeared
+:published_at: 2017-02-01
+:hp-tags: git, code archaeology
+
+Because I keep forgetting that https://twitter.com/drwxrxrx/status/766373512437039104[I originally put this on the twitters]...
+
+    git log --patch -m -G regexForMissingCode
+
+(Neither of those short options have long names...)
+
+>        -m
+>           This flag makes the merge commits show the full diff like regular commits; for each merge parent, a
+>           separate log entry and diff is generated. An exception is that only diff against the first parent is shown
+>           when --first-parent option is given; in that case, the output represents the changes the merge brought
+>           into the then-current branch.
+
+>       -G<regex>
+>           Look for differences whose patch text contains added/removed lines that match <regex>.
+>           To illustrate the difference between -S<regex> --pickaxe-regex and -G<regex>, consider a commit with the
+>           following diff in the same file:
+>               +    return !regexec(regexp, two->ptr, 1, &regmatch, 0);
+>               ...
+>               -    hit = !regexec(regexp, mf2.ptr, 1, &regmatch, 0);
+>           While git log -G"regexec\(regexp" will show this commit, git log -S"regexec\(regexp" --pickaxe-regex will
+>           not (because the number of occurrences of that string did not change).
+>           See the pickaxe entry in gitdiffcore(7) for more information.
