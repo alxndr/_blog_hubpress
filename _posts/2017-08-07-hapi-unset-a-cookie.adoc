@@ -1,0 +1,8 @@
+= hapi: unset a cookie
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+:published_at: 2017-08-07
+:hp-tags: notes to self, JavaScript, HapiJS
+
+...because the documentation for Hapi is awful:
+
+If you're trying to `reply().unstate("cookiename")` and it Just Won't Work, look for how you set that cookie. If you used `reply().state("cookiename", value, cookieOptions)`, you need to include those `cookieOptions` when you try to unset: `reply().unstate("cookiename", cookieOptions)` should work.
