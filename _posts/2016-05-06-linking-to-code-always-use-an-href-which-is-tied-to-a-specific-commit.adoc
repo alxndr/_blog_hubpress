@@ -2,7 +2,7 @@
 :hp-tags: version control, future-proofing, documentation
 :published-at: 2016-05-06
 
-*tl;dr* Don't _ever_ use links like `github.com/owner/repo/blob/master/file.ext#L13` because that branch _will_ change! Use `github.com/owner/repo/blob/COMMIT_SHA/file.ext#L13` and be _future-proof_.
+*tl;dr* _Don't_ use links like `github.com/owner/repo/blob/master/file.ext#L13` because that branch _will_ change! Use `github.com/owner/repo/blob/COMMIT_SHA/file.ext#L13` and be _future-proof_.
 
 ---
 
