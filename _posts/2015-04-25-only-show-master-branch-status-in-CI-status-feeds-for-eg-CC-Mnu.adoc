@@ -1,0 +1,11 @@
+= only show master branch status in CI status feeds (for e.g. CCMenu)
+:published_at: 2015-04-25
+:hp-tags: build status, ccmenu, travis ci, circle ci, xml feed
+
+http://ccmenu.org/[CCMenu] is a neat little menu icon which shows the build status of your projects http://docs.travis-ci.com/user/cc-menu/[on Travis CI], https://circleci.com/docs/polling-project-status[CircleCI], or many other automated build services.
+
+Sometimes they show the build status of all open PRs, which can often be noisy. I like to limit them to only show the status of the master branch:
+
+For Travis CI, stick https://github.com/travis-ci/travis-api/commit/3f16100247e1baf2be97eb870afb26a542f23fcc[`&branch=master`] onto http://docs.travis-ci.com/user/cc-menu/[the `cc.xml` URL you're using].
+
+For Circle CI, https://circleci.com/docs/polling-project-status[add "master" to the file name] so https://circleci.com/docs/polling-project-status[the full URL looks like `https://circleci.com/gh/USER/REPO/tree/master.cc.xml?circle-token=TOKEN&ccmenu-hack=cc.xml`].
