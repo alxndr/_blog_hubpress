@@ -9,3 +9,5 @@ Sometimes they show the build status of all open PRs, which can often be noisy. 
 For Travis CI, stick https://github.com/travis-ci/travis-api/commit/3f16100247e1baf2be97eb870afb26a542f23fcc[`&branch=master`] onto http://docs.travis-ci.com/user/cc-menu/[the `cc.xml` URL you're using].
 
 For Circle CI, https://circleci.com/docs/polling-project-status[add "master" to the file name] so https://circleci.com/docs/polling-project-status[the full URL looks like `https://circleci.com/gh/USER/REPO/tree/master.cc.xml?circle-token=TOKEN&ccmenu-hack=cc.xml`].
+
+*Update:* Circle CI rotates tokens. When you notice that all of your builds on Circle are showing gray circles, it's time to get a new token! Go to your https://circleci.com/account/api[Personal API Tokens page in Circle CI] and click Create New Token to get a new one.
