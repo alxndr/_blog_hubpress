@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="https://alxndr.github.io/blog/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
-    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/roon/assets/css/screen.css?v=1518046956410" />
+    <link rel="stylesheet" type="text/css" href="//alxndr.github.io/blog/themes/roon/assets/css/screen.css?v=1518049115486" />
 
     <link rel="canonical" href="https://alxndr.github.io/blog/2018/02/07/beware-s3cmd-footgun-trailing-slashes-with-sync.html" />
     <meta name="referrer" content="origin" />
@@ -91,6 +91,9 @@
 </div>
 <div class="paragraph">
 <p>So if you want to sync a whole local directory with a whole remote directory, make sure everything you specify ends in a slash.</p>
+</div>
+<div class="paragraph">
+<p>(Oh and if you don&#8217;t want a <code>x-amz-meta-s3cmd-attrs</code> HTTP header to show up including your username on that local system, <a href="https://github.com/s3tools/s3cmd/issues/67">use the <code>--no-preserve</code> flag</a>.)</p>
 </div>
         </div>
 
