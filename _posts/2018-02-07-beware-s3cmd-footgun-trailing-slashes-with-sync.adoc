@@ -11,3 +11,5 @@ But beware its footgun — read about how it treats trailing slashes when you sp
 This means if you're trying to `sync ./foo s3://somewhere-over-the-rainbow/foo/` (which is what I'd end up with zsh if I tab-completed and then hit space and started typing the remote address) you will end up with a `foo/` subdirectory inside the remote's top-level `foo/` directory... which is probably not what you wanted.
 
 So if you want to sync a whole local directory with a whole remote directory, make sure everything you specify ends in a slash.
+
+(Oh and if you don't want a `x-amz-meta-s3cmd-attrs` HTTP header to show up including your username on that local system, https://github.com/s3tools/s3cmd/issues/67[use the `--no-preserve` flag].)
