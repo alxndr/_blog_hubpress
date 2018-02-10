@@ -2,7 +2,12 @@
 :published_at: 2018-02-09
 :hp-tags: charts, chickens, eggs
 
-...not quite literally, because these wouldn't hatch anyway. But they are literal eggs. My housemates and I kept egg-laying chickens in our back yard for a couple years. Here's roughly how many eggs were laid each day for four years between the seven of them:
+...not quite literally, because these wouldn't hatch anyway. But they are literal eggs. My housemates and I kept egg-laying chickens in our back yard for a couple years.
+
+image::https://i.imgur.com/z815102.jpg[]
+image::https://i.imgur.com/PxTn2Yb.jpg[]
+
+This is roughly how many eggs were laid each day for four years between the seven (...?) of them:
 
 image::https://i.imgur.com/ypqsKor.png[]
 
