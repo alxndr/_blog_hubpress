@@ -1,9 +1,6 @@
 = counting eggs before they hatch
-// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
-// :hp-image: /covers/cover.png
-// :published_at: 2019-01-31
-// :hp-tags: HubPress, Blog, Open_Source,
-// :hp-alt-title: My English Title
+:published_at: 2018-02-09
+:hp-tags: charts, chickens, eggs
 
 ...not quite literally, because these wouldn't hatch anyway. But they are literal eggs. My housemates and I kept egg-laying chickens in our back yard for a couple years. Here's roughly how many the seven of them laid each day for four years:
 
