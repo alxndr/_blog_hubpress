@@ -1,25 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 08 Feb 2018 00:18:35 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[beware `s3cmd` footgun: trailing slashes with `sync`]]></title><description><![CDATA[<div class="paragraph">
-<p><a href="http://s3tools.org/s3cmd"><code>s3cmd</code></a> sure is useful! You can just <code>sync</code> a directory from here to there, or from there to here!</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Sat, 10 Feb 2018 07:08:50 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[counting eggs before they hatch]]></title><description><![CDATA[<div class="paragraph">
+<p>&#8230;&#8203;not quite literally, because these wouldn&#8217;t hatch anyway. But they are literal eggs. My housemates and I kept egg-laying chickens in our back yard for a couple years. Here&#8217;s roughly how many the seven of them laid each day for four years:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://i.imgur.com/ypqsKor.png" alt="ypqsKor.png">
+</div>
 </div>
 <div class="paragraph">
-<p>But beware its footgun — read about how it treats trailing slashes when you specify a directory:</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>"However if the local path doesn&#8217;t end with a slash the last directory&#8217;s name is used on the remote side as well."</p>
-</div>
-</blockquote>
+<p><a href="http://alxndr.github.io/eggcount/">Some more similar charts here.</a></p>
 </div>
 <div class="paragraph">
-<p>This means if you&#8217;re trying to <code>sync ./foo s3://somewhere-over-the-rainbow/foo/</code> (which is what I&#8217;d end up with zsh if I tab-completed and then hit space and started typing the remote address) you will end up with a <code>foo/</code> subdirectory inside the remote&#8217;s top-level <code>foo/</code> directory&#8230;&#8203; which is probably not what you wanted.</p>
+<p>Unfortunately in 2017 our neighbor&#8217;s cat and the neighborhood raccoons had figured out how to get in to the coop. In January 2018 only one tough chicken had persisted through all the attacks, and we moved her to a nearby chicken retirement home with a better-built coop. Heidi is now free to live out the remainder of her seasons sans predators, laying an egg whenever she goddamn feels like it!</p>
 </div>
-<div class="paragraph">
-<p>So if you want to sync a whole local directory with a whole remote directory, make sure everything you specify ends in a slash.</p>
-</div>
-<div class="paragraph">
-<p>(Oh and if you don&#8217;t want a <code>x-amz-meta-s3cmd-attrs</code> HTTP header to show up including your username on that local system, <a href="https://github.com/s3tools/s3cmd/issues/67">use the <code>--no-preserve</code> flag</a>.)</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2018/02/07/beware-s3cmd-footgun-trailing-slashes-with-sync.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2018/02/07/beware-s3cmd-footgun-trailing-slashes-with-sync.html</guid><category><![CDATA[Amazon S3]]></category><category><![CDATA[footgun]]></category><category><![CDATA[rtfm]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 07 Feb 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[`console.log()` meta tags]]></title><description><![CDATA[<div class="paragraph">
+<div class="ulist">
+<div class="title">RIP 🐔</div>
+<ul>
+<li>
+<p>Brgita — April 2013 ⚰ 22 March 2017</p>
+</li>
+<li>
+<p>Sloopy — April 2013 ⚰ 3 October 2017</p>
+</li>
+<li>
+<p>Linda — April 2013 ⚰ 4 October 2017</p>
+</li>
+<li>
+<p>Stay-Puft — April 2013 ⚰ 13 October 2017</p>
+</li>
+<li>
+<p>Not-Heidi — April 2013 ⚰ January 2018</p>
+</li>
+<li>
+<p>Dark Jake — April 2013 ⚰ January 2018</p>
+</li>
+</ul>
+</div>]]></description><link>https://alxndr.github.io/blog/2018/02/09/counting-eggs-before-they-hatch.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2018/02/09/counting-eggs-before-they-hatch.html</guid><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[`console.log()` meta tags]]></title><description><![CDATA[<div class="paragraph">
 <p>Sure can be annoying looking through HTML source trying to find all the <code>&lt;meta name="whatever" content="something that search engines love" /&gt;</code> tags that the super-expensive SEO consultant said you absolutely must add&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
@@ -107,7 +122,7 @@ TypeError: Cannot read property 'value' of undefined
 <p><a href="https://github.com/babel/babel-eslint/issues/350">babel/babel-eslint issue: Remove the ast changes for async/await when ESLint supports it</a></p>
 </li>
 </ul>
-</div>]]></description><link>https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</guid><category><![CDATA[eslint]]></category><category><![CDATA[ecmascript]]></category><category><![CDATA[javascript]]></category><category><![CDATA[linting]]></category><category><![CDATA[notes to self]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 18 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[don't be scared of merge conflicts]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2017/01/18/eslint-Cannot-read-property-value-of-undefined.html</guid><category><![CDATA[eslint]]></category><category><![CDATA[ ecmascript]]></category><category><![CDATA[ javascript]]></category><category><![CDATA[ linting]]></category><category><![CDATA[ notes to self]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 18 Jan 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[don't be scared of merge conflicts]]></title><description><![CDATA[<div class="paragraph">
 <p>First things first: it can be a lot easier to resolve merge conflicts when you can see what the code looked like <strong>before</strong> the edits which are now conflicting. Git calls that the "common ancestors" of the conflicting lines of code, and it&#8217;s easy to configure Git to show those in the merge conflicts themselves using the <code>merge.conflictstyle</code> config option. Here&#8217;s what Git&#8217;s help has to say about it:</p>
 </div>
 <div class="quoteblock">
@@ -150,7 +165,7 @@ TypeError: Cannot read property 'value' of undefined
 <div class="content">
 <pre class="highlight"><code>$ git diff :1:path/to/file :3:path/to/file</code></pre>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html</guid><category><![CDATA[versioning]]></category><category><![CDATA[merge conflicts]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 17 Nov 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[use a Dvorak keyboard layout on iOS Simulator]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/11/17/dont-be-scared-of-merge-conflicts.html</guid><category><![CDATA[versioning]]></category><category><![CDATA[ merge conflicts]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 17 Nov 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[use a Dvorak keyboard layout on iOS Simulator]]></title><description><![CDATA[<div class="paragraph">
 <p>&#8230;&#8203;why would anyone want to have Dvorak on a mobile device?!? Actually, I only care about it in the iOS <em>Simulator</em>, when I&#8217;m using it on a computer with a real-live hardware keyboard.</p>
 </div>
 <div class="paragraph">
@@ -164,7 +179,7 @@ TypeError: Cannot read property 'value' of undefined
 <div class="footnote" id="_footnote_1">
 <a href="#_footnoteref_1">1</a>. which you can get to quickly by pressing <code>Command</code>+<code>Shift</code>+<code>h</code>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</guid><category><![CDATA[dvorak keyboard]]></category><category><![CDATA[ios]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes for npmCamp 2016]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/08/04/use-a-Dvorak-keyboard-layout-on-iOS-Simulator.html</guid><category><![CDATA[dvorak keyboard]]></category><category><![CDATA[ ios]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes for npmCamp 2016]]></title><description><![CDATA[<div class="paragraph">
 <p>Isaac Schlueter</p>
 </div>
 <div class="ulist">
@@ -795,7 +810,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </ul>
 </div>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</guid><category><![CDATA[standards]]></category><category><![CDATA[communication]]></category><category><![CDATA[version control]]></category><category><![CDATA[stage this hunk]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[linking to code? always use an href which is tied to a specific commit]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/05/20/version-control-commit-messages.html</guid><category><![CDATA[standards]]></category><category><![CDATA[ communication]]></category><category><![CDATA[ version control]]></category><category><![CDATA[ stage this hunk]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[linking to code? always use an href which is tied to a specific commit]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>tl;dr</strong> <em>Don&#8217;t</em> use links like <code>github.com/owner/repo/blob/master/file.ext#L13</code> because that branch <em>will</em> change! Use <code>github.com/owner/repo/blob/COMMIT_SHA/file.ext#L13</code> and be <em>future-proof</em>.</p>
 </div>
 <hr>
@@ -832,7 +847,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </div>
 <div class="paragraph">
 <p>Tip of the hat to <a href="http://stackoverflow.com/a/21079437/303896">VonC on StackOverflow</a>.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</guid><category><![CDATA[git]]></category><category><![CDATA[version control]]></category><category><![CDATA[code archaeology]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 11 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting Hound-CI to show Rubocop "cop names" again]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/04/11/search-Git-history-ignoring-certain-directory.html</guid><category><![CDATA[git]]></category><category><![CDATA[ version control]]></category><category><![CDATA[ code archaeology]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 11 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting Hound-CI to show Rubocop "cop names" again]]></title><description><![CDATA[<div class="paragraph">
 <p>Thoughtbot&#8217;s Hound-CI service runs Rubocop on Ruby projects. It had a setting to show the name of the "cop" (style rule) that failed, which made it easier to look up the options for that specific rule.</p>
 </div>
 <div class="paragraph">
@@ -843,14 +858,14 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 <pre class="highlight"><code>AllCops:
   DisplayCopNames: true</code></pre>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</guid><category><![CDATA[static analysis]]></category><category><![CDATA[continuous integration]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 21 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[installing an old version of something via `brew`]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/02/21/getting-Hound-CI-to-show-Rubocop-cop-names-again.html</guid><category><![CDATA[static analysis]]></category><category><![CDATA[ continuous integration]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 21 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[installing an old version of something via `brew`]]></title><description><![CDATA[<div class="paragraph">
 <p>Don&#8217;t need to <code>brew edit</code> or check out old SHAs inside <code>/usr/local/Library</code> any more: just <code>brew switch [project] [version]</code>. Shiny!</p>
 </div>]]></description><link>https://alxndr.github.io/blog/2016/02/19/installing-an-old-version-of-something-via-brew.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/02/19/installing-an-old-version-of-something-via-brew.html</guid><category><![CDATA[brew]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 19 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[how to mark an email as "not-spam" in Google's Inbox]]></title><description><![CDATA[<div class="paragraph">
 <p>I&#8217;m using Google&#8217;s Inbox mail client for work email. Recently I noticed that an email in a thread was marked as being spam, and couldn&#8217;t find a way to tell Inbox that this automated email wasn&#8217;t actually spam.</p>
 </div>
 <div class="paragraph">
 <p>Turns out that pinning and then unpinning an email thread seems to convince Inbox that the contents of the thread aren&#8217;t to be considered spam.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</guid><category><![CDATA[google inbox]]></category><category><![CDATA[ui fail]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[ElixirConf US 2015 notes]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2016/01/13/how-to-mark-an-email-as-not-spam-in-Googles-Inbox.html</guid><category><![CDATA[google inbox]]></category><category><![CDATA[ ui fail]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[ElixirConf US 2015 notes]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://elixirconf.com">ElixirConf US 2015</a> was October 2–3 in Austin, Texas.</p>
@@ -1734,12 +1749,12 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </ul>
 </div>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</guid><category><![CDATA[elixirconf]]></category><category><![CDATA[elixir-lang]]></category><category><![CDATA[tech conference]]></category><category><![CDATA[Austin TX]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 02 Oct 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[typing an ellipsis in OS X]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/10/02/ElixirConf-US-2015-notes.html</guid><category><![CDATA[elixirconf]]></category><category><![CDATA[ elixir-lang]]></category><category><![CDATA[ tech conference]]></category><category><![CDATA[ Austin TX]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 02 Oct 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[typing an ellipsis in OS X]]></title><description><![CDATA[<div class="paragraph">
 <p>Ever find yourself wanting to type a literal ellipsis, like this? …</p>
 </div>
 <div class="paragraph">
 <p>If you&#8217;ve got OS X on that computer, you&#8217;re in luck: it&#8217;s just Option <code>⌥</code> (aka Alt) and semicolon <code>;</code>.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/09/23/typing-an-ellipsis-in-OS-X.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/09/23/typing-an-ellipsis-in-OS-X.html</guid><category><![CDATA[keyboard shortcut]]></category><category><![CDATA[OS X]]></category><category><![CDATA[punctuation]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 23 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[La trahison des mots]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/09/23/typing-an-ellipsis-in-OS-X.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/09/23/typing-an-ellipsis-in-OS-X.html</guid><category><![CDATA[keyboard shortcut]]></category><category><![CDATA[ OS X]]></category><category><![CDATA[ punctuation]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 23 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[La trahison des mots]]></title><description><![CDATA[<div class="paragraph">
 <p>Run this in your (POSIX-compliant) shell — I promise it&#8217;s not bad:</p>
 </div>
 <div class="literalblock">
@@ -1766,7 +1781,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 <div class="footnote" id="_footnote_1">
 <a href="#_footnoteref_1">1</a>. Close second is: "What&#8217;s the best thing about UDP jokes? No one cares if you don&#8217;t get it!" &#8230;&#8203;third is <a href="https://twitter.com/iamdevloper/status/399991896862638081">"Knock knock. Race condition. Who&#8217;s there?"</a>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</guid><category><![CDATA[pun]]></category><category><![CDATA[shell code]]></category><category><![CDATA[rene magritte]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 05 Aug 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting started with Spacemacs]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/08/05/La-trahison-des-mots.html</guid><category><![CDATA[pun]]></category><category><![CDATA[ shell code]]></category><category><![CDATA[ rene magritte]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 05 Aug 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[getting started with Spacemacs]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Are you a vi/vim user who&#8217;s been hearing about how worderful/useful/fast Spacemacs can be? Here is an evolving list of pointers for folks beginning to use this crazy new blend of editors&#8230;&#8203;</p>
@@ -1926,7 +1941,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 <div class="paragraph">
 <p>Some more people who, knowingly or unknowingly, have helped me out learning all this: <a href="https://news.ycombinator.com/item?id=9395785">tuhdo</a>, svarlet (in the elixir-lang Slack)</p>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</guid><category><![CDATA[spacemacs]]></category><category><![CDATA[emacs]]></category><category><![CDATA[vim]]></category><category><![CDATA[vi]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 20 Jun 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[advanced filtering in Chrome's Network dev tools]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/06/20/getting-started-with-Spacemacs.html</guid><category><![CDATA[spacemacs]]></category><category><![CDATA[ emacs]]></category><category><![CDATA[ vim]]></category><category><![CDATA[ vi]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 20 Jun 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[advanced filtering in Chrome's Network dev tools]]></title><description><![CDATA[<div class="paragraph">
 <p>Google Chrome has some nice developer tools. The Network tab in there lets you see requests and their headers, responses, initiators, and much more. Being able to filter the list of requests in the Network tab can be very useful.</p>
 </div>
 <div class="paragraph">
@@ -1952,7 +1967,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 <div class="footnote" id="_footnote_1">
 <a href="#_footnoteref_1">1</a>. The next time you’re filtering something in the Network panel but you’re not seeing what you think you should be seeing, make sure this request type quick selector is on “All”!
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</guid><category><![CDATA[Google Chrome]]></category><category><![CDATA[developer tools]]></category><category><![CDATA[network]]></category><category><![CDATA[filters]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 30 May 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[only show master branch status in CI status feeds (for e.g. CCMenu)]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/05/30/advanced-filtering-in-Chromes-Network-dev-tools.html</guid><category><![CDATA[Google Chrome]]></category><category><![CDATA[ developer tools]]></category><category><![CDATA[ network]]></category><category><![CDATA[ filters]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 30 May 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[only show master branch status in CI status feeds (for e.g. CCMenu)]]></title><description><![CDATA[<div class="paragraph">
 <p><a href="http://ccmenu.org/">CCMenu</a> is a neat little menu icon which shows the build status of your projects <a href="http://docs.travis-ci.com/user/cc-menu/">on Travis CI</a>, <a href="https://circleci.com/docs/polling-project-status">CircleCI</a>, or many other automated build services.</p>
 </div>
 <div class="paragraph">
@@ -1963,7 +1978,10 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </div>
 <div class="paragraph">
 <p>For Circle CI, <a href="https://circleci.com/docs/polling-project-status">add "master" to the file name</a> so <a href="https://circleci.com/docs/polling-project-status">the full URL looks like <code>https://circleci.com/gh/USER/REPO/tree/master.cc.xml?circle-token=TOKEN&amp;ccmenu-hack=cc.xml</code></a>.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CCMenu.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CCMenu.html</guid><category><![CDATA[build status]]></category><category><![CDATA[ccmenu]]></category><category><![CDATA[travis ci]]></category><category><![CDATA[circle ci]]></category><category><![CDATA[xml feed]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 25 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[watch some files, and run something whenever they change]]></title><description><![CDATA[<div id="preamble">
+</div>
+<div class="paragraph">
+<p><strong>Update:</strong> Circle CI rotates tokens. When you notice that all of your builds on Circle are showing gray circles, it&#8217;s time to get a new token! Go to your <a href="https://circleci.com/account/api">Personal API Tokens page in Circle CI</a> and click Create New Token to get a new one.</p>
+</div>]]></description><link>https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CC-Mnu.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/25/only-show-master-branch-status-in-CI-status-feeds-for-eg-CC-Mnu.html</guid><category><![CDATA[build status]]></category><category><![CDATA[ccmenu]]></category><category><![CDATA[travis ci]]></category><category><![CDATA[circle ci]]></category><category><![CDATA[xml feed]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 25 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[watch some files, and run something whenever they change]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>For the next time I forget what this tool is called:</p>
@@ -1973,7 +1991,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 <h1 id="_entr" class="sect0">entr</h1>
 <div class="paragraph">
 <p><a href="http://entrproject.org"><code>entr</code></a> is a neat little tool that monitors files and runs a command when they change.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</guid><category><![CDATA[entr]]></category><category><![CDATA[tools]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 15 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes: Erlang Factory 2015]]></title><description><![CDATA[<div class="sect1">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/04/15/watch-some-files-and-run-something-whenever-they-change.html</guid><category><![CDATA[entr]]></category><category><![CDATA[ tools]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Wed, 15 Apr 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[notes: Erlang Factory 2015]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_jos_what_elixir_is_about">José: What Elixir Is About</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -2585,12 +2603,12 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </ul>
 </div>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</guid><category><![CDATA[notes]]></category><category><![CDATA[erlang factory]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 27 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[jiggling the handle of OS X 10.8.5's dock]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/27/notes-Erlang-Factory-2015.html</guid><category><![CDATA[notes]]></category><category><![CDATA[ erlang factory]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 27 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[jiggling the handle of OS X 10.8.5's dock]]></title><description><![CDATA[<div class="paragraph">
 <p>About once a week now, I&#8217;ll notice that the Dock on my Macbook (running 10.8.5) no longer auto-shows itself when hovering at the bottom of the screen.</p>
 </div>
 <div class="paragraph">
 <p>My current somewhat-quick workaround to make it behave is to four-finger-swipe-up to activate Mission Control, which shows the Dock. Then right-click on it and open up the Dock preferences. At this point the Dock is behaving again; close the preferences.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</guid><category><![CDATA[OSX]]></category><category><![CDATA[dock]]></category><category><![CDATA[autohiding]]></category><category><![CDATA[workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 06 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[project naming chains of nonsense]]></title><description><![CDATA[<div class="sect5">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/06/jiggling-the-handle-of-OS-X-1085s-dock.html</guid><category><![CDATA[OSX]]></category><category><![CDATA[ dock]]></category><category><![CDATA[ autohiding]]></category><category><![CDATA[ workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 06 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[project naming chains of nonsense]]></title><description><![CDATA[<div class="sect5">
 <h6 id="_elm_pine_pico_nano">elm pine pico nano</h6>
 <div class="ulist">
 <ul>
@@ -2672,7 +2690,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </li>
 </ul>
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</guid><category><![CDATA[nomenclature]]></category><category><![CDATA[trivia]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[Wanted: replacement for actionitems.us]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/project-naming-chains-of-nonsense.html</guid><category><![CDATA[nomenclature]]></category><category><![CDATA[ trivia]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[Wanted: replacement for actionitems.us]]></title><description><![CDATA[<div class="paragraph">
 <p>In 2011 the dev team I was on went to <a href="http://pivotallabs.com/">Pivotal Labs</a> for a few months to bootstrap a rebuild of our company&#8217;s site, and learn their style of "extreme programming". We used a tool to organize our weekly retrospective meetings which I felt was remarkably useful and easy, but it&#8217;s since disappeared and I haven&#8217;t found a web-based replacement.</p>
 </div>
 <div class="paragraph">
@@ -2708,7 +2726,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </div>
 <div class="paragraph">
 <p>(In the meantime, <strong><a href="http://stickies.io/">stickies.io</a></strong>, though lacking the voting/ranking feature, has been a decent replacement.)</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</guid><category><![CDATA[agile]]></category><category><![CDATA[retrospective]]></category><category><![CDATA[tooling]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[sometimes iTunes doesn't show the currently-playing song's name and position]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2015/03/01/Wanted-replacement-for-actionitemsus.html</guid><category><![CDATA[agile]]></category><category><![CDATA[ retrospective]]></category><category><![CDATA[ tooling]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sun, 01 Mar 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[sometimes iTunes doesn't show the currently-playing song's name and position]]></title><description><![CDATA[<div class="paragraph">
 <p>In the middle of the very top of iTunes, between the play/volume controls on the left and the search bar on the right, there&#8217;s a panel that normally shows the currently-playing song name and position, or device sync info, or CD burning info.</p>
 </div>
 <div class="paragraph">
@@ -2716,7 +2734,7 @@ You could also <a href="https://robots.thoughtbot.com/better-commit-messages-wit
 </div>
 <div class="paragraph">
 <p>To fix, close the iTunes window and re-open it by goning up to the Window menu and "unchecking"/selecting the (helpfully-named) iTunes menu option. The song you&#8217;re playing will continue to play, but the iTunes window goes away. Then pull the Window menu down again and "check"/re-select the iTunes menu option. The iTunes window comes back, and now it&#8217;s showing the name/position/album of the still-playing song.</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</guid><category><![CDATA[iTunes]]></category><category><![CDATA[UI]]></category><category><![CDATA[bug]]></category><category><![CDATA[workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 14 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[Sharpening Your Tools]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/14/sometimes-iTunes-doesnt-show-the-currently-playing-songs-name-and-position.html</guid><category><![CDATA[iTunes]]></category><category><![CDATA[ UI]]></category><category><![CDATA[ bug]]></category><category><![CDATA[ workaround]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 14 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[Sharpening Your Tools]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>…is an episode of <a href="http://rubyrogues.com/">the Ruby Rogues podcast</a>, <a href="http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/">#129 with Ben Orenstein</a> (who has spent some of his time being the host of <a href="http://thoughtbot.com/">Thoughtbot</a>’s <a href="http://podcasts.thoughtbot.com/giantrobots">Giant Robots podcast</a>). In the episode, Ben talks about periodically evaluating his tools and making them work better for you.</p>
@@ -3054,9 +3072,9 @@ nothing added to commit but untracked files present (use "git add" to track)</pr
 <div class="footnote" id="_footnote_5">
 <a href="#_footnoteref_5">5</a>. Actually, Google seems to be playing with how <code>btnI</code> works these days&#8230;&#8203; Unless the first result is a dead match for what you searched, it appears they&#8217;ll keep you on the search results page. Some of my image search parameters have been hit-and-miss as well. What&#8217;s up, Google?
 </div>
-</div>]]></description><link>https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</guid><category><![CDATA[tooling]]></category><category><![CDATA[shortcuts]]></category><category><![CDATA[efficiency]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 13 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[killing processes]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/13/Sharpening-Your-Tools.html</guid><category><![CDATA[tooling]]></category><category><![CDATA[ shortcuts]]></category><category><![CDATA[ efficiency]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Mon, 13 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[killing processes]]></title><description><![CDATA[<div class="paragraph">
 <p>Signals to try in order: 1, 15, 2, only then 9</p>
-</div>]]></description><link>https://alxndr.github.io/blog/2014/10/04/killing-processes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/04/killing-processes.html</guid><category><![CDATA[unix]]></category><category><![CDATA[shell]]></category><category><![CDATA[processes]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 04 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[RequireJS 'invalid require call' error"]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://alxndr.github.io/blog/2014/10/04/killing-processes.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/10/04/killing-processes.html</guid><category><![CDATA[unix]]></category><category><![CDATA[ shell]]></category><category><![CDATA[ processes]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Sat, 04 Oct 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[RequireJS 'invalid require call' error"]]></title><description><![CDATA[<div class="paragraph">
 <p>Ruh roh.</p>
 </div>
 <div class="literalblock">
@@ -3114,4 +3132,4 @@ Module.init require.js:775
 <p>change terminal name: enter "xterm-256color" in Preferences &gt; Profiles &gt; Terminal &gt; <strong>Report Terminal Type</strong></p>
 </li>
 </ul>
-</div>]]></description><link>https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</guid><category><![CDATA[vim]]></category><category><![CDATA[iTerm]]></category><category><![CDATA[fonts]]></category><category><![CDATA[powerline]]></category><category><![CDATA[airline]]></category><category><![CDATA[terminal colors]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 29 Apr 2014 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2014/04/29/setting-up-fancy-fonts-for-vim-in-iTerm.html</guid><category><![CDATA[vim]]></category><category><![CDATA[ iTerm]]></category><category><![CDATA[ fonts]]></category><category><![CDATA[ powerline]]></category><category><![CDATA[ airline]]></category><category><![CDATA[ terminal colors]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Tue, 29 Apr 2014 00:00:00 GMT</pubDate></item></channel></rss>
