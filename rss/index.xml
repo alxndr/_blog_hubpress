@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Sat, 10 Feb 2018 07:09:21 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[counting eggs before they hatch]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxndr's blog]]></title><description><![CDATA[Alexander goes by "alxndr" or "drwxrxrx" on the Interwebs.]]></description><link>https://alxndr.github.io/blog</link><image><url>https://c1.staticflickr.com/5/4113/4970463506_7798961dba_o.jpg</url><title>alxndr&apos;s blog</title><link>https://alxndr.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Sat, 10 Feb 2018 07:11:32 GMT</lastBuildDate><atom:link href="https://alxndr.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[counting eggs before they hatch]]></title><description><![CDATA[<div class="paragraph">
 <p>&#8230;&#8203;not quite literally, because these wouldn&#8217;t hatch anyway. But they are literal eggs. My housemates and I kept egg-laying chickens in our back yard for a couple years. Here&#8217;s roughly how many the seven of them laid each day for four years:</p>
 </div>
 <div class="imageblock">
@@ -10,28 +10,28 @@
 <p><a href="http://alxndr.github.io/eggcount/">Some more similar charts here.</a></p>
 </div>
 <div class="paragraph">
-<p>Unfortunately in 2017 our neighbor&#8217;s cat and the neighborhood raccoons had figured out how to get in to the coop. In January 2018 only one tough chicken had persisted through all the attacks, and we moved her to a nearby chicken retirement home with a better-built coop. Heidi is now free to live out the remainder of her seasons sans predators, laying an egg whenever she goddamn feels like it!</p>
+<p>Unfortunately in 2017 our neighbor&#8217;s cat and the neighborhood raccoons had figured out how to get in to the coop. In January 2018 only one tough chicken had persisted through all the attacks, and we moved her to a nearby chicken retirement home with a better-built coop. Heidi (🐣 April 2013) is now free to live out the remainder of her seasons sans predators, laying an egg whenever she goddamn feels like it!</p>
 </div>
 <div class="ulist">
 <div class="title">RIP 🐔</div>
 <ul>
 <li>
-<p>Brgita — April 2013 ⚰ 22 March 2017</p>
+<p>Brgita 🐣 April 2013 ⚰ 22 March 2017</p>
 </li>
 <li>
-<p>Sloopy — April 2013 ⚰ 3 October 2017</p>
+<p>Sloopy 🐣 April 2013 ⚰ 3 October 2017</p>
 </li>
 <li>
-<p>Linda — April 2013 ⚰ 4 October 2017</p>
+<p>Linda 🐣 April 2013 ⚰ 4 October 2017</p>
 </li>
 <li>
-<p>Stay-Puft — April 2013 ⚰ 13 October 2017</p>
+<p>Stay-Puft 🐣 April 2013 ⚰ 13 October 2017</p>
 </li>
 <li>
-<p>Not-Heidi — April 2013 ⚰ January 2018</p>
+<p>Not-Heidi 🐣 April 2013 ⚰ January 2018</p>
 </li>
 <li>
-<p>Dark Jake — April 2013 ⚰ January 2018</p>
+<p>Dark Jake 🐣 April 2013 ⚰ January 2018</p>
 </li>
 </ul>
 </div>]]></description><link>https://alxndr.github.io/blog/2018/02/09/counting-eggs-before-they-hatch.html</link><guid isPermaLink="true">https://alxndr.github.io/blog/2018/02/09/counting-eggs-before-they-hatch.html</guid><category><![CDATA[charts]]></category><category><![CDATA[chickens]]></category><category><![CDATA[eggs]]></category><dc:creator><![CDATA[Alexander Quine]]></dc:creator><pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[`console.log()` meta tags]]></title><description><![CDATA[<div class="paragraph">
