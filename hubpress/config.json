@@ -32,7 +32,7 @@
   },
   "urls": {
     "site": "https://alxndr.github.io/blog",
-    "hubpress": "http://alxndr.github.io/blog",
+    "hubpress": "http://alxndr.blog/blog",
     "theme": "//alxndr.github.io/blog/themes/roon",
     "images": "https://alxndr.github.io/blog/images"
   },
