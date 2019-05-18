@@ -3,7 +3,7 @@
     "username": "alxndr",
     "repositoryName": "blog",
     "branch": "gh-pages",
-    "cname": ""
+    "cname": "alxndr.blog"
   },
   "site": {
     "title": "alxndr's blog",
@@ -23,9 +23,9 @@
     "github": "http://github.com/alxndr",
     "email": "",
     "facebook": "",
-    "instagram": "",
+    "instagram": "https://www.instagram.com/drwxrxrx/",
     "pinterest": "",
-    "stackoverflow": ""
+    "stackoverflow": "https://stackoverflow.com/users/303896/alxndr"
   },
   "theme": {
     "name": "roon"
